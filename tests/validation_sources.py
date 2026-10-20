@@ -57,12 +57,12 @@ class Jurisdiction:
         return corpus_paths.fixture_path(self.bill_id, self.version)
 
 
-def _senate_fy25(slug, display, srpt, s_num, bill_id, accounts, source="summary", fy="FY 2025"):
+def _senate_fy25(slug, display, srpt, s_num, bill_id, accounts, source="summary", fy="FY 2025", congress=118):
     return Jurisdiction(
         slug=slug,
         display=display,
-        report_pkg=f"CRPT-118srpt{srpt}",
-        bill_pkg=f"BILLS-118s{s_num}rs",
+        report_pkg=f"CRPT-{congress}srpt{srpt}",
+        bill_pkg=f"BILLS-{congress}s{s_num}rs",
         bill_id=bill_id,
         version="1_reported-in-senate.xml",
         fy=fy,
@@ -101,6 +101,12 @@ JURISDICTIONS = [
     # render their account tables as images, so they can't be read.
     _senate_fy25("homeland_security", "Homeland Security (FY2024)", "85", "2625", "118-s-2625", 35, fy="FY 2024"),
     _senate_fy25("legislative_branch", "Legislative Branch", "192", "4678", "118-s-4678", 31),
+    # A later Congress (119th, FY2026) of an already-covered jurisdiction: a second cross-year
+    # guard, in the other direction from cjs_fy2024, and the first bill neither the parser nor
+    # the research resolvers (docs/research/financial-semantics) were written against.
+    _senate_fy25(
+        "cjs_fy2026", "Commerce-Justice-Science (FY2026)", "44", "2354", "119-s-2354", 75, fy="FY 2026", congress=119
+    ),
 ]
 
 # Coverage note: with MilCon-VA, Homeland Security, and Legislative Branch, all 12 regular Senate

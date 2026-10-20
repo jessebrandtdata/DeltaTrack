@@ -184,6 +184,7 @@ def parse_comparative_statement(text: str) -> list[ComparativeRow]:
     lines = text.split("\n")
     starts = [i for i, line in enumerate(lines) if _CANONICAL_STATEMENT_RE.search(line)]
     start = starts[-1] if starts else 0  # last == the full statement (front matter precedes it)
+    rec_col = _recommendation_column(lines, start)
     rows: list[ComparativeRow] = []
     current_title: str | None = None
     current_bureau: str | None = None
@@ -202,16 +203,41 @@ def parse_comparative_statement(text: str) -> list[ComparativeRow]:
                 current_bureau = line.strip()
             continue
         cells = _parse_cells(m.group(2))
-        if len(cells) >= 3 and cells[2] is not None:
+        if len(cells) >= 3 and cells[rec_col] is not None:
             rows.append(
                 ComparativeRow(
                     item=m.group(1).strip(),
-                    committee_recommendation_thousands=cells[2],
+                    committee_recommendation_thousands=cells[rec_col],
                     title=current_title,
                     bureau=current_bureau,
                 )
             )
     return rows
+
+
+# Column of the committee recommendation, by layout. With the President's budget estimate
+# printed, a row runs `<prior year> <budget estimate> <committee rec> <Δ> <Δ>`; without it (the
+# 119th Congress FY2026 reports, written before a budget was transmitted) a row runs
+# `<prior year> <committee rec> <Δ>`, and the third cell is the change from the prior year.
+_REC_COL_FIVE_COLUMNS = 2
+_REC_COL_THREE_COLUMNS = 1
+
+
+def _recommendation_column(lines: list[str], start: int) -> int:
+    """Which cell of a data row holds the committee recommendation, from the rows' own shape.
+
+    Blank cells print as dot runs, so every row of a statement has the same number of cells:
+    five with a budget-estimate column, three without. The most common width decides; a
+    statement with no rows, or an unfamiliar width, is read as the five-column layout."""
+    widths: dict[int, int] = {}
+    for line in lines[start:]:
+        m = _COMPARATIVE_ROW_RE.match(line)
+        if m:
+            width = len(_parse_cells(m.group(2)))
+            widths[width] = widths.get(width, 0) + 1
+    if not widths:
+        return _REC_COL_FIVE_COLUMNS
+    return _REC_COL_THREE_COLUMNS if max(widths, key=widths.get) == 3 else _REC_COL_FIVE_COLUMNS
 
 
 def _parse_cells(tail: str) -> list[int | None]:

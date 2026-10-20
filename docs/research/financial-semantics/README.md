@@ -25,8 +25,8 @@ appropriation **equals** the report's. `committee_agreement.py` measures that ov
 the answer keys (`tests/data/validation_*.json`) map to a bill node. The keys come from two kinds
 of source, and the script reports them separately:
 
-- **Committee reports**: thirteen keys, each built from a Senate committee report's account
-  figures (`source: CRPT-...`), FY2024-FY2025 reported bills; 752 mapped accounts.
+- **Committee reports**: fourteen keys, each built from a Senate committee report's account
+  figures (`source: CRPT-...`), FY2024-FY2026 reported bills; 822 mapped accounts.
 - **The Legislative Branch spreadsheet**: `validation_leg_branch.json` comes from
   `House_and_Senate_Appropriations_FY_1994_to_present.xlsx`, not a committee report, checked
   against the FY2014-FY2020 enrolled bills; 411 mapped accounts. (`validation_legislative_branch.json`
@@ -40,25 +40,25 @@ uv run python docs/research/financial-semantics/committee_agreement.py --split h
 uv run python docs/research/financial-semantics/committee_agreement.py --resolver structured --details wrong_figure
 ```
 
-On the 1,163 mapped accounts (of 1,267), reproduced by the first command:
+On the 1,233 mapped accounts (of 1,342), reproduced by the first command:
 
 | | `classify_bill` (first figure of the primary clause) | `structured` (one figure per paragraph) | `ledger` (plus itemised lines) | `summed` (plus an account's added pieces) |
 |---|---|---|---|---|
-| Agrees with the answer key | 920 (79.1%) | 955 (82.1%) | 1,051 (90.4%) | 1,061 (91.2%) |
-| Typed a different figure while the answer key's is in the text | 37 | 2 | 1 | 1 |
+| Agrees with the answer key | 986 (80.0%) | 1,022 (82.9%) | 1,118 (90.7%) | 1,128 (91.5%) |
+| Typed a different figure while the answer key's is in the text | 38 | 2 | 1 | 1 |
 | Typed nothing while the answer key's figure is in the text | 21 | 21 | 21 | 21 |
 | Typed a figure the answer key does not state (no single figure in the text matches) | 46 | 46 | 46 | 36 |
-| Answer key finer than the figure typed (several answer-key lines, one paragraph) | 122 | 122 | 27 | 27 |
+| Answer key finer than the figure typed (several answer-key lines, one paragraph) | 124 | 124 | 29 | 29 |
 
 The same agreement by evidence source (the summary's last lines):
 
 | Agrees with the answer key | `classify_bill` | `structured` | `ledger` | `summed` |
 |---|---|---|---|---|
-| Committee reports (752 accounts) | 636 (84.6%) | 648 (86.2%) | 648 (86.2%) | 658 (87.5%) |
+| Committee reports (822 accounts) | 702 (85.4%) | 715 (87.0%) | 715 (87.0%) | 725 (88.2%) |
 | Legislative Branch spreadsheet (411 accounts) | 284 (69.1%) | 307 (74.7%) | 403 (98.1%) | 403 (98.1%) |
-| Combined (1,163 accounts) | 920 (79.1%) | 955 (82.1%) | 1,051 (90.4%) | 1,061 (91.2%) |
+| Combined (1,233 accounts) | 986 (80.0%) | 1,022 (82.9%) | 1,118 (90.7%) | 1,128 (91.5%) |
 
-Against committee reports alone, `summed` agrees on 87.5%. The step from 82.1% to 90.4% is
+Against committee reports alone, `summed` agrees on 88.2%. The step from 82.9% to 90.7% is
 entirely the spreadsheet's itemised lines, and every figure `summed` types that its source
 contradicts or does not confirm (37) is on a committee-report account.
 
@@ -110,14 +110,14 @@ uv run python tools/fetch_bills.py download 118 hr 4366
 
 The scripts use only stdlib and the project's core dependencies. The Jupyter notebooks use `pandas`, which is in the `dev` dependency group. Running `uv sync` installs everything — no extra steps needed.
 
-**What the 82% is made of.** It is not a quality score for the resolver. Of the 1,163 accounts,
-122 are answer-key lines finer than the bill's paragraph (several offices of one "including: ..."
-paragraph, 101 of them from the spreadsheet) and 63 have no single figure in the account's text
+**What the 83% is made of.** It is not a quality score for the resolver. Of the 1,233 accounts,
+124 are answer-key lines finer than the bill's paragraph (several offices of one "including: ..."
+paragraph, 101 of them from the spreadsheet) and 64 have no single figure in the account's text
 equal to the answer key's, so no
-method that types one figure per account, rules or a model, can agree on those 185. Where one
-figure can, the resolver agrees on 955 of 978 (97.6%). Typing **every** figure (naming the
+method that types one figure per account, rules or a model, can agree on those 188. Where one
+figure can, the resolver agrees on 1,022 of 1,045 (97.8%). Typing **every** figure (naming the
 itemised lines, summing an account's appropriating figures) would raise the ceiling to at most
-1,066 (91.7%): 101 of the 122 are a figure printed in the paragraph, and 10 of the 63 are a sum
+1,133 (91.9%): 101 of the 124 are a figure printed in the paragraph, and 10 of the 64 are a sum
 of two to four figures before its first proviso. The rest are report-versus-bill differences
 that only hand-tracing settles.
 
@@ -135,7 +135,7 @@ other resolver types for the paragraph, so a wrong line or a wrong figure still 
 Read the 90.4% with where it comes from. All 96 new agreements are in the Legislative Branch
 spreadsheet key (`leg_branch`), whose 411 accounts are over a third of the answer keys, and the
 rule was written while reading them (they are in `DEV`). They are agreement with the spreadsheet,
-not with a committee report: committee-report agreement is unchanged at 648 of 752. DEV goes from
+not with a committee report: committee-report agreement is unchanged at 715 of 822. DEV goes from
 81.1% to 95.3%; HELD_OUT is unchanged at 83.5%, because those bills do not itemise this way.
 Outside the spreadsheet key the remaining gap is not a typing question:
 
@@ -163,7 +163,7 @@ and these rules were written after the held-out keys had been read: HELD_OUT mov
 ## Do typed figures add up to the report's agency totals?
 
 The account figures exist to be rolled up: account, agency, department. `rollup_agreement.py`
-checks the roll-up against each "Total, <agency>" line of the thirteen Senate reports'
+checks the roll-up against each "Total, <agency>" line of the fourteen Senate reports'
 comparative statements (in thousands):
 
 ```bash
@@ -178,19 +178,19 @@ section context is not reliable enough to attribute it otherwise). The total's n
 be exactly one bill heading. A report total is net of fee offsets and rescissions, which are
 negative rows; a typed figure is gross, so both are compared.
 
-Of the 406 totals, 273 are attributed; 190 of those name a bill heading. Reproduced by the first
+Of the 423 totals, 284 are attributed; 200 of those name a bill heading. Reproduced by the first
 command:
 
 | | `classify_bill` | `appropriation_resolver` |
 |---|---|---|
-| Equals the report's net total | 109 | 113 |
+| Equals the report's net total | 116 | 121 |
 | Equals it with the report's negative rows added back (gross) | 7 | 8 |
 | Equals it once accounts' second figures ("together with $X from the ... Trust Fund") are added | 2 | 2 |
-| Complete, and none of these | 41 | 31 |
-| Incomplete (an appropriating account abstained, or none was typed) | 31 | 36 |
+| Complete, and none of these | 43 | 31 |
+| Incomplete (an appropriating account abstained, or none was typed) | 32 | 38 |
 
-So 121 of the resolver's 154 complete roll-ups reproduce the report's agency total. With
-`resolve_total` (an account's added pieces summed in), 124 do (116 net, 8 gross), 30 do not.
+So 131 of the resolver's 162 complete roll-ups reproduce the report's agency total. With
+`resolve_total` (an account's added pieces summed in), 132 do (124 net, 8 gross), 30 do not.
 `tests/test_rollup_agreement.py` pins the attribution and these counts.
 
 **Why the other 31 do not, hand-traced:**

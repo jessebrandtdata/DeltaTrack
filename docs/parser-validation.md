@@ -15,7 +15,7 @@ report are written separately, by different people, for different purposes — s
 numbers match the report, that is real, independent evidence the tool got it right.
 
 Across **all 12 regular appropriations subcommittees**, the tool's amounts match the independent
-source about **94% of the time**. We then hand-checked every remaining case, and
+source about **95% of the time**. We then hand-checked every remaining case, and
 **none is a tool error.** Each is a spot where the report and the bill legitimately state a
 number differently — for example, the report gives one account total while the bill splits it
 into separate lines, or the amount is open-ended ("such sums as may be necessary") so there is
@@ -36,7 +36,7 @@ bill XML; we check that our parser reads it correctly, by comparing the parser's
 ## Two independent ground-truth sources
 
 - **Legislative Branch** — 414 line items across 7 enrolled bills (113-hr-3547, 113-hr-83, 114-hr-2029, 115-hr-1625, 115-hr-244, 115-hr-5895, 116-hr-1865), chambers: house, senate. Source: an independently maintained appropriations spreadsheet. Validated *structurally* (`TestLegBranchValidation`): each curated account names a `match_path`, and the parser must produce a node there with the expected amount.
-- **13 committee-report jurisdictions** — committee-recommended amounts parsed from the
+- **14 committee-report jurisdictions** — committee-recommended amounts parsed from the
   Senate Appropriations **committee reports** (govinfo `CRPT-…`), compared to what the parser
   extracts from each reported bill. The report is written by committee staff for a different
   purpose than the bill, so it is genuinely independent. (Committee reports, not CRS reports.)
@@ -69,8 +69,9 @@ offsetting collections) are excluded — they are not leaf appropriation account
 | Commerce-Justice-Science (FY2024) | `118-s-2321` | 75 | 73 | 97% |
 | Homeland Security (FY2024) | `118-s-2625` | 35 | 30 | 86% |
 | Legislative Branch | `118-s-4678` | 31 | 29 | 94% |
+| Commerce-Justice-Science (FY2026) | `119-s-2354` | 75 | 74 | 99% |
 
-**Overall: 803 / 853 accounts recalled (94.1%).**
+**Overall: 877 / 928 accounts recalled (94.5%).**
 
 ## Why the remainder is not a parser problem
 
@@ -153,6 +154,8 @@ The full current remainder:
 **Legislative Branch** (2)
   - LEGISLATIVE BRANCH APPROPRIATIONS / CAPITOL POLICE — $832,556,000
   - LEGISLATIVE BRANCH APPROPRIATIONS / SALARIES AND EXPENSES — $60,238,000
+**Commerce-Justice-Science (FY2026)** (1)
+  - DEPARTMENT OF JUSTICE / PUBLIC SAFETY OFFICERS BENEFITS — $236,800,000
 
 ## Guarding against overfitting
 

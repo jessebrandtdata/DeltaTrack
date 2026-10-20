@@ -236,6 +236,12 @@ covers = "CJS FY2024 reported print — the cross-year out-of-corpus guard (head
 versions = [{ stage = "1_reported-in-senate", formats = ["xml", "pdf"], committee_report = [{pkg = "CRPT-118srpt62", citation = "S. Rept. 118-62", chamber = "senate"}]}]
 
 [[bill]]
+id = "119-s-2354"
+subcommittee = "commerce-justice-science (FY2026)"
+covers = "CJS FY2026 reported print (119th Congress) — the later-year cross-year guard: the first bill written after every heading rule and research resolver was frozen."
+versions = [{ stage = "1_reported-in-senate", formats = ["xml"], committee_report = [{pkg = "CRPT-119srpt44", citation = "S. Rept. 119-44", chamber = "senate"}]}]
+
+[[bill]]
 id = "118-s-4921"
 subcommittee = "defense"
 covers = "Department of Defense Senate reported print — Defense subcommittee heading vocabulary."

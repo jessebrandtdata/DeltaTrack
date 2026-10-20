@@ -490,6 +490,7 @@ _KNOWN_DUPLICATE_COUNTS: dict[str, int] = {
     # it asserts zero as an unlisted file. Equality (#513) is what surfaced that; under the
     # old ceiling it would have kept tolerating 4 collisions the parser no longer makes.
     "118-s-4795/1_reported-in-senate.xml": 2,  # CJS: DOJ general-provisions + NASA pair
+    "119-s-2354/1_reported-in-senate.xml": 3,  # CJS FY2026: the same DOJ general-provisions + NASA pair
     "118-s-4796/1_reported-in-senate.xml": 5,  # Transportation-HUD: FAA/FHWA/NHTSA/HUD repeats
     "118-s-4797/1_reported-in-senate.xml": 1,  # State-Foreign Ops: callable-capital limitation
     "118-s-4802/1_reported-in-senate.xml": 3,  # Interior-Environment: Forest Service repeats

@@ -223,6 +223,9 @@ _MAX_UNVALIDATED = {
     # (amount correctly extracted under the right agency), 2 absent (Coast Guard mandatory
     # health-care accrual, fee-funded USCIS Operations and Support).
     "homeland_security": 5,
+    # CJS FY2026 (119th Congress): the later-year cross-year guard. 1 structural miss, the same
+    # PSOB indefinite "such sums" line as FY2025 and FY2024 — verified absent from the bill XML.
+    "cjs_fy2026": 1,
     # Legislative Branch FY2025: 2 unvalidated, both arithmetic the recall check cannot do,
     # each confirmed against the bill XML rather than inferred from the fixture's `bureau`
     # (which carries the nearest preceding report heading, not the account's actual bureau):

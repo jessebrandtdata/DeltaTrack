@@ -269,6 +269,36 @@ def test_parse_comparative_statement_handles_blanks_and_negatives():
     assert rows["Offsetting fee collections"] == -12_000
 
 
+# The 119th Congress FY2026 reports were written before a budget estimate was transmitted, so
+# their statement has three numeric columns: prior-year appropriation, committee recommendation,
+# change. Read as the five-column layout, the third column is the change (S. Rept. 119-44).
+THREE_COLUMN_STATEMENT = """\
+       COMPARATIVE STATEMENT OF NEW BUDGET (OBLIGATIONAL) AUTHORITY FOR FISCAL YEAR 2025 AND BUDGET ESTIMATES AND
+                                  AMOUNTS RECOMMENDED IN THE BILL FOR FISCAL YEAR 2026
+                                                [In thousands of dollars]
+    ----------------------------------------------------------------------------------------------------------------
+                                                                                                   Senate Committee
+                                                                                                    recommendation
+                            Item                          2025 appropriation       Committee       compared with (+
+                                                                                recommendation        or -) 2025
+                                                                                                     appropriation
+    ----------------------------------------------------------------------------------------------------------------
+               TITLE I--DEPARTMENT OF COMMERCE
+             Bureau of Industry and Security
+    Operations and administration.......................             22,183              41,869             +19,686
+    Operations and Administration (emergency)...........             20,000   ..................            -20,000
+          Total, Bureau of Industry and Security........            191,000             211,000             +20,000
+"""
+
+
+def test_parse_comparative_statement_reads_the_second_cell_of_a_three_column_statement():
+    rows = {r.item: r.committee_recommendation_thousands for r in parse_comparative_statement(THREE_COLUMN_STATEMENT)}
+    assert rows["Operations and administration"] == 41_869
+    assert rows["Total, Bureau of Industry and Security"] == 211_000
+    # A blank recommendation is skipped, not read from the change column.
+    assert "Operations and Administration (emergency)" not in rows
+
+
 def test_parse_comparative_statement_ignores_non_table_lines():
     # Summary-block lines have a single amount, not three columns, so they are not rows.
     assert parse_comparative_statement(BASIC_BLOCK) == []

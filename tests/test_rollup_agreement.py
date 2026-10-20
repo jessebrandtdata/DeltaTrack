@@ -79,20 +79,20 @@ def test_rollup_outcomes_match_the_measurement_the_readme_quotes():
     """
     outcomes = Counter(r.outcome for r in ra.measure(resolve))
     assert outcomes == {
-        "net": 113,
+        "net": 121,
         "gross": 8,
         "with_additional": 2,
         "mismatch": 31,
-        "incomplete": 36,
-        "unmapped": 83,
-        "report_inconsistent": 133,
+        "incomplete": 38,
+        "unmapped": 84,
+        "report_inconsistent": 139,
     }
     summed = Counter(r.outcome for r in ra.measure(resolve_total))
     assert summed == {
-        "net": 116,
+        "net": 124,
         "gross": 8,
         "mismatch": 30,
-        "incomplete": 36,
-        "unmapped": 83,
-        "report_inconsistent": 133,
+        "incomplete": 38,
+        "unmapped": 84,
+        "report_inconsistent": 139,
     }

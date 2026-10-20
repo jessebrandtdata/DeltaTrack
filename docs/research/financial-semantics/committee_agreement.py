@@ -68,6 +68,8 @@ OUTCOMES = (
 
 # The resolver's rules were written from disagreements in DEV only; HELD_OUT was not examined
 # until they were frozen, so its numbers are the honest estimate of how the rules generalise.
+# cjs_fy2026 (119th Congress) is in neither: its bill and report were published after both
+# splits were read, so it shows in `all` only and leaves the two splits' numbers as quoted.
 DEV = {"agriculture", "cjs", "cjs_fy2024", "defense", "homeland_security", "leg_branch"}
 HELD_OUT = {
     "energy_water",
