@@ -16,6 +16,29 @@ Financial classifier and analysis tools for DeltaTrack bill data.
 | `committee_agreement.py` | Scores the figure typed as each account's appropriation against the answer key's figure for that account (committee reports, and one Legislative Branch spreadsheet), reported per source (ADR 0025, proposed, #796) |
 | `appropriation_resolver.py` | Picks the one figure an appropriations paragraph appropriates, the way the paragraph is drafted, or abstains |
 | `rollup_agreement.py` | Adds the typed figures up per agency and checks them against the committee report's "Total, <agency>" lines |
+| `classifier_sample.py` | Draws a stratified sample of bill paragraphs into `classifier_labels.toml` for a person to label by class |
+| `classifier_labels.toml` | The sampled paragraphs with the classifier's prediction and a hand-filled `label`; empty labels are unreviewed |
+| `classifier_agreement.py` | Precision and recall of `classify_text` per class, over the labelled rows |
+
+## Is each paragraph the class the classifier says?
+
+`classify_text` gives every paragraph one of twelve labels, and the committee-report answer keys
+check only the dollar figure of one of them (appropriation). Nothing else in the repo records a
+paragraph's true class, so the classifier's precision and recall per class are measured against
+hand labels. `classifier_sample.py` draws up to 20 paragraphs per predicted label from the
+Senate-reported bills (the "unknown" label split by whether the paragraph has a dollar figure), 142
+rows from 3,003 paragraphs at seed 0, and writes them with `label = ""` for a person to fill.
+`classifier_agreement.py` re-reads each labelled paragraph from the bill XML, refuses to score one
+whose text no longer matches the hash recorded with its label, and prints per-class precision
+(of the paragraphs predicted as a class, how many are labelled it) and recall (of the paragraphs
+labelled a class, how many were predicted as it). Rows with an empty label are skipped and
+counted; the figures describe the labelled sample, which over-represents rare predictions by
+design.
+
+```bash
+uv run python docs/research/financial-semantics/classifier_sample.py                 # add rows; keeps existing ones
+uv run python docs/research/financial-semantics/classifier_agreement.py --details    # score, list disagreements
+```
 
 ## Does the typed appropriation equal the committee report's?
 

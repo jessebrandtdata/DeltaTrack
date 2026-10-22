@@ -1,0 +1,2010 @@
+# Paragraphs to label by hand, so classify_text (classify_bill.py) can be scored per class.
+# Written by classifier_sample.py; scored by classifier_agreement.py. Edit only `label` and
+# `note`; every other field identifies the paragraph (ADR 0019) and is checked at scoring.
+#
+# label: the class the paragraph truly is, one of
+#   restriction transfer appropriation rescission directive cap authorization fee earmark
+#   availability sub_allocation unknown
+# "unknown" means none of the eleven fits. An empty label means not yet reviewed; the scorer
+# skips it. `predicted` is what the classifier said and is pre-filled for comparison only:
+# a row whose label equals its prediction still needs a person to have read it.
+# note: anything the next reader needs (why the label, what made it hard). Free text.
+
+[meta]
+generated = "2026-10-21"
+per_class = 20
+seed = 0
+parser_revision = "6ce6f2c9359f2946557346c4c2c4e12615d2e88f"
+population = 3003
+bills = ["agriculture", "cjs", "cjs_fy2024", "defense", "energy_water", "financial_services", "homeland_security", "interior_environment", "labor_hhs", "legislative_branch", "milcon_va", "state_foreign_ops", "transportation_hud"]
+
+[[nodes]]
+jurisdiction = "defense"
+bill = "118-s-4921"
+version = "1_reported-in-senate.xml"
+node_ordinal = 53
+element_id = "id8E970AFC2D28404795FAD515AD61D890"
+path = "TITLE III > PROCUREMENT > Procurement, defense-Wide"
+text_sha256 = "65879ad6db30060c9994a1a046e32eda4851302bbcb6d8b40129de430b08403f"
+predicted = "appropriation"
+label = ""
+note = ""
+text = '''
+For expenses of activities and agencies of the Department of Defense (other than the military departments) necessary for procurement, production, and modification of equipment, supplies, materials, and spare parts therefor, not otherwise provided for; the purchase of passenger motor vehicles for replacement only; expansion of public and private plants, equipment, and installation thereof in such plants, erection of structures, and acquisition of land for the foregoing purposes, and such lands and interests therein, may be acquired, and construction prosecuted thereon prior to approval of title; reserve plant and Government and contractor-owned equipment layaway, $5,819,954,000, to remain available for obligation until September 30, 2027: Provided, That of the amounts made available under this heading, $527,245,000 is designated by the Congress as being for an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985.'''
+
+[[nodes]]
+jurisdiction = "energy_water"
+bill = "118-s-4927"
+version = "1_reported-in-senate.xml"
+node_ordinal = 76
+element_id = "id65CFED0D1FF04B21BF6DC754B5A71A54"
+path = "TITLE III\u2014DEPARTMENT OF ENERGY > ENVIRONMENTAL AND OTHER DEFENSE ACTIVITIES > Defense Uranium Enrichment Decontamination and Decommissioning"
+text_sha256 = "225c5b4f7a1d9fb4f9459a81e32c0926cf95ef5fb94b0e820043730f20f5eb40"
+predicted = "appropriation"
+label = ""
+note = ""
+text = '''
+For an additional amount for atomic energy defense environmental cleanup activities for Department of Energy contributions for uranium enrichment decontamination and decommissioning activities, $577,000,000, to be deposited into the Defense Environmental Cleanup account, which shall be transferred to the Uranium Enrichment Decontamination and Decommissioning Fund.'''
+
+[[nodes]]
+jurisdiction = "agriculture"
+bill = "118-s-4690"
+version = "1_reported-in-senate.xml"
+node_ordinal = 8
+element_id = "idF7FA5B8443664CE784EEEEB83D7E0E46"
+path = "TITLE I\u2014AGRICULTURAL PROGRAMS > Office of the chief information officer"
+text_sha256 = "64abb8c50eabb42327ed7ae851d0fc174ab11beead1255d8869834ac08330ff0"
+predicted = "appropriation"
+label = ""
+note = ""
+text = '''
+For necessary expenses of the Office of the Chief Information Officer, $91,400,000, of which not less than $77,428,000 is for cybersecurity requirements of the department.'''
+
+[[nodes]]
+jurisdiction = "financial_services"
+bill = "118-s-4928"
+version = "1_reported-in-senate.xml"
+node_ordinal = 199
+element_id = "id42944b376c464d95808956ad5715c1e7"
+path = "TITLE VI > GENERAL PROVISIONS\u2014THIS ACT > Sec. 617 > (b)"
+text_sha256 = "f6ae2110de43e23592f86151c17976a50021e9cd645e361c5b627644b8e2bbc7"
+predicted = "appropriation"
+label = ""
+note = ""
+text = '''
+(b)For purposes of this section, the term Executive agency covered by this Act means any Executive agency provided funds by this Act, but does not include the General Services Administration or the United States Postal Service.'''
+
+[[nodes]]
+jurisdiction = "legislative_branch"
+bill = "118-s-4678"
+version = "1_reported-in-senate.xml"
+node_ordinal = 52
+element_id = "id7DC7C5F33D684E15914241C3C8975A80"
+path = "TITLE I\u2014LEGISLATIVE BRANCH > LIBRARY OF CONGRESS > Copyright Office > SALARIES AND EXPENSES"
+text_sha256 = "40376e9a43d69ef1be3e45c7c3fd5eb8c7144c0e662cafb670f294e4e44dc9c4"
+predicted = "appropriation"
+label = ""
+note = ""
+text = '''
+For all necessary expenses of the Copyright Office, $106,133,000, of which not more than $38,025,000, to remain available until expended, shall be derived from collections credited to this appropriation during fiscal year 2025 under sections 708(d) and 1316 of title 17, United States Code: Provided, That the Copyright Office may not obligate or expend any funds derived from collections under such section in excess of the amount authorized for obligation or expenditure in appropriations Acts: Provided further, That not more than $7,870,000 shall be derived from collections during fiscal year 2025 under sections 111(d)(2), 119(b)(3), 803(e), and 1005 of such title: Provided further, That the total amount available for obligation shall be reduced by the amount by which collections are less than $45,895,000: Provided further, That of the funds provided under this heading, not less than $10,300,000 is for modernization initiatives, of which $9,300,000 shall remain available until September 30, 2026: Provided further, That not more than $100,000 of the amount appropriated is available for the maintenance of an International Copyright Institute in the Copyright Office of the Library of Congress for the purpose of training nationals of developing countries in intellectual property laws and policies: Provided further, That not more than $6,500 may be expended, on the certification of the Librarian of Congress, in connection with official representation and reception expenses for activities of the International Copyright Institute and for copyright delegations, visitors, and seminars: Provided further, That, notwithstanding any provision of chapter 8 of title 17, United States Code, any amounts made available under this heading which are attributable to royalty fees and payments received by the Copyright Office pursuant to sections 111, 119, and chapter 10 of such title may be used for the costs incurred in the administration of the Copyright Royalty Judges program, with the exception of the costs of salaries and benefits for the Copyright Royalty Judges and staff under section 802(e).'''
+
+[[nodes]]
+jurisdiction = "homeland_security"
+bill = "118-s-2625"
+version = "1_reported-in-senate.xml"
+node_ordinal = 135
+element_id = "idD4311C5EE50442F4B5267309B3EC15C1"
+path = "TITLE IV > RESEARCH, DEVELOPMENT, TRAINING, AND SERVICES > Countering weapons of mass destruction office > PROCUREMENT, CONSTRUCTION, AND IMPROVEMENTS"
+text_sha256 = "63d13a1dd752f7c485bae899517a27739f49ba76e6eecf59d16f7540c97262ce"
+predicted = "appropriation"
+label = ""
+note = ""
+text = '''
+For necessary expenses of the Countering Weapons of Mass Destruction Office for procurement, construction, and improvements, $15,360,000, to remain available until September 30, 2026.'''
+
+[[nodes]]
+jurisdiction = "energy_water"
+bill = "118-s-4927"
+version = "1_reported-in-senate.xml"
+node_ordinal = 30
+element_id = "id66E20042D577454CB2B554866297C3EF"
+path = "TITLE II\u2014DEPARTMENT OF THE INTERIOR > Bureau of Reclamation > POLICY AND ADMINISTRATION"
+text_sha256 = "d05f68c94f79b9f742e322f3390eaa948aa2891dcc450782ac13eef8db10e0f7"
+predicted = "appropriation"
+label = ""
+note = ""
+text = '''
+For expenses necessary for policy, administration, and related functions in the Office of the Commissioner, the Denver office, and offices in the six regions of the Bureau of Reclamation, to remain available until September 30, 2026, $66,794,000, to be derived from the Reclamation Fund and be nonreimbursable as provided in 43 U.S.C. 377: Provided, That no part of any other appropriation in this Act shall be available for activities or functions budgeted as policy and administration expenses.'''
+
+[[nodes]]
+jurisdiction = "labor_hhs"
+bill = "118-s-4942"
+version = "1_reported-in-senate.xml"
+node_ordinal = 129
+element_id = "id95E6513D2D8A40D19BB009C2FF1FD6EC"
+path = "TITLE II\u2014DEPARTMENT OF HEALTH AND HUMAN SERVICES > Administration for children and families > PAYMENTS FOR FOSTER CARE AND PERMANENCY"
+text_sha256 = "132dc6eefe02558f0d864f04bb7649a9d61e21b94fb3e3b39af254fe4151637b"
+predicted = "appropriation"
+label = ""
+note = ""
+text = '''
+For carrying out, except as otherwise provided, title IV–E of the Social Security Act, $6,768,000,000. For carrying out, except as otherwise provided, title IV–E of the Social Security Act, for the first quarter of fiscal year 2026, $3,600,000,000. For carrying out, after May 31 of the current fiscal year, except as otherwise provided, section 474 of title IV–E of the Social Security Act, for the last 3 months of the current fiscal year for unanticipated costs, incurred for the current fiscal year, such sums as may be necessary.'''
+
+[[nodes]]
+jurisdiction = "homeland_security"
+bill = "118-s-2625"
+version = "1_reported-in-senate.xml"
+node_ordinal = 40
+element_id = "idCD53F45D91B742A38DED30ACB35E2CC3"
+path = "TITLE II > SECURITY, ENFORCEMENT, AND INVESTIGATIONS > United states secret service > PROCUREMENT, CONSTRUCTION, AND IMPROVEMENTS"
+text_sha256 = "027b0a54e83e6a23cf0b8140c223a952345f935aeb0a020ac46ca557bef3b9bf"
+predicted = "appropriation"
+label = ""
+note = ""
+text = '''
+For necessary expenses of the United States Secret Service for procurement, construction, and improvements, $69,098,000, to remain available until September 30, 2026: Provided, That of the amounts made available under this heading, $18,000,000 is designated by the Congress as being for an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985.'''
+
+[[nodes]]
+jurisdiction = "milcon_va"
+bill = "118-s-4677"
+version = "1_reported-in-senate.xml"
+node_ordinal = 163
+element_id = "id027BFD2EBD2345C2B6CCE7B1C4D77C3E"
+path = "TITLE III > RELATED AGENCIES > American battle monuments commission > FOREIGN CURRENCY FLUCTUATIONS ACCOUNT"
+text_sha256 = "32e84db6d8d8e341a9d6bdf0b08e53e18dde542cda16f0dbaf86d22b0070bf0c"
+predicted = "appropriation"
+label = ""
+note = ""
+text = '''
+For necessary expenses, not otherwise provided for, of the American Battle Monuments Commission, such sums as may be necessary, to remain available until expended, for purposes authorized by section 2109 of title 36, United States Code.'''
+
+[[nodes]]
+jurisdiction = "financial_services"
+bill = "118-s-4928"
+version = "1_reported-in-senate.xml"
+node_ordinal = 60
+element_id = "idD3104CA2950A49DEA385D4455153AAF9"
+path = "TITLE II > EXECUTIVE OFFICE OF THE PRESIDENT AND FUNDS APPROPRIATED TO THE PRESIDENT > Office of administration > SALARIES AND EXPENSES"
+text_sha256 = "decf93e32926161ce79c31632bda8cf19c318b5b1d2dc3fa48627ea6a42b2597"
+predicted = "appropriation"
+label = ""
+note = ""
+text = '''
+For necessary expenses of the Office of Administration, including services as authorized by 5 U.S.C. 3109 and 3 U.S.C. 107, and hire of passenger motor vehicles, $115,463,000, of which not to exceed $12,800,000 shall remain available until expended for continued modernization of information resources within the Executive Office of the President: Provided, That of the amounts provided under this heading, up to $7,000,000 shall be available for a program to provide payments (such as stipends, subsistence allowances, cost reimbursements, or awards) to students, recent graduates, and veterans recently discharged from active duty who are performing voluntary services in the Executive Office of the President under section 3111(b) of title 5, United States Code, or comparable authority and shall be in addition to amounts otherwise available to pay or compensate such individuals: Provided further, That such payments shall not be considered compensation for such purposes and may be paid in advance.'''
+
+[[nodes]]
+jurisdiction = "legislative_branch"
+bill = "118-s-4678"
+version = "1_reported-in-senate.xml"
+node_ordinal = 37
+element_id = "id831BDA842D7948678054AB42C5189324"
+path = "TITLE I\u2014LEGISLATIVE BRANCH > CAPITOL POLICE > Salaries"
+text_sha256 = "871d8758eef815015d15065852e80faa58680caf4ba8f2789c2af8eaa848ab5c"
+predicted = "appropriation"
+label = ""
+note = ""
+text = '''
+For salaries of employees of the Capitol Police, including overtime, hazardous duty pay, and Government contributions for health, retirement, social security, professional liability insurance, and other applicable employee benefits, $620,401,000, of which overtime shall not exceed $74,976,000 unless the Committees on Appropriations of the House and Senate are notified, to be disbursed by the Chief of the Capitol Police or a duly authorized designee: Provided, That of the amounts made available under this heading, at least $3,087,000 shall be available for overtime to support requirements associated with the 2025 Presidential Inauguration; and at least $15,000,000 shall be available for tuition reimbursement, recruitment and retention bonuses and other retention focused salary related items.'''
+
+[[nodes]]
+jurisdiction = "state_foreign_ops"
+bill = "118-s-4797"
+version = "1_reported-in-senate.xml"
+node_ordinal = 35
+element_id = "id0C14DF9618BF469CADECE14009B85A7E"
+path = "TITLE I\u2014DEPARTMENT OF STATE AND RELATED AGENCY > OTHER COMMISSIONS > Commission on security and cooperation in europe > SALARIES AND EXPENSES"
+text_sha256 = "f45a2c307d9eadf967d6483e7fbdcf4b38289702b5e1fb2a03c3f0bad6027fb0"
+predicted = "appropriation"
+label = ""
+note = ""
+text = '''
+For necessary expenses of the Commission on Security and Cooperation in Europe, as authorized by Public Law 94–304 (22 U.S.C. 3001 et seq.), $3,059,000, including not more than $6,000 for representation expenses, to remain available until September 30, 2026.'''
+
+[[nodes]]
+jurisdiction = "labor_hhs"
+bill = "118-s-4942"
+version = "1_reported-in-senate.xml"
+node_ordinal = 84
+element_id = "id29530547EC794B5FB80FB0789D4800CE"
+path = "TITLE II\u2014DEPARTMENT OF HEALTH AND HUMAN SERVICES > Centers for disease control and prevention > CDC-WIDE ACTIVITIES AND PROGRAM SUPPORT"
+text_sha256 = "d766c0cbc981514c2b5ce4c8d5f30224d1d0d53432fd446a1d476ea72c1f32f6"
+predicted = "appropriation"
+label = ""
+note = ""
+text = '''
+For carrying out titles II, III, XVII and XIX, and section 2821 of the PHS Act and for cross-cutting activities and program support for activities funded in other appropriations included in this Act for the Centers for Disease Control and Prevention, $521,570,000, of which $365,000,000 shall remain available through September 30, 2026, for public health infrastructure and capacity: Provided, That paragraphs(1) through(3) of subsection(b) of section 2821 of the PHS Act shall not apply to funds appropriated under this heading and in all other accounts of the CDC: Provided further, That of the amounts made available under this heading, $25,000,000, to remain available until expended, shall be available to the Director of the CDC for deposit in the Infectious Diseases Rapid Response Reserve Fund established by section 231 of division B of Public Law 115–245: Provided further, That funds appropriated under this heading may be used to support a contract for the operation and maintenance of an aircraft in direct support of activities throughout CDC to ensure the agency is prepared to address public health preparedness emergencies: Provided further, That employees of CDC or the Public Health Service, both civilian and commissioned officers, detailed to States, municipalities, or other organizations under authority of section 214 of the PHS Act, or in overseas assignments, shall be treated as non-Federal employees for reporting purposes only and shall not be included within any personnel ceiling applicable to the Agency, Service, or HHS during the period of detail or assignment: Provided further, That CDC may use up to $10,000 from amounts appropriated to CDC in this Act for official reception and representation expenses when specifically approved by the Director of CDC: Provided further, That in addition, such sums as may be derived from authorized user fees, which shall be credited to the appropriation charged with the cost thereof: Provided further, That with respect to the previous proviso, authorized user fees from the Vessel Sanitation Program and the Respirator Certification Program shall be available through September 30, 2026.'''
+
+[[nodes]]
+jurisdiction = "state_foreign_ops"
+bill = "118-s-4797"
+version = "1_reported-in-senate.xml"
+node_ordinal = 36
+element_id = "idEA4D85759CD745B3B2C4CE51E04D230B"
+path = "TITLE I\u2014DEPARTMENT OF STATE AND RELATED AGENCY > OTHER COMMISSIONS > Congressional-Executive commission on the people's republic of china > SALARIES AND EXPENSES"
+text_sha256 = "4e9c0600ab1f2b4e8c8875f4a9f766d2eec09ea16855a4ecded18e67db473cd3"
+predicted = "appropriation"
+label = ""
+note = ""
+text = '''
+For necessary expenses of the Congressional-Executive Commission on the People's Republic of China, as authorized by title III of the U.S.-China Relations Act of 2000 (22 U.S.C. 6911 et seq.), $2,300,000, including not more than $3,000 for representation expenses, to remain available until September 30, 2026.'''
+
+[[nodes]]
+jurisdiction = "transportation_hud"
+bill = "118-s-4796"
+version = "1_reported-in-senate.xml"
+node_ordinal = 84
+element_id = "id26087DFCA08841A69ED3D64F5C7E5361"
+path = "TITLE I\u2014DEPARTMENT OF TRANSPORTATION > National Highway Traffic Safety Administration > HIGHWAY TRAFFIC SAFETY GRANTS"
+text_sha256 = "e10241725c472efe3b1b380dc801719f754caa8396b675739a515820d41fb08d"
+predicted = "appropriation"
+label = ""
+note = ""
+text = '''
+For payment of obligations incurred in carrying out provisions of sections 402, 404, and 405 of title 23, United States Code, and grant administration expenses under chapter 4 of title 23, United States Code, to remain available until expended, $831,444,832, to be derived from the Highway Trust Fund (other than the Mass Transit Account): Provided, That none of the funds in this Act shall be available for the planning or execution of programs for which the total obligations in fiscal year 2025 are in excess of $831,444,832 for programs authorized under sections 402, 404, and 405 of title 23, United States Code, and grant administration expenses under chapter 4 of title 23, United States Code: Provided further, That of the sums appropriated under this heading— (1)$385,900,000 shall be for highway safety programs under section 402 of title 23, United States Code; (2)$360,500,000 shall be for national priority safety programs under section 405 of title 23, United States Code; (3)$42,300,000 shall be for the high visibility enforcement program under section 404 of title 23, United States Code; and (4)$42,744,832 shall be for grant administrative expenses under chapter 4 of title 23, United States Code: Provided further, That none of these funds shall be used for construction, rehabilitation, or remodeling costs, or for office furnishings and fixtures for State, local or private buildings or structures: Provided further, That not to exceed $500,000 of the funds made available for national priority safety programs under section 405 of title 23, United States Code, for impaired driving countermeasures (as described in subsection(d) of that section) shall be available for technical assistance to the States: Provided further, That with respect to the Transfers provision under section 405(a)(10) of title 23, United States Code, any amounts transferred to increase the amounts made available under section 402 shall include the obligation authority for such amounts: Provided further, That the Administrator shall notify the House and Senate Committees on Appropriations of any exercise of the authority granted under the preceding proviso or under section 405(a)(10) of title 23, United States Code, within 5 days.'''
+
+[[nodes]]
+jurisdiction = "financial_services"
+bill = "118-s-4928"
+version = "1_reported-in-senate.xml"
+node_ordinal = 161
+element_id = "idF86E2359EAE3423C9403BF2EA1DB99E6"
+path = "TITLE V > INDEPENDENT AGENCIES > Office of personnel management > SALARIES AND EXPENSES"
+text_sha256 = "347cc948ff42d69e96f143d9ba20e75679bf6498f2986e3e7c526aa580aa8bec"
+predicted = "appropriation"
+label = ""
+note = ""
+text = '''
+For necessary expenses of the Office of Inspector General in carrying out the provisions of chapter 4 of title 5, United States Code, including services as authorized by 5 U.S.C. 3109, hire of passenger motor vehicles, $6,908,000, and in addition, not to exceed $29,487,000 for administrative expenses to audit, investigate, and provide other oversight of the Office of Personnel Management's retirement and insurance programs, to be transferred from the appropriate trust funds of the Office of Personnel Management, as determined by the Inspector General: Provided, That the Inspector General is authorized to rent conference rooms in the District of Columbia and elsewhere.'''
+
+[[nodes]]
+jurisdiction = "state_foreign_ops"
+bill = "118-s-4797"
+version = "1_reported-in-senate.xml"
+node_ordinal = 50
+element_id = "id8FC567BD69F44E82816D4E9FDFF24860"
+path = "TITLE III\u2014BILATERAL ECONOMIC ASSISTANCE > Department of State > MIGRATION AND REFUGEE ASSISTANCE"
+text_sha256 = "4039f95227beeb3959ea741acb3086b3d5d87d864fb259fcf9b7c4e100a8cc15"
+predicted = "appropriation"
+label = ""
+note = ""
+text = '''
+For necessary expenses not otherwise provided for, to enable the Secretary of State to carry out the provisions of section 2(a) and(b) of the Migration and Refugee Assistance Act of 1962 (22 U.S.C. 2601), and other activities to meet refugee and migration needs; salaries and expenses of personnel and dependents as authorized by the Foreign Service Act of 1980 (22 U.S.C. 3901 et seq.); allowances as authorized by sections 5921 through 5925 of title 5, United States Code; purchase and hire of passenger motor vehicles; and services as authorized by section 3109 of title 5, United States Code, $4,028,850,000, to remain available until expended, of which $1,100,000,000 is designated by the Congress as being for an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985: Provided, That of the funds appropriated under this heading, $5,000,000 shall be made available for refugees resettling in Israel.'''
+
+[[nodes]]
+jurisdiction = "labor_hhs"
+bill = "118-s-4942"
+version = "1_reported-in-senate.xml"
+node_ordinal = 193
+element_id = "idD4E0D63028BE431FBF0D39B719D82FE8"
+path = "TITLE III\u2014DEPARTMENT OF EDUCATION > Innovation and Improvement"
+text_sha256 = "f7384c0544ea17ae3ac6af0a955c1fd8d0cc87be5c4a4d727b0ab69381f0de56"
+predicted = "appropriation"
+label = ""
+note = ""
+text = '''
+For carrying out activities authorized by subparts 1, 3, and 4 of part B of title II, and parts C, D, and E and subparts 1 and 4 of part F of title IV of the ESEA, $1,115,000,000: Provided, That $173,000,000 shall be for subparts 1, 3 and 4 of part B of title II and shall be made available without regard to sections 2201, 2231(b) and 2241: Provided further, That $683,000,000 shall be for parts C, D, and E and subpart 4 of part F of title IV, and shall be made available without regard to sections 4311, 4409(a), and 4601 of the ESEA: Provided further, That section 4303(d)(3)(A)(i) shall not apply to the funds available for part C of title IV: Provided further, That of the funds available for part C of title IV, the Secretary shall use not less than $60,000,000 to carry out section 4304, not more than $140,000,000, to remain available through March 31, 2026, to carry out section 4305(b), from which the amount necessary for continuation grants may be available for obligation through March 31, 2026, and not more than $16,000,000 to carry out the activities in section 4305(a)(3): Provided further, That notwithstanding section 4601(b), $259,000,000 shall be available through December 31, 2025 for subpart 1 of part F of title IV: Provided further, That of the funds available for subpart 4 of part F of title IV, not less than $8,000,000 shall be used for grants for eligible national nonprofit organizations, as described in the Applications for New Awards; Assistance for Arts Education Program published in the Federal Register on May 31, 2022, for activities described under section 4642(a)(1)(C): Provided further, That the competitive preference priority described in such notice shall be given only to an eligible national nonprofit organization that previously received the competitive preference priority pursuant to such notice.'''
+
+[[nodes]]
+jurisdiction = "transportation_hud"
+bill = "118-s-4796"
+version = "1_reported-in-senate.xml"
+node_ordinal = 100
+element_id = "id5AB5622A18D04BEAA461B9D2E19DA205"
+path = "TITLE I\u2014DEPARTMENT OF TRANSPORTATION > Federal transit administration > TECHNICAL ASSISTANCE AND TRAINING"
+text_sha256 = "8eb361b73cae57a3491e9e34add1d74ff8c308abe2beb76591a1cae630069861"
+predicted = "appropriation"
+label = ""
+note = ""
+text = '''
+For necessary expenses to carry out section 5314 of title 49, United States Code, $8,000,000, to remain available until September 30, 2026: Provided, That the assistance provided under this heading does not duplicate the activities of section 5311(b) or section 5312 of title 49, United States Code: Provided further, That amounts made available under this heading are in addition to any other amounts made available for such purposes: Provided further, That amounts made available under this heading shall not be subject to any limitation on obligations set forth in this or any other Act.'''
+
+[[nodes]]
+jurisdiction = "transportation_hud"
+bill = "118-s-4796"
+version = "1_reported-in-senate.xml"
+node_ordinal = 63
+element_id = "id50313b208ac04e1dafba785914e68ffb"
+path = "TITLE I\u2014DEPARTMENT OF TRANSPORTATION > Federal Highway Administration > Sec. 120 > (e) Redistribution of certain authorized funds"
+text_sha256 = "f43aabc25346dd608ba6478b453fa6cab723f8d1181574979e16ce31d3016979"
+predicted = "authorization"
+label = ""
+note = ""
+text = '''
+(e)Redistribution of certain authorized funds(1)In general Not later than 30 days after the date of distribution of obligation limitation under subsection(a), the Secretary shall distribute to the States any funds (excluding funds authorized for the program under section 202 of title 23, United States Code) that—(A)are authorized to be appropriated for such fiscal year for Federal-aid highway programs; and(B)the Secretary determines will not be allocated to the States (or will not be apportioned to the States under section 204 of title 23, United States Code), and will not be available for obligation, for such fiscal year because of the imposition of any obligation limitation for such fiscal year.(2)Ratio Funds shall be distributed under paragraph(1) in the same proportion as the distribution of obligation authority under subsection(a)(5).(3)Availability Funds distributed to each State under paragraph(1) shall be available for any purpose described in section 133(b) of title 23, United States Code.'''
+
+[[nodes]]
+jurisdiction = "state_foreign_ops"
+bill = "118-s-4797"
+version = "1_reported-in-senate.xml"
+node_ordinal = 421
+element_id = "id0a1a4123b9024a9489775b276e6601f7"
+path = "TITLE VII\u2014GENERAL PROVISIONS > Sec. 7069 > (a) African development bank"
+text_sha256 = "801cfeecb6d0e04bb7fff605e17bffec49fcaf0948f52514682318c18c01e68e"
+predicted = "authorization"
+label = ""
+note = ""
+text = '''
+(a)African development bank The African Development Bank Act (22 U.S.C. 290i et seq.) is amended by inserting at the end the following new section: 1346. General callable capital increase(a)Subscription authorized(1)In general The United States Governor of the Bank may subscribe on behalf of the United States to 800,000 additional shares of the capital stock of the Bank.(2)Limitation Any subscription by the United States to the capital stock of the Bank shall be effective only to such extent and in such amounts as are provided in advance in appropriations Acts.(b)Authorization of appropriations For the increase in the United States subscription to the Bank under subsection(a), there is authorized to be appropriated, without fiscal year limitation, $7,800,000,000, for payment by the Secretary of the Treasury for callable shares of the Bank..'''
+
+[[nodes]]
+jurisdiction = "transportation_hud"
+bill = "118-s-4796"
+version = "1_reported-in-senate.xml"
+node_ordinal = 69
+element_id = "id5a00deca9b3b4ca58f7c6b5a62c0a59d"
+path = "TITLE I\u2014DEPARTMENT OF TRANSPORTATION > Federal Highway Administration > Sec. 124 > (b)"
+text_sha256 = "6f27f6bc15d6cdf94124a8970526473fbd1ff209968df07620da83be60f8b838"
+predicted = "authorization"
+label = ""
+note = ""
+text = '''
+(b)In this section, the term earmarked amount means—(1)congressionally directed spending, as defined in rule XLIV of the Standing Rules of the Senate, identified in a prior law, report, or joint explanatory statement, which was authorized to be appropriated or appropriated more than 10 fiscal years prior to the current fiscal year, and administered by the Federal Highway Administration; or(2)a congressional earmark, as defined in rule XXI of the Rules of the House of Representatives, identified in a prior law, report, or joint explanatory statement, which was authorized to be appropriated or appropriated more than 10 fiscal years prior to the current fiscal year, and administered by the Federal Highway Administration.'''
+
+[[nodes]]
+jurisdiction = "state_foreign_ops"
+bill = "118-s-4797"
+version = "1_reported-in-senate.xml"
+node_ordinal = 422
+element_id = "ide15e872653c849f29de1fc850cfa1535"
+path = "TITLE VII\u2014GENERAL PROVISIONS > Sec. 7069 > (b) European bank for reconstruction and development"
+text_sha256 = "0d330bcaed7ae7e6d0ed573370213ae8e104e1bc3c90c416c02878e914c7b99b"
+predicted = "authorization"
+label = ""
+note = ""
+text = '''
+(b)European bank for reconstruction and development The European Bank for Reconstruction and Development Act (22 U.S.C. 290l et seq.) is amended by adding at the end the following new paragraph:(13)Capital increase(A)Subscription authorized(i)The United States Governor of the Bank is authorized to subscribe on behalf of the United States to 40,000 additional shares of the paid-in capital stock of the Bank.(ii)Any subscription by the United States to additional paid-in capital stock of the Bank shall be effective only to such extent and in such amounts as are provided in advance in appropriations Acts.(B)Authorization of appropriations In order to pay for the increase in the United States subscription to the Bank under paragraph(A), there are authorized to be appropriated, without fiscal year limitation, $439,100,000, for payment by the Secretary of the Treasury..'''
+
+[[nodes]]
+jurisdiction = "state_foreign_ops"
+bill = "118-s-4797"
+version = "1_reported-in-senate.xml"
+node_ordinal = 85
+element_id = "id99436F57915345B9B8BBC2728F1D4FE7"
+path = "TITLE VI\u2014EXPORT AND INVESTMENT ASSISTANCE > United States international development finance corporation > CORPORATE CAPITAL ACCOUNT"
+text_sha256 = "64a09899f8d6db1de4e84969bbb7821782f91f4699b516202ed06fb3571b4880"
+predicted = "availability"
+label = ""
+note = ""
+text = '''
+The United States International Development Finance Corporation (the Corporation) is authorized to make such expenditures and commitments within the limits of funds and borrowing authority available to the Corporation, and in accordance with the law, and to make such expenditures and commitments without regard to fiscal year limitations, as provided by section 9104 of title 31, United States Code, as may be necessary in carrying out the programs for the current fiscal year for the Corporation: Provided, That for necessary expenses of the activities described in subsections(b),(c),(e),(f), and(g) of section 1421 of the BUILD Act of 2018 (division F of Public Law 115–254) and for administrative expenses to carry out authorized activities described in section 1434(d) of such Act, $1,008,400,000: Provided further, That of the amount provided— (1)$245,000,000 shall remain available until September 30, 2027, for administrative expenses to carry out authorized activities (including an amount for official reception and representation expenses which shall not exceed $25,000); and (2)$763,400,000 shall remain available until September 30, 2027, for the activities described in subsections(b),(c),(e),(f), and(g) of section 1421 of the BUILD Act of 2018, except such amounts obligated in a fiscal year for activities described in section 1421(c) of such Act shall remain available for disbursement for the term of the underlying project: Provided further, That amounts made available under this paragraph may be paid to the United States International Development Finance Corporation—Program Account for programs authorized by subsections(b),(e),(f), and(g) of section 1421 of the BUILD Act of 2018: Provided further, That funds may only be obligated pursuant to section 1421(g) of the BUILD Act of 2018 subject to prior consultation with the appropriate congressional committees and the regular notification procedures of the Committees on Appropriations: Provided further, That funds appropriated by this Act and prior Acts making appropriations for the Department of State, foreign operations, and related programs for support by the Corporation in upper-middle income countries shall be subject to prior consultation with the Committees on Appropriations: Provided further, That in fiscal year 2025 collections of amounts described in section 1434(h) of the BUILD Act of 2018 shall be credited as offsetting collections to this appropriation: Provided further, That such collections collected in fiscal year 2025 in excess of $1,008,400,000 shall be credited to this account and shall be available in future fiscal years only to the extent provided in advance in appropriations Acts: Provided further, That in fiscal year 2025, if such collections are less than $1,008,400,000, receipts collected pursuant to the BUILD Act of 2018 and the Federal Credit Reform Act of 1990, in an amount equal to such shortfall, shall be credited as offsetting collections to this appropriation: Provided further, That fees charged for project-specific transaction costs as described in section 1434(k) of the BUILD Act of 2018, and other direct costs associated with origination or monitoring services provided to specific or potential investors, shall not be considered administrative expenses for the purposes of this heading: Provided further, That such fees shall be credited to this account for such purposes, to remain available until expended: Provided further, That funds appropriated or otherwise made available under this heading may not be used to provide any type of assistance that is otherwise prohibited by any other provision of law or to provide assistance to any foreign country that is otherwise prohibited by any other provision of law: Provided further, That the sums herein appropriated from the General Fund shall be reduced on a dollar-for-dollar basis by the offsetting collections described under this heading so as to result in a final fiscal year appropriation from the General Fund estimated at $593,400,000.'''
+
+[[nodes]]
+jurisdiction = "defense"
+bill = "118-s-4921"
+version = "1_reported-in-senate.xml"
+node_ordinal = 172
+element_id = "id816CB0F312DE42BB84F4A0852EF611A3"
+path = "TITLE VIII > GENERAL PROVISIONS > Sec. 8062"
+text_sha256 = "987bababd201a9e80ce291ac352acea8331cb0c001917a33d0a958c3299fa72d"
+predicted = "availability"
+label = ""
+note = ""
+text = '''
+Of the amounts appropriated in this Act under the heading Operation and Maintenance, Army, $194,452,598 shall remain available until expended: Provided, That, notwithstanding any other provision of law, the Secretary of Defense is authorized to transfer such funds to other activities of the Federal Government: Provided further, That the Secretary of Defense is authorized to enter into and carry out contracts for the acquisition of real property, construction, personal services, and operations related to projects carrying out the purposes of this section: Provided further, That contracts entered into under the authority of this section may provide for such indemnification as the Secretary determines to be necessary: Provided further, That projects authorized by this section shall comply with applicable Federal, State, and local law to the maximum extent consistent with the national security, as determined by the Secretary of Defense.'''
+
+[[nodes]]
+jurisdiction = "financial_services"
+bill = "118-s-4928"
+version = "1_reported-in-senate.xml"
+node_ordinal = 15
+element_id = "id79D0D1753D2E43C8983E4695F27BD92B"
+path = "TITLE I > DEPARTMENT OF THE TREASURY > Community development financial institutions fund"
+text_sha256 = "5204ec7448ec30363e798ab576ca57fd6632707d058886ff82b54832b8bc14b0"
+predicted = "cap"
+label = ""
+note = ""
+text = '''
+To carry out the Riegle Community Development and Regulatory Improvement Act of 1994 (subtitle A of title I of Public Law 103–325), including services authorized by section 3109 of title 5, United States Code, but at rates for individuals not to exceed the per diem rate equivalent to the rate for EX–III, $354,000,000. Of the amount appropriated under this heading— (1)not less than $191,000,000, notwithstanding section 108(e) of Public Law 103–325 (12 U.S.C. 4707(e)) with regard to Small and/or Emerging Community Development Financial Institutions Assistance awards, is available until September 30, 2026, for financial assistance and technical assistance under subparagraphs(A) and(B) of section 108(a)(1), respectively, of Public Law 103–325 (12 U.S.C. 4707(a)(1)(A) and(B)), of which up to $1,600,000 may be available for training and outreach under section 109 of Public Law 103–325 (12 U.S.C. 4708), of which up to $3,153,750 may be used for the cost of direct loans, of which up to $10,000,000, notwithstanding subsection(d) of section 108 of Public Law 103–325 (12 U.S.C. 4707(d)), may be available to provide financial assistance, technical assistance, training, and outreach to community development financial institutions to expand investments that benefit individuals with disabilities, and of which up to $2,000,000 shall be for the Economic Mobility Corps to be operated in conjunction with the Corporation for National and Community Service, pursuant to 42 U.S.C. 12571: Provided, That the cost of direct and guaranteed loans, including the cost of modifying such loans, shall be as defined in section 502 of the Congressional Budget Act of 1974: Provided further, That these funds are available to subsidize gross obligations for the principal amount of direct loans not to exceed $25,000,000: Provided further, That of the funds provided under this paragraph, excluding those made to community development financial institutions to expand investments that benefit individuals with disabilities and those made to community development financial institutions that serve populations living in persistent poverty counties, the CDFI Fund shall prioritize Financial Assistance awards to organizations that invest and lend in high-poverty areas: Provided further, That for purposes of this section, the term high-poverty area means any census tract with a poverty rate of at least 20 percent as measured by the 2016–2020 5-year data series available from the American Community Survey of the Bureau of the Census for all States and Puerto Rico or with a poverty rate of at least 20 percent as measured by the 2020 Island areas Decennial Census data for any territory or possession of the United States; (2)not less than $35,000,000, notwithstanding section 108(e) of Public Law 103–325 (12 U.S.C. 4707(e)), is available until September 30, 2026, for financial assistance, technical assistance, training, and outreach programs designed to benefit Native American, Native Hawaiian, and Alaska Native communities and provided primarily through qualified community development lender organizations with experience and expertise in community development banking and lending in Indian country, Native American organizations, Tribes and Tribal organizations, and other suitable providers; (3)not less than $40,000,000 is available until September 30, 2026, for the Bank Enterprise Award program; (4)not less than $24,000,000, notwithstanding subsections(d) and(e) of section 108 of Public Law 103–325 (12 U.S.C. 4707(d) and(e)), is available until September 30, 2026, for a Healthy Food Financing Initiative to provide financial assistance, technical assistance, training, and outreach to community development financial institutions for the purpose of offering affordable financing and technical assistance to expand the availability of healthy food options in distressed communities; (5)not less than $9,000,000 is available until September 30, 2026, to provide grants for loan loss reserve funds and to provide technical assistance for small dollar loan programs under section 122 of Public Law 103–325 (12 U.S.C. 4719): Provided, That sections 108(d) and 122(b)(2) of such Public Law shall not apply to the provision of such grants and technical assistance; (6)up to $45,000,000 is available for administrative expenses, including administration of CDFI Fund programs and the New Markets Tax Credit Program, of which not less than $1,000,000 is for the development of tools to better assess and inform CDFI investment performance and CDFI program impacts, and up to $300,000 is for administrative expenses to carry out the direct loan program; and (7)up to $10,000,000 is available until September 30, 2026 for the cost, as defined in section 502 of the Congressional Budget Act of 1974, of commitments to guarantee bonds and notes under section 114A of the Riegle Community Development and Regulatory Improvement Act of 1994 (12 U.S.C. 4713a): Provided, That commitments to guarantee bonds and notes under such section 114A shall not exceed $500,000,000: Provided further, That such section 114A shall remain in effect until December 31, 2026: Provided further, That of the funds awarded under this heading, except those provided for the Economic Mobility Corps, not less than 10 percent shall be used for awards that support investments that serve populations living in persistent poverty counties: Provided further, That for the purposes of this paragraph and paragraph(1), the term persistent poverty counties means any county, including county equivalent areas in Puerto Rico, that has had 20 percent or more of its population living in poverty over the past 30 years, as measured by the 1990 and 2000 decennial censuses and the 2016–2020 5-year data series available from the American Community Survey of the Bureau of the Census or any other territory or possession of the United States that has had 20 percent or more of its population living in poverty over the past 30 years, as measured by the 1990, 2000, 2010, and 2020 Island Areas Decennial Censuses, or equivalent data, of the Bureau of the Census.'''
+
+[[nodes]]
+jurisdiction = "state_foreign_ops"
+bill = "118-s-4797"
+version = "1_reported-in-senate.xml"
+node_ordinal = 401
+element_id = "id9BF3A3CB18EA4483A429FAB8E6F0F914"
+path = "TITLE VII\u2014GENERAL PROVISIONS > Sec. 7064 > (d) Other matters"
+text_sha256 = "83967a433546a085e0c22d67c16a67d989ebc85fa50abc79a535ae7016d47386"
+predicted = "cap"
+label = ""
+note = ""
+text = '''
+(d)Other matters(1)In addition to amounts appropriated or otherwise made available by this Act under the heading Diplomatic Programs—(A)as authorized by section 810 of the United States Information and Educational Exchange Act, not to exceed $5,000,000, to remain available until expended, may be credited to this appropriation from fees or other payments received from English teaching, library, motion pictures, and publication programs and from fees from educational advising and counseling and exchange visitor programs; and(B)not to exceed $15,000, which shall be derived from reimbursements, surcharges, and fees for use of Blair House facilities.(2)Funds appropriated or otherwise made available by this Act under the heading Diplomatic Programs are available for acquisition by exchange or purchase of passenger motor vehicles as authorized by law and, pursuant to section 1108(g) of title 31, United States Code, for the field examination of programs and activities in the United States funded from any account contained in title I of this Act.(3)Consistent with section 204 of the Admiral James W. Nance and Meg Donovan Foreign Relations Authorization Act, Fiscal Years 2000 and 2001 (22 U.S.C. 2452b), up to $25,000,000 of the amounts made available under the heading Diplomatic Programs in this Act may be obligated and expended for United States participation in international fairs and expositions abroad, including for construction and operation of a United States pavilion at Expo 2025.(4)Of the funds appropriated by this Act under the heading Diplomatic Programs and in addition to the amount identified in paragraph(4) under such heading, up to $10,000,000 may remain available until expended for settlements and damages related to employment claims, as necessary: Provided, That such funds shall be in addition to funds otherwise available for such purposes.(5)Of the funds made available under the heading Enduring Welcome Administrative Expenses Account, up to $1,000,000 shall be used to reimburse, not later than 180 days after the date of enactment of this Act, United States-based entities for services rendered in support of evacuation, relocation, reception, and related activities in 2021 that were associated with Operation Allies Welcome, following consultation with the Committees on Appropriations.'''
+
+[[nodes]]
+jurisdiction = "defense"
+bill = "118-s-4921"
+version = "1_reported-in-senate.xml"
+node_ordinal = 74
+element_id = "idFCE4F24889C24A8C90482DF9C2E43B52"
+path = "TITLE VIII > GENERAL PROVISIONS > Sec. 8005"
+text_sha256 = "22f775a9ef39cb0b9585b5b1e6ff2cb56e0475568718570378962bc58acc1307"
+predicted = "cap"
+label = ""
+note = ""
+text = '''
+Upon determination by the Secretary of Defense that such action is necessary in the national interest, the Secretary may, with the approval of the Director of the Office of Management and Budget, transfer not to exceed $6,000,000,000 of working capital funds of the Department of Defense or funds made available in this Act to the Department of Defense for military functions (except military construction) between such appropriations or funds or any subdivision thereof, to be merged with and to be available for the same purposes, and for the same time period, as the appropriation or fund to which transferred: Provided, That such authority to transfer may not be used unless for higher priority items, based on unforeseen military requirements, than those for which originally appropriated and in no case where the item for which funds are requested has been denied by the Congress: Provided further, That the Secretary of Defense shall notify the Congress promptly of all transfers made pursuant to this authority or any other authority in this Act: Provided further, That no part of the funds in this Act shall be available to prepare or present a request to the Committees on Appropriations of the House of Representatives and the Senate for reprogramming of funds, unless for higher priority items, based on unforeseen military requirements, than those for which originally appropriated and in no case where the item for which reprogramming is requested has been denied by the Congress: Provided further, That a request for multiple reprogrammings of funds using authority provided in this section shall be made prior to June 30, 2025: Provided further, That transfers among military personnel appropriations shall not be taken into account for purposes of the limitation on the amount of funds that may be transferred under this section.'''
+
+[[nodes]]
+jurisdiction = "defense"
+bill = "118-s-4921"
+version = "1_reported-in-senate.xml"
+node_ordinal = 112
+element_id = "idb6b1784fe294480282d1657b5f030cce"
+path = "TITLE VIII > GENERAL PROVISIONS > Sec. 8026 > (d)"
+text_sha256 = "8e73d2e04475bfafc8fbc3dc5797c46edefb0bb441561334986cf7de9358f6df"
+predicted = "cap"
+label = ""
+note = ""
+text = '''
+(d)Notwithstanding any other provision of law, of the funds available to the department during fiscal year 2025, not more than $2,886,300,000 may be funded for professional technical staff-related costs of the defense FFRDCs: Provided, That within such funds, not more than $461,300,000 shall be available for the defense studies and analysis FFRDCs: Provided further, That this subsection shall not apply to staff years funded in the National Intelligence Program and the Military Intelligence Program: Provided further, That the Secretary of Defense shall, with the submission of the department’s fiscal year 2026 budget request, submit a report presenting the specific amounts of staff years of technical effort to be allocated for each defense FFRDC by program during that fiscal year and the associated budget estimates, by appropriation account and program.'''
+
+[[nodes]]
+jurisdiction = "transportation_hud"
+bill = "118-s-4796"
+version = "1_reported-in-senate.xml"
+node_ordinal = 54
+element_id = "id721581BBC60542CC95739BD5C35DE8C2"
+path = "TITLE I\u2014DEPARTMENT OF TRANSPORTATION > Federal Highway Administration > LIMITATION ON ADMINISTRATIVE EXPENSES"
+text_sha256 = "a4b52c2278261374dacb14484442101c8f7bfc3f2e6b9a2b717ba524e1e1956e"
+predicted = "cap"
+label = ""
+note = ""
+text = '''
+Not to exceed $512,695,778 together with advances and reimbursements received by the Federal Highway Administration, shall be obligated for necessary expenses for administration and operation of the Federal Highway Administration: Provided, That in addition, $3,248,000 shall be transferred to the Appalachian Regional Commission in accordance with section 104(a) of title 23, United States Code.'''
+
+[[nodes]]
+jurisdiction = "labor_hhs"
+bill = "118-s-4942"
+version = "1_reported-in-senate.xml"
+node_ordinal = 156
+element_id = "idE0E0204E75BC412E9086A9BDBACC9098"
+path = "TITLE II\u2014DEPARTMENT OF HEALTH AND HUMAN SERVICES > General provisions > Sec. 216"
+text_sha256 = "5710976502aeb02dfcfe1b56eee12b3b613bec71cb6fd32aa3ad9216428cfd5d"
+predicted = "cap"
+label = ""
+note = ""
+text = '''
+Not to exceed $100,000,000 of funds appropriated by this Act to the institutes and centers of the National Institutes of Health may be used for alteration, repair, or improvement of facilities, as necessary for the proper and efficient conduct of the activities authorized herein, at not to exceed $5,000,000 per project.'''
+
+[[nodes]]
+jurisdiction = "financial_services"
+bill = "118-s-4928"
+version = "1_reported-in-senate.xml"
+node_ordinal = 254
+element_id = "idCEDADD77A6DA41F5B25EACFF86A3A69D"
+path = "TITLE VII > GENERAL PROVISIONS\u2014GOVERNMENT-WIDE > Departments, agencies, and corporations > Sec. 721"
+text_sha256 = "f1d4ace5220f461cd8f2a1d3067070a08b810dbbf1fa9ce1d8d7a3cce454937a"
+predicted = "cap"
+label = ""
+note = ""
+text = '''
+Notwithstanding 31 U.S.C. 1346 and section 708 of this Act, the head of each Executive department and agency is hereby authorized to transfer to or reimburse General Services Administration, Government-wide Policy with the approval of the Director of the Office of Management and Budget, funds made available for the current fiscal year by this or any other Act, including rebates from charge card and other contracts: Provided, That these funds shall be administered by the Administrator of General Services to support Government-wide and other multi-agency financial, information technology, procurement, and other management innovations, initiatives, and activities, including improving coordination and reducing duplication, as approved by the Director of the Office of Management and Budget, in consultation with the appropriate interagency and multi-agency groups designated by the Director (including the President's Management Council for overall management improvement initiatives, the Chief Financial Officers Council for financial management initiatives, the Chief Information Officers Council for information technology initiatives, the Chief Human Capital Officers Council for human capital initiatives, the Chief Acquisition Officers Council for procurement initiatives, and the Performance Improvement Council for performance improvement initiatives): Provided further, That the total funds transferred or reimbursed shall not exceed $15,000,000 to improve coordination, reduce duplication, and for other activities related to Federal Government Priority Goals established by 31 U.S.C. 1120, and not to exceed $17,000,000 for Government-wide innovations, initiatives, and activities: Provided further, That the funds transferred to or for reimbursement of General Services Administration, Government-Wide Policy during fiscal year 2025 shall remain available for obligation through September 30, 2026: Provided further, That not later than 90 days after enactment of this Act, the Director of the Office of Management and Budget, in consultation with the Administrator of General Services, shall submit to the Committees on Appropriations of the House of Representatives and the Senate, the Committee on Homeland Security and Governmental Affairs of the Senate, and the Committee on Oversight and Accountability of the House of Representatives a detailed spend plan for the funds to be transferred or reimbursed: Provided further, That the spend plan shall, at a minimum, include:(i) the amounts currently in the funds authorized under this section and the estimate of amounts to be transferred or reimbursed in fiscal year 2025;(ii) a detailed breakdown of the purposes for all funds estimated to be transferred or reimbursed pursuant to this section (including total number of personnel and costs for all staff whose salaries are provided for by this section);(iii) where applicable, a description of the funds intended for use by or for the benefit of each executive council; and(iv) where applicable, a description of the funds intended for use by or for the implementation of specific laws passed by Congress: Provided further, That no transfers or reimbursements may be made pursuant to this section until 15 days following notification of the Committees on Appropriations of the House of Representatives and the Senate by the Director of the Office of Management and Budget.'''
+
+[[nodes]]
+jurisdiction = "financial_services"
+bill = "118-s-4928"
+version = "1_reported-in-senate.xml"
+node_ordinal = 40
+element_id = "id7F0FCBA8FA00458D83DBFF9F4071B93D"
+path = "TITLE I > DEPARTMENT OF THE TREASURY > Administrative provisions\u2014Department of the treasury > Sec. 122"
+text_sha256 = "f7db0f31b1cca9008a9ff41f9478ad736f620565a4463121152534c10d69366c"
+predicted = "cap"
+label = ""
+note = ""
+text = '''
+Not to exceed $5,000 shall be made available from the Bureau of Engraving and Printing's Industrial Revolving Fund for necessary official reception and representation expenses.'''
+
+[[nodes]]
+jurisdiction = "labor_hhs"
+bill = "118-s-4942"
+version = "1_reported-in-senate.xml"
+node_ordinal = 50
+element_id = "idDAAF49BAE27E458790D115694CCDD381"
+path = "TITLE I\u2014DEPARTMENT OF LABOR > General provisions > Sec. 112"
+text_sha256 = "e3fcf70336c870c17c310fc8673f175d3b82016cdff046d4e01dd8f7e92c53b4"
+predicted = "cap"
+label = ""
+note = ""
+text = '''
+Notwithstanding any other provision of law, the Secretary may furnish through grants, cooperative agreements, contracts, and other arrangements, not more than $450,000 of excess personal property, at a value determined by the Secretary, to apprenticeship programs for the purpose of training apprentices in those programs.'''
+
+[[nodes]]
+jurisdiction = "state_foreign_ops"
+bill = "118-s-4797"
+version = "1_reported-in-senate.xml"
+node_ordinal = 72
+element_id = "idA585E81A3443402396F294FC75530D2B"
+path = "TITLE V\u2014MULTILATERAL ASSISTANCE > International financial institutions > LIMITATION ON CALLABLE CAPITAL SUBSCRIPTIONS"
+text_sha256 = "a4f07dd344b7852851f359e2a1bfebde88d004029ee27995af68a1c324faa974"
+predicted = "cap"
+label = ""
+note = ""
+text = '''
+The United States Governor of the African Development Bank may subscribe without fiscal year limitation to the callable capital portion of the United States share of increases in capital stock in an amount not to exceed $8,656,174,624.'''
+
+[[nodes]]
+jurisdiction = "cjs"
+bill = "118-s-4795"
+version = "1_reported-in-senate.xml"
+node_ordinal = 94
+element_id = "id078f04fd225d4e45bc9a50b006dfdaa7"
+path = "TITLE II > DEPARTMENT OF JUSTICE > General provisions\u2014Department of justice > Sec. 216 > (b)"
+text_sha256 = "1c9cd2346f3d21086898e1d5f5e73add5c814ca2995100db3ddaae5d05a3fe42"
+predicted = "cap"
+label = ""
+note = ""
+text = '''
+(b)Not to exceed $30,000,000 of the unobligated balances transferred to the capital account of the Department of Justice Working Capital Fund pursuant to title I of Public Law 102–140 (105 Stat. 784; 28 U.S.C. 527 note) shall be available for obligation in fiscal year 2025, and any use, obligation, transfer, or allocation of such funds shall be treated as a reprogramming of funds under section 505 of this Act.'''
+
+[[nodes]]
+jurisdiction = "cjs_fy2024"
+bill = "118-s-2321"
+version = "1_reported-in-senate.xml"
+node_ordinal = 24
+element_id = "id034F4F105E2D458E9A0219962E35F634"
+path = "TITLE I\u2014DEPARTMENT OF COMMERCE > National oceanic and atmospheric administration > FISHERIES FINANCE PROGRAM ACCOUNT"
+text_sha256 = "70b2dc45b4964faf0095b3fe5d629bb6865045578a198cc6b28bb2211577f3f0"
+predicted = "cap"
+label = ""
+note = ""
+text = '''
+Subject to section 502 of the Congressional Budget Act of 1974, during fiscal year 2024, obligations of direct loans may not exceed $24,000,000 for Individual Fishing Quota loans and not to exceed $150,000,000 for traditional direct loans as authorized by the Merchant Marine Act of 1936.'''
+
+[[nodes]]
+jurisdiction = "cjs"
+bill = "118-s-4795"
+version = "1_reported-in-senate.xml"
+node_ordinal = 23
+element_id = "id034F4F105E2D458E9A0219962E35F634"
+path = "TITLE I\u2014DEPARTMENT OF COMMERCE > National oceanic and atmospheric administration > FISHERIES FINANCE PROGRAM ACCOUNT"
+text_sha256 = "561e5988508dec2b7c7b99fdf4e8b2a7796cc9887583a52eb39032bb3cbac67c"
+predicted = "cap"
+label = ""
+note = ""
+text = '''
+Subject to section 502 of the Congressional Budget Act of 1974, during fiscal year 2025, obligations of direct loans may not exceed $24,000,000 for Individual Fishing Quota loans and not to exceed $150,000,000 for traditional direct loans as authorized by the Merchant Marine Act of 1936.'''
+
+[[nodes]]
+jurisdiction = "cjs"
+bill = "118-s-4795"
+version = "1_reported-in-senate.xml"
+node_ordinal = 115
+element_id = "id7891e15624f24ecd85a1345b5e44b7d7"
+path = "TITLE III > SCIENCE > National aeronautics and space administration"
+text_sha256 = "991aa3f6213670f756dbf89c6f753c082f72a97dcf03a82dc0110bc10ade3429"
+predicted = "cap"
+label = ""
+note = ""
+text = '''
+Not to exceed $38,500,000 made available for the current fiscal year in this Act within Safety, Security and Mission Services may be transferred to the Working Capital Fund of the National Aeronautics and Space Administration. Balances so transferred shall be available until expended only for activities described in section 30102(b)(3) of title 51, United States Code, as amended by this Act, and shall remain available until expended. Any transfer pursuant to this provision shall be treated as a reprogramming of funds under section 505 of this Act and shall not be available for obligation except in compliance with the procedures set forth in that section. There is hereby established in the Treasury of the United States a fund to be known as the National Aeronautics and Space Administration Nonrecurring Expenses Fund (the Fund). Unobligated balances of expired discretionary funds appropriated for this or any succeeding fiscal year from the General Fund of the Treasury to the National Aeronautics and Space Administration (NASA) by this or any other Act may be transferred (not later than the end of the fifth fiscal year after the last fiscal year for which such funds are available for the purposes for which appropriated) into the Fund. Amounts deposited in the Fund shall be available until expended, and in addition to such other funds as may be available for such purposes, for facilities infrastructure improvements, including nonrecurring maintenance, necessary for the operation of NASA, subject to approval by the Office of Management and Budget. Amounts in the Fund may not be available for the purpose described in subsection(b)(3) of section 30102 of title 51, United States Code. Amounts in the Fund may be obligated only after the Committees on Appropriations of the House of Representatives and the Senate are notified at least 15 days in advance of the planned use of funds.'''
+
+[[nodes]]
+jurisdiction = "interior_environment"
+bill = "118-s-4802"
+version = "1_reported-in-senate.xml"
+node_ordinal = 131
+element_id = "id922af98604e84ee9b57713e634c60bc0"
+path = "TITLE III\u2014RELATED AGENCIES > DEPARTMENT OF AGRICULTURE > Forest service"
+text_sha256 = "be53505e99652075b57a94e17c116bd11d34f211c8b2d0db271f30768a9a7b5d"
+predicted = "cap"
+label = ""
+note = ""
+text = '''
+Funds appropriated to the Forest Service under the headings National Forest System and Forest and Rangeland Research may be used for expenses associated with primary and secondary schooling for dependents of agency personnel stationed in Puerto Rico, who are subject to transfer and reassignment to other locations in the United States, at a cost not in excess of those authorized for the Department of Defense for the same area, when it is determined by the Chief of the Forest Service that public schools available in the locality are unable to provide adequately for the education of such dependents; Provided, That Congress hereby ratifies and approves payments for such purposes to agency employees stationed in Puerto Rico made by the Forest Service after August 2, 2005, in accordance with the 19th unnumbered paragraph under the heading Administrative Provisions, Forest Service in title III of Public Law 109–54, as amended. Funds appropriated to the Forest Service shall be available for interactions with and providing technical assistance to rural communities and natural resource-based businesses for sustainable rural development purposes. Funds appropriated to the Forest Service shall be available for payments to counties within the Columbia River Gorge National Scenic Area, pursuant to section 14(c)(1) and(2), and section 16(a)(2) of Public Law 99–663. Any funds appropriated to the Forest Service may be used to meet the non-Federal share requirement in section 502(c) of the Older Americans Act of 1965 (42 U.S.C. 3056(c)(2)). The Forest Service shall not assess funds for the purpose of performing fire, administrative, and other facilities maintenance and decommissioning. Notwithstanding any other provision of law, of any appropriations or funds available to the Forest Service, not to exceed $500,000 may be used to reimburse the Office of the General Counsel (OGC), Department of Agriculture, for travel and related expenses incurred as a result of OGC assistance or participation requested by the Forest Service at meetings, training sessions, management reviews, land purchase negotiations, and similar matters unrelated to civil litigation: Provided, That future budget justifications for both the Forest Service and the Department of Agriculture should clearly display the sums previously transferred and the sums requested for transfer. An eligible individual who is employed in any project funded under title V of the Older Americans Act of 1965 (42 U.S.C. 3056 et seq.) and administered by the Forest Service shall be considered to be a Federal employee for purposes of chapter 171 of title 28, United States Code.'''
+
+[[nodes]]
+jurisdiction = "defense"
+bill = "118-s-4921"
+version = "1_reported-in-senate.xml"
+node_ordinal = 134
+element_id = "id6545902C51B44E4C84540DDBAE2CCE14"
+path = "TITLE VIII > GENERAL PROVISIONS > Sec. 8039"
+text_sha256 = "00febb2a6c85d0ad6594d2fe91876b5f17f72ea34c6ba0c8927307f0a7ff8209"
+predicted = "cap"
+label = ""
+note = ""
+text = '''
+During the current fiscal year, appropriations which are available to the Department of Defense for operation and maintenance may be used to purchase items having an investment item unit cost of not more than $350,000: Provided, That upon determination by the Secretary of Defense that such action is necessary to meet the operational requirements of a Commander of a Combatant Command engaged in a named contingency operation overseas, such funds may be used to purchase items having an investment item unit cost of not more than $500,000.'''
+
+[[nodes]]
+jurisdiction = "labor_hhs"
+bill = "118-s-4942"
+version = "1_reported-in-senate.xml"
+node_ordinal = 11
+element_id = "idd0185402b52f414fa288448a9b98a0fc"
+path = "TITLE I\u2014DEPARTMENT OF LABOR > Veterans' employment and training"
+text_sha256 = "f6a8bc49422a7d70acf874d88d0073c4d3156f986acf62997f0e5e30685773d3"
+predicted = "cap"
+label = ""
+note = ""
+text = '''
+Not to exceed $269,841,000 may be derived from the Employment Security Administration account in the Unemployment Trust Fund to carry out the provisions of chapters 41, 42, and 43 of title 38, United States Code, of which— (1)$185,000,000 is for Jobs for Veterans State grants under 38 U.S.C. 4102A(b)(5) to support disabled veterans' outreach program specialists under section 4103A of such title and local veterans' employment representatives under section 4104(b) of such title, and for the expenses described in section 4102A(b)(5)(C), which shall be available for expenditure by the States through September 30, 2027, and not to exceed 3 percent for the necessary Federal expenditures for data systems and contract support to allow for the tracking of participant and performance information: Provided, That, in addition, such funds may be used to support such specialists and representatives in the provision of services to transitioning members of the Armed Forces who have participated in the Transition Assistance Program and have been identified as in need of intensive services, to members of the Armed Forces who are wounded, ill, or injured and receiving treatment in military treatment facilities or warrior transition units, to the spouses or other family caregivers of such wounded, ill, or injured members, and to surviving spouses of individuals who died while serving as members of the Armed Forces or as a result of a service-connected disability; (2)$34,379,000 is for carrying out the Transition Assistance Program under 38 U.S.C. 4113 and 10 U.S.C. 1144; (3)$47,048,000 is for Federal administration of chapters 41, 42, and 43 of title 38, and sections 2021, 2021A and 2023 of title 38, United States Code: Provided, That up to $500,000 may be used to carry out the Hire VETS Act (division O of Public Law 115–31); and (4)$3,414,000 is for the National Veterans' Employment and Training Services Institute under 38 U.S.C. 4109: Provided, That the Secretary may reallocate among the appropriations provided under paragraphs(1) through(4) above an amount not to exceed 3 percent of the appropriation from which such reallocation is made.'''
+
+[[nodes]]
+jurisdiction = "interior_environment"
+bill = "118-s-4802"
+version = "1_reported-in-senate.xml"
+node_ordinal = 9
+element_id = "id4476DE5D0448463EB1BE4E7A94DC67C4"
+path = "TITLE I\u2014DEPARTMENT OF THE INTERIOR > Bureau of land management > ADMINISTRATIVE PROVISIONS"
+text_sha256 = "4b5db036e2df170b24b99b6317e8c34ed0332cb878aca74494ed5fbd4a41a53d"
+predicted = "cap"
+label = ""
+note = ""
+text = '''
+The Bureau of Land Management may carry out the operations funded under this Act by direct expenditure, contracts, grants, cooperative agreements, and reimbursable agreements with public and private entities, including with States. Appropriations for the Bureau shall be available for purchase, erection, and dismantlement of temporary structures, and alteration and maintenance of necessary buildings and appurtenant facilities to which the United States has title; up to $100,000 for payments, at the discretion of the Secretary, for information or evidence concerning violations of laws administered by the Bureau; miscellaneous and emergency expenses of enforcement activities authorized or approved by the Secretary and to be accounted for solely on the Secretary’s certificate, not to exceed $10,000: Provided, That notwithstanding Public Law 90–620 (44 U.S.C. 501), the Bureau may, under cooperative cost-sharing and partnership arrangements authorized by law, procure printing services from cooperators in connection with jointly produced publications for which the cooperators share the cost of printing either in cash or in services, and the Bureau determines the cooperator is capable of meeting accepted quality standards: Provided further, That projects to be funded pursuant to a written commitment by a State government to provide an identified amount of money in support of the project may be carried out by the Bureau on a reimbursable basis.'''
+
+[[nodes]]
+jurisdiction = "state_foreign_ops"
+bill = "118-s-4797"
+version = "1_reported-in-senate.xml"
+node_ordinal = 68
+element_id = "id79BADECAEF2546B18C5E5EFA0A12BD1C"
+path = "TITLE V\u2014MULTILATERAL ASSISTANCE > International financial institutions > LIMITATION ON CALLABLE CAPITAL SUBSCRIPTIONS"
+text_sha256 = "82aec7e1e04f45ad8afa286f4b2493e33cedd52faf19dcc4f9c5067adde5a512"
+predicted = "cap"
+label = ""
+note = ""
+text = '''
+The United States Governor of the International Bank for Reconstruction and Development may subscribe without fiscal year limitation to the callable capital portion of the United States share of increases in capital stock in an amount not to exceed $1,421,275,728.70.'''
+
+[[nodes]]
+jurisdiction = "cjs_fy2024"
+bill = "118-s-2321"
+version = "1_reported-in-senate.xml"
+node_ordinal = 97
+element_id = "id408e43961dcf4997abf15b1c93704687"
+path = "TITLE II > DEPARTMENT OF JUSTICE > General provisions\u2014Department of justice > Sec. 216 > (c)"
+text_sha256 = "a323ea42d3097afdff3b472773d35cc8e7e382a21fb6ffcab7b900b7f1f01dcc"
+predicted = "cap"
+label = ""
+note = ""
+text = '''
+(c)Not to exceed $10,000,000 of the excess unobligated balances available under section 524(c)(8)(E) of title 28, United States Code, shall be available for obligation during fiscal year 2024, and any use, obligation, transfer or allocation of such funds shall be treated as a reprogramming of funds under section 505 of this Act.'''
+
+[[nodes]]
+jurisdiction = "agriculture"
+bill = "118-s-4690"
+version = "1_reported-in-senate.xml"
+node_ordinal = 158
+element_id = "id1F0182066BB340DC92D3BB1EDDB9BF3F"
+path = "TITLE VII\u2014GENERAL PROVISIONS > Sec. 752"
+text_sha256 = "2fef197ffcb053681ff8b1ba1b0538a5ba3a7036b6e4e1a2462b9506b76eed77"
+predicted = "directive"
+label = ""
+note = ""
+text = '''
+The Secretary shall set aside for Rural Economic Area Partnership (REAP) Zones, until August 15, 2025, an amount of funds made available in title III under the headings of Rural Housing Insurance Fund Program Account, Mutual and Self-Help Housing Grants, Rural Housing Assistance Grants, Rural Community Facilities Program Account, Rural Business Program Account, Rural Development Loan Fund Program Account, and Rural Water and Waste Disposal Program Account, equal to the amount obligated in REAP Zones with respect to funds provided under such headings in the most recent fiscal year any such funds were obligated under such headings for REAP Zones, excluding the funding provided through any Community Project Funding/Congressionally Directed Spending.'''
+
+[[nodes]]
+jurisdiction = "interior_environment"
+bill = "118-s-4802"
+version = "1_reported-in-senate.xml"
+node_ordinal = 71
+element_id = "id905A87993D5A4540B4EAFDB6948CB014"
+path = "TITLE I\u2014DEPARTMENT OF THE INTERIOR > Ellis, Governors, and Liberty Islands > Sec. 109"
+text_sha256 = "ed926124e2273101c09a2bd82807234c0f4655432945ef8fed7c30f51485b744"
+predicted = "directive"
+label = ""
+note = ""
+text = '''
+The United States Fish and Wildlife Service shall, in carrying out its responsibilities to protect threatened and endangered species of salmon, implement a system of mass marking of salmonid stocks, intended for harvest, that are released from federally operated or federally financed hatcheries including but not limited to fish releases of coho, chinook, and steelhead species. Marked fish must have a visible mark that can be readily identified by commercial and recreational fishers.'''
+
+[[nodes]]
+jurisdiction = "cjs_fy2024"
+bill = "118-s-2321"
+version = "1_reported-in-senate.xml"
+node_ordinal = 87
+element_id = "id344F64620EA745E5A73341963D1402E4"
+path = "TITLE II > DEPARTMENT OF JUSTICE > General provisions\u2014Department of justice > Sec. 209"
+text_sha256 = "3fe2726cb9d65ce9635f487f6fbe187ba7ebbd9a2d20a6253589aada79951cec"
+predicted = "directive"
+label = ""
+note = ""
+text = '''
+The notification thresholds and procedures set forth in section 505 of this Act shall apply to deviations from the amounts designated for specific activities in this Act and in the report accompanying this Act, and to any use of deobligated balances of funds provided under this title in previous years.'''
+
+[[nodes]]
+jurisdiction = "interior_environment"
+bill = "118-s-4802"
+version = "1_reported-in-senate.xml"
+node_ordinal = 171
+element_id = "idE60B2D25FADA447CA4B6D2A1D29499E6"
+path = "TITLE IV\u2014GENERAL PROVISIONS > Sec. 407"
+text_sha256 = "780378d6ac4ca3ea8f5f59297d6882314976a20806d73515f078e8e4708a996f"
+predicted = "directive"
+label = ""
+note = ""
+text = '''
+The Secretary of Agriculture shall not be considered to be in violation of section 6(f)(5)(A) of the Forest and Rangeland Renewable Resources Planning Act of 1974 (16 U.S.C. 1604(f)(5)(A)) solely because more than 15 years have passed without revision of the plan for a unit of the National Forest System. Nothing in this section exempts the Secretary from any other requirement of the Forest and Rangeland Renewable Resources Planning Act (16 U.S.C. 1600 et seq.) or any other law: Provided, That if the Secretary is not acting expeditiously and in good faith, within the funding available, to revise a plan for a unit of the National Forest System, this section shall be void with respect to such plan and a court of proper jurisdiction may order completion of the plan on an accelerated basis.'''
+
+[[nodes]]
+jurisdiction = "financial_services"
+bill = "118-s-4928"
+version = "1_reported-in-senate.xml"
+node_ordinal = 20
+element_id = "id45886939CD0949CBA4B7BF8A1FF80700"
+path = "TITLE I > DEPARTMENT OF THE TREASURY > Technology And Operations Support > Sec. 102"
+text_sha256 = "bbf59bd04186aabf8bfb7cf121289fc8f849c31872e27d88da568421aa6058f4"
+predicted = "directive"
+label = ""
+note = ""
+text = '''
+The Internal Revenue Service shall maintain an employee training program, which shall include the following topics: taxpayers' rights, dealing courteously with taxpayers, cross-cultural relations, ethics, and the impartial application of tax law.'''
+
+[[nodes]]
+jurisdiction = "transportation_hud"
+bill = "118-s-4796"
+version = "1_reported-in-senate.xml"
+node_ordinal = 219
+element_id = "idE9C71CD90CED4EEBA42AC3F8AD674620"
+path = "TITLE II\u2014DEPARTMENT OF HOUSING AND URBAN DEVELOPMENT > General provisions\u2014Department of housing and urban development"
+text_sha256 = "13f868a49ecb40106edab0a3adc0e9f207d944b0714d8a79d65c390dcd90961f"
+predicted = "directive"
+label = ""
+note = ""
+text = '''
+The first report shall be submitted to the Senate and House Committees on Appropriations not later than 30 days after the enactment of this Act, and the second report shall be submitted within 180 days of the transmittal of the first report.'''
+
+[[nodes]]
+jurisdiction = "energy_water"
+bill = "118-s-4927"
+version = "1_reported-in-senate.xml"
+node_ordinal = 125
+element_id = "idF8A6AFC4ACF4430AACAC17A275324DA8"
+path = "TITLE IV\u2014INDEPENDENT AGENCIES > GENERAL PROVISIONS\u2014INDEPENDENT AGENCIES > Sec. 401"
+text_sha256 = "d26fa022d26feb93ed7e8cf2f5d1230607631ba04279f6ca6f77e0e8a94d3b35"
+predicted = "directive"
+label = ""
+note = ""
+text = '''
+The Nuclear Regulatory Commission shall comply with the July 5, 2011, version of Chapter VI of its Internal Commission Procedures when responding to Congressional requests for information, consistent with Department of Justice guidance for all Federal agencies.'''
+
+[[nodes]]
+jurisdiction = "milcon_va"
+bill = "118-s-4677"
+version = "1_reported-in-senate.xml"
+node_ordinal = 107
+element_id = "id392192AC6A2B4A42919D552C1A379229"
+path = "TITLE II > DEPARTMENT OF VETERANS AFFAIRS > Administrative provisions > Sec. 231"
+text_sha256 = "fc34382d3a0cc8fb9928301f640fbdba0d4004496b2da922af1a904b439ee97e"
+predicted = "directive"
+label = ""
+note = ""
+text = '''
+The Secretary of Veterans Affairs may not reprogram funds among major construction projects or programs if such instance of reprogramming will exceed $7,000,000, unless such reprogramming is approved by the Committees on Appropriations of both Houses of Congress.'''
+
+[[nodes]]
+jurisdiction = "transportation_hud"
+bill = "118-s-4796"
+version = "1_reported-in-senate.xml"
+node_ordinal = 18
+element_id = "id5FF1C64DE2BD4F8D9208914A04E6084E"
+path = "TITLE I\u2014DEPARTMENT OF TRANSPORTATION > Office of the Secretary > Sec. 102"
+text_sha256 = "32f2a351322a72e4d5266db8bac4409fb55a4f29dcd6d0287979f4af57ff1dd9"
+predicted = "directive"
+label = ""
+note = ""
+text = '''
+The Secretary shall post on the website of the Department of Transportation a schedule of all meetings of the Council on Credit and Finance, including the agenda for each meeting, and require the Council on Credit and Finance to record the decisions and actions of each meeting.'''
+
+[[nodes]]
+jurisdiction = "energy_water"
+bill = "118-s-4927"
+version = "1_reported-in-senate.xml"
+node_ordinal = 4
+element_id = "idA0491702C15B4351A2CEC1C0EF6FB256"
+path = "TITLE I\u2014CORPS OF ENGINEERS\u2014CIVIL > DEPARTMENT OF THE ARMY > Corps of Engineers\u2014Civil"
+text_sha256 = "77b7382a4afddc78f22dbfe6f8e81d5277bac965926d25bbbe8132fab6770591"
+predicted = "directive"
+label = ""
+note = ""
+text = '''
+The following appropriations shall be expended under the direction of the Secretary of the Army and the supervision of the Chief of Engineers for authorized civil functions of the Department of the Army pertaining to river and harbor, flood and storm damage reduction, shore protection, aquatic ecosystem restoration, and related efforts.'''
+
+[[nodes]]
+jurisdiction = "transportation_hud"
+bill = "118-s-4796"
+version = "1_reported-in-senate.xml"
+node_ordinal = 235
+element_id = "id0228BF163CFE4EFFAD79BC4E55AA025F"
+path = "TITLE II\u2014DEPARTMENT OF HOUSING AND URBAN DEVELOPMENT > General provisions\u2014Department of housing and urban development > Sec. 233"
+text_sha256 = "67cf703448336813b7d7f9ec3ebc8983d1a231c4f2eda11a5b7dd71c332d9241"
+predicted = "directive"
+label = ""
+note = ""
+text = '''
+The Secretary shall comply with all process requirements, including public notice and comment, when seeking to revise any annual contributions contract.'''
+
+[[nodes]]
+jurisdiction = "energy_water"
+bill = "118-s-4927"
+version = "1_reported-in-senate.xml"
+node_ordinal = 26
+element_id = "id059D49229E874E2EA2F76BBE74E0CB25"
+path = "TITLE II\u2014DEPARTMENT OF THE INTERIOR > Bureau of Reclamation"
+text_sha256 = "9295e2cbf26eec10908b2055069ad5887fd2ecf7ea27d4bda6d75967677daccc"
+predicted = "directive"
+label = ""
+note = ""
+text = '''
+The following appropriations shall be expended to execute authorized functions of the Bureau of Reclamation:'''
+
+[[nodes]]
+jurisdiction = "financial_services"
+bill = "118-s-4928"
+version = "1_reported-in-senate.xml"
+node_ordinal = 21
+element_id = "id42CC55CF9EDB47F3A261F96888804FA4"
+path = "TITLE I > DEPARTMENT OF THE TREASURY > Technology And Operations Support > Sec. 103"
+text_sha256 = "7937d200a5e86c3124513a9cd8740b1eb5310035ad60f7b3d134af242d8a9969"
+predicted = "directive"
+label = ""
+note = ""
+text = '''
+The Internal Revenue Service shall institute and enforce policies and procedures that will safeguard the confidentiality of taxpayer information and protect taxpayers against identity theft.'''
+
+[[nodes]]
+jurisdiction = "cjs_fy2024"
+bill = "118-s-2321"
+version = "1_reported-in-senate.xml"
+node_ordinal = 178
+element_id = "id5715BCDC6C51439AA200760581042FE0"
+path = "TITLE V > GENERAL PROVISIONS > Sec. 524"
+text_sha256 = "df993eccb6a5b5528be6d378e2f5ae37b4087a9e6a37313ba3c1dbc3b239b1b2"
+predicted = "directive"
+label = ""
+note = ""
+text = '''
+The Director of the Office of Management and Budget shall instruct any department, agency, or instrumentality of the United States receiving funds appropriated under this Act to track undisbursed balances in expired grant accounts and include in its annual performance plan and performance and accountability reports the following:(1)Details on future action the department, agency, or instrumentality will take to resolve undisbursed balances in expired grant accounts.(2)The method that the department, agency, or instrumentality uses to track undisbursed balances in expired grant accounts.(3)Identification of undisbursed balances in expired grant accounts that may be returned to the Treasury of the United States.(4)In the preceding 3 fiscal years, details on the total number of expired grant accounts with undisbursed balances (on the first day of each fiscal year) for the department, agency, or instrumentality and the total finances that have not been obligated to a specific project remaining in the accounts.'''
+
+[[nodes]]
+jurisdiction = "cjs"
+bill = "118-s-4795"
+version = "1_reported-in-senate.xml"
+node_ordinal = 173
+element_id = "id5715BCDC6C51439AA200760581042FE0"
+path = "TITLE V > GENERAL PROVISIONS > Sec. 524"
+text_sha256 = "df993eccb6a5b5528be6d378e2f5ae37b4087a9e6a37313ba3c1dbc3b239b1b2"
+predicted = "directive"
+label = ""
+note = ""
+text = '''
+The Director of the Office of Management and Budget shall instruct any department, agency, or instrumentality of the United States receiving funds appropriated under this Act to track undisbursed balances in expired grant accounts and include in its annual performance plan and performance and accountability reports the following:(1)Details on future action the department, agency, or instrumentality will take to resolve undisbursed balances in expired grant accounts.(2)The method that the department, agency, or instrumentality uses to track undisbursed balances in expired grant accounts.(3)Identification of undisbursed balances in expired grant accounts that may be returned to the Treasury of the United States.(4)In the preceding 3 fiscal years, details on the total number of expired grant accounts with undisbursed balances (on the first day of each fiscal year) for the department, agency, or instrumentality and the total finances that have not been obligated to a specific project remaining in the accounts.'''
+
+[[nodes]]
+jurisdiction = "cjs_fy2024"
+bill = "118-s-2321"
+version = "1_reported-in-senate.xml"
+node_ordinal = 35
+element_id = "id416D164433374A868097390EF536187F"
+path = "TITLE I\u2014DEPARTMENT OF COMMERCE > General provisions\u2014Department of commerce > Sec. 108"
+text_sha256 = "1e1aa6bcb2b1f37b866264b9051c4dcccb858cd805ac51c17775cd4472a589a3"
+predicted = "directive"
+label = ""
+note = ""
+text = '''
+The National Technical Information Service shall not charge any customer for a copy of any report or document generated by the Legislative Branch unless the Service has provided information to the customer on how an electronic copy of such report or document may be accessed and downloaded for free online. Should a customer still require the Service to provide a printed or digital copy of the report or document, the charge shall be limited to recovering the Service's cost of processing, reproducing, and delivering such report or document.'''
+
+[[nodes]]
+jurisdiction = "financial_services"
+bill = "118-s-4928"
+version = "1_reported-in-senate.xml"
+node_ordinal = 23
+element_id = "id650D0E2288134B1795083FA891E6D0F9"
+path = "TITLE I > DEPARTMENT OF THE TREASURY > Technology And Operations Support > Sec. 105"
+text_sha256 = "a7bb5f7ac9dfd9edc61fd83465806a7a8f2082083a4c5b4e44593b90f55bd2bc"
+predicted = "directive"
+label = ""
+note = ""
+text = '''
+The Internal Revenue Service shall issue a notice of confirmation of any address change relating to an employer making employment tax payments, and such notice shall be sent to both the employer's former and new address and an officer or employee of the Internal Revenue Service shall give special consideration to an offer-in-compromise from a taxpayer who has been the victim of fraud by a third party payroll tax preparer.'''
+
+[[nodes]]
+jurisdiction = "milcon_va"
+bill = "118-s-4677"
+version = "1_reported-in-senate.xml"
+node_ordinal = 100
+element_id = "idDED38617883745FE9DE32680C806248B"
+path = "TITLE II > DEPARTMENT OF VETERANS AFFAIRS > Administrative provisions > Sec. 224"
+text_sha256 = "f3dacc188912254c0831db3b771122014130208ea9302e7fe3b07e78fd2e0bde"
+predicted = "directive"
+label = ""
+note = ""
+text = '''
+The Secretary of Veterans Affairs shall notify the Committees on Appropriations of both Houses of Congress of all bid savings in a major construction project that total at least $5,000,000, or 5 percent of the programmed amount of the project, whichever is less: Provided, That such notification shall occur within 14 days of a contract identifying the programmed amount: Provided further, That the Secretary shall notify the Committees on Appropriations of both Houses of Congress 14 days prior to the obligation of such bid savings and shall describe the anticipated use of such savings.'''
+
+[[nodes]]
+jurisdiction = "labor_hhs"
+bill = "118-s-4942"
+version = "1_reported-in-senate.xml"
+node_ordinal = 178
+element_id = "idA7665F807F584E338AC553E1EE47335F"
+path = "TITLE II\u2014DEPARTMENT OF HEALTH AND HUMAN SERVICES > General provisions > Sec. 228"
+text_sha256 = "420ac4e35d26f1bf1e46ce843652ee50524db9f063e87f159efd0146f62e0a9a"
+predicted = "directive"
+label = ""
+note = ""
+text = '''
+The Department of Health and Human Services shall provide the Committees on Appropriations of the House of Representatives and Senate a biannual report 30 days after enactment of this Act on staffing described in the report accompanying this Act.'''
+
+[[nodes]]
+jurisdiction = "milcon_va"
+bill = "118-s-4677"
+version = "1_reported-in-senate.xml"
+node_ordinal = 103
+element_id = "id3350ADD149654C499A13C3AFD6C2BACF"
+path = "TITLE II > DEPARTMENT OF VETERANS AFFAIRS > Administrative provisions > Sec. 227"
+text_sha256 = "3114101e1dbed5945a6b09f295ed3ed769d143f5d4eba04b31c8f4fa6342618d"
+predicted = "directive"
+label = ""
+note = ""
+text = '''
+The Secretary of Veterans Affairs shall provide written notification to the Committees on Appropriations of both Houses of Congress 15 days prior to organizational changes which result in the transfer of 25 or more full-time equivalents from one organizational unit of the Department of Veterans Affairs to another.'''
+
+[[nodes]]
+jurisdiction = "milcon_va"
+bill = "118-s-4677"
+version = "1_reported-in-senate.xml"
+node_ordinal = 155
+element_id = "ide46f521ae316419aa2ffabb7a3fd9a02"
+path = "TITLE II > DEPARTMENT OF VETERANS AFFAIRS > Administrative provisions > Sec. 257"
+text_sha256 = "bb72b9959e9c4ec308900c035a8b29709c8bba2397c3082f4895fcd993b9b20e"
+predicted = "rescission"
+label = ""
+note = ""
+text = '''
+Of the unobligated balances from amounts made available under the heading Medical and Prosthetic Research from prior appropriations Acts, $5,000,000 is hereby rescinded: Provided, That no amounts may be rescinded from amounts that were designated by the Congress as an emergency requirement pursuant to a concurrent resolution on the budget or the Balanced Budget and Emergency Deficit Control Act of 1985.'''
+
+[[nodes]]
+jurisdiction = "labor_hhs"
+bill = "118-s-4942"
+version = "1_reported-in-senate.xml"
+node_ordinal = 186
+element_id = "id0F22CB10B83D4CC890B71888119A1B21"
+path = "TITLE II\u2014DEPARTMENT OF HEALTH AND HUMAN SERVICES > General provisions > Sec. 236"
+text_sha256 = "779df152fadd5278d1fc69b3cbc5b1443821d4021ce4993dabe781768846b791"
+predicted = "rescission"
+label = ""
+note = ""
+text = '''
+Of the unobligated balances in the Nonrecurring Expenses Fund established in section 223 of division G of Public Law 110–161, $1,656,000,000 are hereby rescinded not later than September 30, 2025, except that no amounts may be rescinded from amounts that were previously designated by the Congress as being for an emergency requirement pursuant to a concurrent resolution on the budget or the Balanced Budget and Emergency Deficit Control Act of 1985.'''
+
+[[nodes]]
+jurisdiction = "homeland_security"
+bill = "118-s-2625"
+version = "1_reported-in-senate.xml"
+node_ordinal = 245
+element_id = "id7921F16358C74EFCBFFEDE63B0DD6BDE"
+path = "TITLE V > GENERAL PROVISIONS > Sec. 545"
+text_sha256 = "7dfe66a9a2123d63bf8ca4a38bdeee38d470d719cb7d75d49ed4479dadd9a241"
+predicted = "rescission"
+label = ""
+note = ""
+text = '''
+Of the funds appropriated to the Department of Homeland Security, the following funds are hereby rescinded from the following accounts and programs in the specified amounts: Provided, That no amounts may be rescinded from amounts that were designated by the Congress as an emergency requirement pursuant to a concurrent resolution on the budget or the Balanced Budget and Emergency Deficit Control Act of 1985:(1)$1,473,000 from the unobligated balances available in the U.S. Customs and Border Protection—Procurement, Construction, and Improvements account (70 X 0532).(2)$1,842,000 from the unobligated balances available in the U.S. Customs and Border Protection—Border Security Fencing, Infrastructure, and Technology account (70 X 0533).(3)$452,000 from the unobligated balances available in the U.S. Customs and Border Protection—Air and Marine Interdiction, Operations, Maintenance, and Procurement account (70 X 0544).(4)$1,000,000 from the unobligated balances available in the U.S. Immigration and Customs Enforcement—Operations and Support account (70 23/24 0540).(5)$2,092,841 from the unobligated balances available in the U.S. Immigration and Customs Enforcement—Operations and Support account (70 X 0540).(6)$10,439 from the unobligated balances available in the U.S. Immigration and Customs Enforcement—Automation Modernization account (70 X 0543).(7)$63,591,000 from the unobligated balances available in the Transportation Security Administration—Operations and Support account (70 X 0550).(8)$22,600,000 from the unobligated balances available in the Coast Guard—Acquisition, Construction, and Improvements account (70 X 0613).(9)$2,400,000 from the unobligated balances available in the United States Secret Service—Operations and Support account (70 X 0400).(10)$4,000,000 from the unobligated balances available in the United States Secret Service—Procurement, Construction, and Improvements account (70 23/25 0401).(11)$3,500,000 from the unobligated balances available in the Cybersecurity and Infrastructure Security Agency—Procurement, Construction, and Improvements account (70 23/27 0412).(12)$800,000 from the unobligated balances available in the Federal Law Enforcement Training Centers—Procurement, Construction, and Improvements account (70 20/24 0510).(13)$900,000 from the unobligated balances available in the Science and Technology Directorate—Operations and Support account (70 X 0800).(14)$388,522 from the unobligated balances available in the Countering Weapons of Mass Destruction Office—Research and Development account (70 22/24 0860).(15)$11,478 from the unobligated balances available in the Countering Weapons of Mass Destruction Office—Research and Development account (70 X 0860).'''
+
+[[nodes]]
+jurisdiction = "transportation_hud"
+bill = "118-s-4796"
+version = "1_reported-in-senate.xml"
+node_ordinal = 164
+element_id = "id151D943357B44CA19EF35D4E7FB16400"
+path = "TITLE II\u2014DEPARTMENT OF HOUSING AND URBAN DEVELOPMENT > Public and indian housing > HOUSING CERTIFICATE FUND"
+text_sha256 = "47a6696eb107c6572e56590b67d611a0a4dec36fcb0ba68330b46eccee37091d"
+predicted = "rescission"
+label = ""
+note = ""
+text = '''
+Unobligated balances, including recaptures and carryover, remaining from funds appropriated to the Department of Housing and Urban Development under this heading, the heading Annual Contributions for Assisted Housing and the heading Project-Based Rental Assistance, for fiscal year 2025 and prior years may be used for renewal of or amendments to section 8 project-based contracts and for performance-based contract administrators, notwithstanding the purposes for which such funds were appropriated: Provided, That any obligated balances of contract authority from fiscal year 1974 and prior fiscal years that have been terminated shall be rescinded: Provided further, That amounts heretofore recaptured, or recaptured during the current fiscal year, from section 8 project-based contracts from source years fiscal year 1975 through fiscal year 1987 are hereby rescinded, and an amount of additional new budget authority, equivalent to the amount rescinded is hereby appropriated, to remain available until expended, for the purposes set forth under this heading, in addition to amounts otherwise available.'''
+
+[[nodes]]
+jurisdiction = "cjs_fy2024"
+bill = "118-s-2321"
+version = "1_reported-in-senate.xml"
+node_ordinal = 208
+element_id = "id66d3ade0392c4835b245f8e5ddeb2f74"
+path = "TITLE V > GENERAL PROVISIONS > Sec. 540 > (a)"
+text_sha256 = "1887b10cb0e5987fbbbb3f37e20cab96fa2d1df0dbbedc02d255b55f0bf86388"
+predicted = "rescission"
+label = ""
+note = ""
+text = '''
+(a)The remaining unobligated balances of funds as of September 30, 2024, from amounts made available to Office of the United States Trade Representative—Salaries and Expenses in section 540 of division B of the Consolidated Appropriations Act, 2023 (Public Law 117–328) are hereby rescinded, and an amount of additional new budget authority equivalent to the amount rescinded pursuant to this subsection is hereby appropriated on September 30, 2024, for an additional amount for fiscal year 2024, to remain available until September 30, 2026, and shall be available for the same purposes, in addition to other funds as may be available for such purposes, and under the same authorities for which the funds were originally provided in Public Law 116–113, except that all references to 2023 under such heading in Public Law 116–113 shall be deemed to refer instead to 2026: Provided, That the amounts rescinded pursuant to this subsection that were previously designated by the Congress as an emergency requirement pursuant to section 4001(a)(1) of S. Con. Res. 14 (117th Congress), the concurrent resolution on the budget for fiscal year 2022, and section 1(e) of H. Res. 1151 (117th Congress), as engrossed in the House of Representatives on June 8, 2022, are designated by the Congress as an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985: Provided further, That the amount of additional new budget authority made available pursuant to this subsection is designated by the Congress as being for an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985.'''
+
+[[nodes]]
+jurisdiction = "financial_services"
+bill = "118-s-4928"
+version = "1_reported-in-senate.xml"
+node_ordinal = 105
+element_id = "idDF0719280EF441A094D484C50D2D245D"
+path = "TITLE IV > DISTRICT OF COLUMBIA > Federal funds > FEDERAL PAYMENT FOR DEFENDER SERVICES IN DISTRICT OF COLUMBIA COURTS"
+text_sha256 = "521636c817e897372dd3be751c3e814a8c22681823ee501138f016e58465ca41"
+predicted = "rescission"
+label = ""
+note = ""
+text = '''
+For payments authorized under section 11–2604 and section 11–2605, D.C. Official Code (relating to representation provided under the District of Columbia Criminal Justice Act), payments for counsel appointed in proceedings in the Family Court of the Superior Court of the District of Columbia under chapter 23 of title 16, D.C. Official Code, or pursuant to contractual agreements to provide guardian ad litem representation, training, technical assistance, and such other services as are necessary to improve the quality of guardian ad litem representation, payments for counsel appointed in adoption proceedings under chapter 3 of title 16, D.C. Official Code, and payments authorized under section 21–2060, D.C. Official Code (relating to services provided under the District of Columbia Guardianship, Protective Proceedings, and Durable Power of Attorney Act of 1986), $46,005,000, to remain available until expended: Provided, That funds provided under this heading shall be administered by the Joint Committee on Judicial Administration in the District of Columbia: Provided further, That notwithstanding any other provision of law, this appropriation shall be apportioned quarterly by the Office of Management and Budget and obligated and expended in the same manner as funds appropriated for expenses of other Federal agencies: Provided further, That of the unobligated balances from prior year appropriations made available under this heading, $12,000,000 are hereby rescinded not later than September 30, 2025.'''
+
+[[nodes]]
+jurisdiction = "defense"
+bill = "118-s-4921"
+version = "1_reported-in-senate.xml"
+node_ordinal = 145
+element_id = "id465C2C79495C486C998F611A1CC14473"
+path = "TITLE VIII > GENERAL PROVISIONS > Sec. 8045"
+text_sha256 = "e5f5add8806b112ae99a1571a17ec602a5bd59a142153a5ce36917d3770f5601"
+predicted = "rescission"
+label = ""
+note = ""
+text = '''
+Of the funds appropriated in Department of Defense Appropriations Acts, the following funds are hereby rescinded from the following accounts and programs in the specified amounts: Provided, That no amounts may be rescinded from amounts that were designated by the Congress as an emergency requirement pursuant to a concurrent resolution on the budget or the Balanced Budget and Emergency Deficit Control Act of 1985: Afghanistan Security Forces Fund, 2022/2025, $80,000,000; Aircraft Procurement, Army, 2023/2025, $25,000,000; Aircraft Procurement, Navy, 2023/2025, $3,700,000; Other Procurement, Navy, 2023/2025, $50,000,000; Aircraft Procurement, Air Force, 2023/2025, $115,204,000; Procurement of Ammunition, Air Force, 2023/2025, $23,000,000; Aircraft Procurement, Air Force, 2024/2026, $75,000,000; Other Procurement, Air Force, 2024/2026, $48,000,000; Procurement, Defense-Wide, 2024/2026, $14,821,000; Research, Development, Test and Evaluation, Navy, 2024/2025, $16,395,000; Research, Development, Test and Evaluation, Air Force, 2024/2025, $13,151,000; Research, Development, Test and Evaluation, Space Force, 2024/2025, $111,665,000; and Research, Development, Test and Evaluation, Defense-Wide, 2024/2025, $17,800,000.'''
+
+[[nodes]]
+jurisdiction = "agriculture"
+bill = "118-s-4690"
+version = "1_reported-in-senate.xml"
+node_ordinal = 131
+element_id = "ida4b0435e41b24cabacbfdf31363103ea"
+path = "TITLE VII\u2014GENERAL PROVISIONS > Sec. 732"
+text_sha256 = "87479629d416fcf1285f28de1d0cd02e25d54ab98815360ac2b4decac20ea195"
+predicted = "rescission"
+label = ""
+note = ""
+text = '''
+Of the unobligated balances from amounts made available to carry out section 749(g) of the Agricultural Appropriations Act of 2010 (Public Law 111–80), $30,000,000 are hereby rescinded: Provided, That no amounts may be rescinded from amounts that were designated by the Congress as an emergency requirement pursuant to a concurrent resolution on the budget or the Balanced Budget and Emergency Deficit Control Act of 1985.'''
+
+[[nodes]]
+jurisdiction = "labor_hhs"
+bill = "118-s-4942"
+version = "1_reported-in-senate.xml"
+node_ordinal = 311
+element_id = "id3b154d0260ef42bd8ae2c486d0ca7098"
+path = "TITLE V\u2014GENERAL PROVISIONS > Sec. 531"
+text_sha256 = "b5ecf652dd9954a8012dd6eafe86347062ee90f968055da8062ccdb54dc56bd0"
+predicted = "rescission"
+label = ""
+note = ""
+text = '''
+Of the unobligated balances of funds made available by sections 2301, 2302, 2303, 2401, 2402, 2403, 2404, 2501, 2502, 2704, 3101 and 9911 of the American Rescue Plan Act of 2021 (Public Law 117–2), $10,000,000 are hereby rescinded: Provided, That not later than 60 days after the date of enactment of this Act, the Secretary of Health and Human Services shall submit to the Committees on Appropriations of the House of Representatives and the Senate a report specifying the unobligated balances rescinded pursuant to this section by both account and amount from each applicable appropriation in Public Law 117–2.'''
+
+[[nodes]]
+jurisdiction = "labor_hhs"
+bill = "118-s-4942"
+version = "1_reported-in-senate.xml"
+node_ordinal = 221
+element_id = "id5c82a6e98e674dd5972c696fa1061945"
+path = "TITLE III\u2014DEPARTMENT OF EDUCATION > General provisions > Sec. 308"
+text_sha256 = "f75c11558fc288598b2786bf3d59ad6cd27c576b0e975a3892c7de1771bb69d4"
+predicted = "rescission"
+label = ""
+note = ""
+text = '''
+Of the amounts appropriated under section 401(b)(7)(A)(ii) of the Higher Education Act of 1965 (20 U.S.C. 1070a(b)(7)(A)(ii)) for fiscal year 2025, $15,000,000 are hereby rescinded.'''
+
+[[nodes]]
+jurisdiction = "agriculture"
+bill = "118-s-4690"
+version = "1_reported-in-senate.xml"
+node_ordinal = 179
+element_id = "id79871011e7c8415c89fac0bda09b6109"
+path = "TITLE VII\u2014GENERAL PROVISIONS > Sec. 768"
+text_sha256 = "2c1f17ef9cb6954422dfb1a455c0f7bd4dd73b1e307103f041314773cff050b9"
+predicted = "rescission"
+label = ""
+note = ""
+text = '''
+Of the unobligated balances from amounts made available for the supplemental nutrition program as authorized by section 17 of the Child Nutrition Act of 1966 (42 U.S.C. 1786), $300,000,000 are hereby rescinded: Provided, That no amounts may be rescinded from amounts that were designated by the Congress as an emergency requirement pursuant to a concurrent resolution on the budget or the Balanced Budget and Emergency Deficit Control Act of 1985.'''
+
+[[nodes]]
+jurisdiction = "cjs_fy2024"
+bill = "118-s-2321"
+version = "1_reported-in-senate.xml"
+node_ordinal = 209
+element_id = "idC7031AEAA1504DD5BA4085EAD37986BA"
+path = "TITLE V > GENERAL PROVISIONS > Sec. 540 > (b)"
+text_sha256 = "6ca55fdcd67a371c31e89c4d46e5a7ad209ad0fdf5424f22150f8e48c5f826d6"
+predicted = "rescission"
+label = ""
+note = ""
+text = '''
+(b)The remaining unobligated balances of funds as of September 30, 2024, from amounts made available to Office of the United States Trade Representative—Trade Enforcement Trust Fund in section 540 of division B of the Consolidated Appropriations Act, 2023 (Public Law 117–328) are hereby rescinded, and an amount of additional new budget authority equivalent to the amount rescinded pursuant to this subsection is hereby appropriated on September 30, 2024, for an additional amount for fiscal year 2024, to remain available until September 30, 2026, and shall be available for the same purposes, in addition to other funds as may be available for such purposes, and under the same authorities for which the funds were originally provided in Public Law 116–113, except that the reference to 2023 under such heading in Public Law 116–113 shall be deemed to refer instead to 2026: Provided, That the amounts rescinded pursuant to this subsection that were previously designated by the Congress as an emergency requirement pursuant to section 4001(a)(1) of S. Con. Res. 14 (117th Congress), the concurrent resolution on the budget for fiscal year 2022, and section 1(e) of H. Res. 1151 (117th Congress), as engrossed in the House of Representatives on June 8, 2022, are designated by the Congress as an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985: Provided further, That the amount of additional new budget authority made available pursuant to this subsection is designated by the Congress as being for an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985.'''
+
+[[nodes]]
+jurisdiction = "agriculture"
+bill = "118-s-4690"
+version = "1_reported-in-senate.xml"
+node_ordinal = 180
+element_id = "id5fdb97078919447d9bcd4230336f949f"
+path = "TITLE VII\u2014GENERAL PROVISIONS > Sec. 769"
+text_sha256 = "7956b11989d3fefee11e56c0226c797292e80be7b202a9e3be1300af58c5f90d"
+predicted = "rescission"
+label = ""
+note = ""
+text = '''
+Of the unobligated balances from prior year appropriations made available under the heading Rural Cooperative Development Grants for Agriculture Innovation Centers authorized by section 6402 of the Farm Security and Rural Investment Act of 2002 (7 U.S.C. 1632b), as amended, $1,000,000 are hereby rescinded: Provided, That no amounts may be rescinded from amounts that were designated by the Congress as an emergency requirement pursuant to a concurrent resolution on the budget or the Balanced Budget and Emergency Deficit Control Act of 1985.'''
+
+[[nodes]]
+jurisdiction = "transportation_hud"
+bill = "118-s-4796"
+version = "1_reported-in-senate.xml"
+node_ordinal = 288
+element_id = "idff0beea33b034a69b11307dd21f3aa08"
+path = "TITLE IV\u2014GENERAL PROVISIONS\u2014THIS ACT > Sec. 415 > (a)"
+text_sha256 = "eeff9fc0b008cf634ded30360f1739a6060a6867d70d9c05571ce4f8b6849dae"
+predicted = "restriction"
+label = ""
+note = ""
+text = '''
+(a)None of the funds made available in this Act may be used to deny an Inspector General funded under this Act timely access to any records, documents, or other materials available to the department or agency over which that Inspector General has responsibilities under the Inspector General Act of 1978 (5 U.S.C. App.), or to prevent or impede that Inspector General's access to such records, documents, or other materials, under any provision of law, except a provision of law that expressly refers to the Inspector General and expressly limits the Inspector General's right of access.'''
+
+[[nodes]]
+jurisdiction = "transportation_hud"
+bill = "118-s-4796"
+version = "1_reported-in-senate.xml"
+node_ordinal = 295
+element_id = "id8c32f3e749b343d29fd25487a3b3578d"
+path = "TITLE IV\u2014GENERAL PROVISIONS\u2014THIS ACT > Sec. 418 > (a)"
+text_sha256 = "3a4f1d3ebbe85cac5defc88df11c16fad8e85d902ca6b9d1f696e1f9b10fbfdc"
+predicted = "restriction"
+label = ""
+note = ""
+text = '''
+(a)None of the funds made available by this Act may be used to approve a new foreign air carrier permit under sections 41301 through 41305 of title 49, United States Code, or exemption application under section 40109 of that title of an air carrier already holding an air operators certificate issued by a country that is party to the U.S.-E.U.-Iceland-Norway Air Transport Agreement where such approval would contravene United States law or Article 17 bis of the U.S.-E.U.-Iceland-Norway Air Transport Agreement.'''
+
+[[nodes]]
+jurisdiction = "transportation_hud"
+bill = "118-s-4796"
+version = "1_reported-in-senate.xml"
+node_ordinal = 292
+element_id = "idD9042F7793434183992BF4E136FF444B"
+path = "TITLE IV\u2014GENERAL PROVISIONS\u2014THIS ACT > Sec. 416"
+text_sha256 = "08b53e4b5002bb75a04ff477249ca29365bd523648e56228479987844c6b3a0c"
+predicted = "restriction"
+label = ""
+note = ""
+text = '''
+None of the funds appropriated or otherwise made available by this Act may be used to pay award or incentive fees for contractors whose performance has been judged to be below satisfactory, behind schedule, over budget, or has failed to meet the basic requirements of a contract, unless the Agency determines that any such deviations are due to unforeseeable events, government-driven scope changes, or are not significant within the overall scope of the project and/or program unless such awards or incentive fees are consistent with 16.401(e)(2) of the Federal Acquisition Regulations.'''
+
+[[nodes]]
+jurisdiction = "cjs"
+bill = "118-s-4795"
+version = "1_reported-in-senate.xml"
+node_ordinal = 156
+element_id = "id23e932e59263408484553f0682bc1e4d"
+path = "TITLE V > GENERAL PROVISIONS > Sec. 514 > (a)"
+text_sha256 = "318783a48ce74269d2b2a62c50a4f51d3c4927bc06823b6ac37d80ba1dda27ab"
+predicted = "restriction"
+label = ""
+note = ""
+text = '''
+(a)None of the funds appropriated or otherwise made available under this Act may be used by the Departments of Commerce and Justice, the National Aeronautics and Space Administration, or the National Science Foundation to acquire a high-impact or moderate-impact information system, as defined for security categorization in the National Institute of Standards and Technology's (NIST) Federal Information Processing Standard Publication 199, Standards for Security Categorization of Federal Information and Information Systems unless the agency has—(1)reviewed the supply chain risk for the information systems against criteria developed by NIST and the Federal Bureau of Investigation (FBI) to inform acquisition decisions for high-impact and moderate-impact information systems within the Federal Government;(2)reviewed the supply chain risk from the presumptive awardee against available and relevant threat information provided by the FBI and other appropriate agencies; and(3)in consultation with the FBI or other appropriate Federal entity, conducted an assessment of any risk of cyber-espionage or sabotage associated with the acquisition of such system, including any risk associated with such system being produced, manufactured, or assembled by one or more entities identified by the United States Government as posing a cyber threat, including but not limited to, those that may be owned, directed, or subsidized by the People's Republic of China, the Islamic Republic of Iran, the Democratic People's Republic of Korea, or the Russian Federation.'''
+
+[[nodes]]
+jurisdiction = "cjs_fy2024"
+bill = "118-s-2321"
+version = "1_reported-in-senate.xml"
+node_ordinal = 181
+element_id = "idfb0cd580b32e4ceda01c4b0cc594771e"
+path = "TITLE V > GENERAL PROVISIONS > Sec. 526 > (a)"
+text_sha256 = "e16af21d3155080c9c743b4720fbc2ebcf13a0d103f9af3f2348fae9b7ac4eac"
+predicted = "restriction"
+label = ""
+note = ""
+text = '''
+(a)None of the funds made available by this Act may be used for the National Aeronautics and Space Administration (NASA), the Office of Science and Technology Policy (OSTP), or the National Space Council (NSC) to develop, design, plan, promulgate, implement, or execute a bilateral policy, program, order, or contract of any kind to participate, collaborate, or coordinate bilaterally in any way with China or any Chinese-owned company unless such activities are specifically authorized by a law enacted after the date of enactment of this Act.'''
+
+[[nodes]]
+jurisdiction = "homeland_security"
+bill = "118-s-2625"
+version = "1_reported-in-senate.xml"
+node_ordinal = 173
+element_id = "id2E805E28096C45D5BF028A821097D43B"
+path = "TITLE V > GENERAL PROVISIONS > Sec. 509"
+text_sha256 = "04d654114c372840390033f5739b7c85c0da41ae0a507237c16b521fb38016d8"
+predicted = "restriction"
+label = ""
+note = ""
+text = '''
+None of the funds appropriated or otherwise made available by this Act may be used for expenses for any construction, repair, alteration, or acquisition project for which a prospectus otherwise required under chapter 33 of title 40, United States Code, has not been approved, except that necessary funds may be expended for each project for required expenses for the development of a proposed prospectus.'''
+
+[[nodes]]
+jurisdiction = "financial_services"
+bill = "118-s-4928"
+version = "1_reported-in-senate.xml"
+node_ordinal = 216
+element_id = "id2bcc14e9c9d54d3984e879a4dc7403fe"
+path = "TITLE VI > GENERAL PROVISIONS\u2014THIS ACT > Sec. 627 > (a)"
+text_sha256 = "066adf4a7ab6abe7813b2429d5e2834a961094c4a1f2ac81bf68ad2393c1fa14"
+predicted = "restriction"
+label = ""
+note = ""
+text = '''
+(a)None of the funds made available under this Act may be used to pay for travel and conference activities that result in a total cost to an Executive branch department, agency, board or commission funded by this Act of more than $500,000 at any single conference unless the agency or entity determines that such attendance is in the national interest and advance notice is transmitted to the Committees on Appropriations of the House of Representatives and the Senate that includes the basis of that determination.'''
+
+[[nodes]]
+jurisdiction = "defense"
+bill = "118-s-4921"
+version = "1_reported-in-senate.xml"
+node_ordinal = 190
+element_id = "idC6FE1EA430E24337B2A3C5108B007144"
+path = "TITLE VIII > GENERAL PROVISIONS > Sec. 8076"
+text_sha256 = "3bf3e04b68782c48db67736ab333883246767b8004b56edb6a51f2aecbd9855a"
+predicted = "restriction"
+label = ""
+note = ""
+text = '''
+None of the funds provided in this Act shall be available for integration of foreign intelligence information unless the information has been lawfully collected and processed during the conduct of authorized foreign intelligence activities: Provided, That information pertaining to United States persons shall only be handled in accordance with protections provided in the Fourth Amendment of the United States Constitution as implemented through Executive Order No. 12333.'''
+
+[[nodes]]
+jurisdiction = "agriculture"
+bill = "118-s-4690"
+version = "1_reported-in-senate.xml"
+node_ordinal = 96
+element_id = "idF920E911D520469FA3CE7DA391E123D2"
+path = "TITLE VII\u2014GENERAL PROVISIONS > Sec. 710"
+text_sha256 = "0099e2a74bc6ff98da5620790c253800c9887fa944f5bb222e17ef728b7457da"
+predicted = "restriction"
+label = ""
+note = ""
+text = '''
+None of the funds appropriated or otherwise made available by this Act may be used for first-class travel by the employees of agencies funded by this Act in contravention of sections 301–10.122 through 301–10.124 of title 41, Code of Federal Regulations.'''
+
+[[nodes]]
+jurisdiction = "agriculture"
+bill = "118-s-4690"
+version = "1_reported-in-senate.xml"
+node_ordinal = 121
+element_id = "id866A6D502ACD4903B0C6F93245BED582"
+path = "TITLE VII\u2014GENERAL PROVISIONS > Sec. 728"
+text_sha256 = "a7fb04a44831dc2e902585176bb81149f04532bb954e94f0b95c530e0d70d766"
+predicted = "restriction"
+label = ""
+note = ""
+text = '''
+None of the funds appropriated or otherwise made available by this Act shall be available for the United States Department of Agriculture to propose, finalize or implement any regulation that would promulgate new user fees pursuant to 31 U.S.C. 9701 after the date of the enactment of this Act.'''
+
+[[nodes]]
+jurisdiction = "homeland_security"
+bill = "118-s-2625"
+version = "1_reported-in-senate.xml"
+node_ordinal = 194
+element_id = "id7C38DD1570CB4D728C5A37E16359FA70"
+path = "TITLE V > GENERAL PROVISIONS > Sec. 522"
+text_sha256 = "cd575bd6502eb41d0f6d30669317b3a388d48e19460e0b3e6549bd81bc2286d9"
+predicted = "restriction"
+label = ""
+note = ""
+text = '''
+None of the funds made available in this Act may be used to reimburse any Federal department or agency for its participation in a National Special Security Event.'''
+
+[[nodes]]
+jurisdiction = "transportation_hud"
+bill = "118-s-4796"
+version = "1_reported-in-senate.xml"
+node_ordinal = 50
+element_id = "idDF5065A94B3E4D6CAB3C2ADB920204BE"
+path = "TITLE I\u2014DEPARTMENT OF TRANSPORTATION > Federal Aviation Administration > Sec. 119B"
+text_sha256 = "b6055c89704b2631762d7128c17429b6ea3dca8c05e4fd030062c2ef760b3f64"
+predicted = "restriction"
+label = ""
+note = ""
+text = '''
+None of the funds made available by this Act may be used by the Administrator of the Federal Aviation Administration to withhold from consideration and approval any new application for participation in the contract tower program, or for reevaluation of cost-share program participants so long as the Federal Aviation Administration has received an application from the airport, and so long as the Administrator determines such tower is eligible using the factors set forth in Federal Aviation Administration published establishment criteria.'''
+
+[[nodes]]
+jurisdiction = "transportation_hud"
+bill = "118-s-4796"
+version = "1_reported-in-senate.xml"
+node_ordinal = 148
+element_id = "id1C465449F3754283A061D52A4D5CF721"
+path = "TITLE I\u2014DEPARTMENT OF TRANSPORTATION > General Provisions\u2014Department of Transportation > Sec. 183"
+text_sha256 = "9a8378c1db422769f410507e2d02f6db1f009a616b09f8d453bae33dfcc6bda3"
+predicted = "restriction"
+label = ""
+note = ""
+text = '''
+None of the funds made available by this Act shall be available for salaries and expenses of more than 125 political and Presidential appointees in the Department of Transportation: Provided, That none of the personnel covered by this provision may be assigned on temporary detail outside the Department of Transportation.'''
+
+[[nodes]]
+jurisdiction = "cjs"
+bill = "118-s-4795"
+version = "1_reported-in-senate.xml"
+node_ordinal = 159
+element_id = "id765FDFBDF176439FA9335698C0613055"
+path = "TITLE V > GENERAL PROVISIONS > Sec. 516"
+text_sha256 = "c5757c4bdb6851896204b1e9c7ac65ac1606ab345edcdb84b29d6a89c2b4a5c5"
+predicted = "restriction"
+label = ""
+note = ""
+text = '''
+None of the funds made available in this Act may be used to include in any new bilateral or multilateral trade agreement the text of—(1)paragraph 2 of article 16.7 of the United States–Singapore Free Trade Agreement;(2)paragraph 4 of article 17.9 of the United States–Australia Free Trade Agreement; or(3)paragraph 4 of article 15.9 of the United States–Morocco Free Trade Agreement.'''
+
+[[nodes]]
+jurisdiction = "agriculture"
+bill = "118-s-4690"
+version = "1_reported-in-senate.xml"
+node_ordinal = 108
+element_id = "idf3de39c545a940c9bf221d5b148fe20b"
+path = "TITLE VII\u2014GENERAL PROVISIONS > Sec. 716 > (d)"
+text_sha256 = "1d7883d7f59f0408b62be292fcb31b5d2dedcc6510207708f0841e492320fa3e"
+predicted = "restriction"
+label = ""
+note = ""
+text = '''
+(d)None of the funds provided by this Act, or provided by previous Appropriations Acts to the agencies funded by this Act that remain available for obligation or expenditure in the current fiscal year, or provided from any accounts in the Treasury derived by the collection of fees available to the agencies funded by this Act, shall be available for—(1)modifying major capital investments funding levels, including information technology systems, that involves increasing or decreasing funds in the current fiscal year for the individual investment in excess of $500,000 or 10 percent of the total cost, whichever is less;(2)realigning or reorganizing new, current, or vacant positions or agency activities or functions to establish a center, office, branch, or similar entity with five or more personnel; or(3)carrying out activities or functions that were not described in the budget request; unless the agencies funded by this Act notify, in writing, the Committees on Appropriations of both Houses of Congress at least 30 days in advance of using the funds for these purposes.'''
+
+[[nodes]]
+jurisdiction = "legislative_branch"
+bill = "118-s-4678"
+version = "1_reported-in-senate.xml"
+node_ordinal = 75
+element_id = "idda04f50a7f684cfb86ff169287dbd188"
+path = "TITLE II\u2014GENERAL PROVISIONS > Sec. 209 > (a)"
+text_sha256 = "7fca8a8c068f1782df45c5dddeb77719d9e3da3d20212ee86021d7da3de4309a"
+predicted = "restriction"
+label = ""
+note = ""
+text = '''
+(a)None of the funds made available in this Act may be used to maintain or establish a computer network unless such network blocks the viewing, downloading, and exchanging of pornography.'''
+
+[[nodes]]
+jurisdiction = "energy_water"
+bill = "118-s-4927"
+version = "1_reported-in-senate.xml"
+node_ordinal = 33
+element_id = "idca65405405a341809b91908abdbf8b11"
+path = "TITLE II\u2014DEPARTMENT OF THE INTERIOR > GENERAL PROVISIONS\u2014DEPARTMENT OF THE INTERIOR > Sec. 201 > (a)"
+text_sha256 = "a9fa23a4d18100fdf523cf9689d14efb1c30e6ab5c285357de4f673b55fe0582"
+predicted = "restriction"
+label = ""
+note = ""
+text = '''
+(a)None of the funds provided in title II of this Act for Water and Related Resources, or provided by previous or subsequent appropriations Acts to the agencies or entities funded in title II of this Act for Water and Related Resources that remain available for obligation or expenditure in fiscal year 2025, shall be available for obligation or expenditure through a reprogramming of funds that—(1)initiates or creates a new program, project, or activity;(2)eliminates a program, project, or activity;(3)increases funds for any program, project, or activity for which funds have been denied or restricted by this Act, unless prior approval is received from the Committees on Appropriations of both Houses of Congress;(4)restarts or resumes any program, project or activity for which funds are not provided in this Act, unless prior approval is received from the Committees on Appropriations of both Houses of Congress;(5)transfers funds in excess of the following limits, unless prior approval is received from the Committees on Appropriations of both Houses of Congress:(A)15 percent for any program, project or activity for which $2,000,000 or more is available at the beginning of the fiscal year; or(B)$400,000 for any program, project or activity for which less than $2,000,000 is available at the beginning of the fiscal year;(6)transfers more than $500,000 from either the Facilities Operation, Maintenance, and Rehabilitation category or the Resources Management and Development category to any program, project, or activity in the other category, unless prior approval is received from the Committees on Appropriations of both Houses of Congress; or(7)transfers, where necessary to discharge legal obligations of the Bureau of Reclamation, more than $5,000,000 to provide adequate funds for settled contractor claims, increased contractor earnings due to accelerated rates of operations, and real estate deficiency judgments, unless prior approval is received from the Committees on Appropriations of both Houses of Congress.'''
+
+[[nodes]]
+jurisdiction = "homeland_security"
+bill = "118-s-2625"
+version = "1_reported-in-senate.xml"
+node_ordinal = 207
+element_id = "id7ccd9b7d0eec404786ca5f34295bbb57"
+path = "TITLE V > GENERAL PROVISIONS > Sec. 527 > (a)"
+text_sha256 = "03176bf9ff4fb57340b1c3f3137ddbfa63948f758f708bd7587b614791d908b6"
+predicted = "restriction"
+label = ""
+note = ""
+text = '''
+(a)None of the funds appropriated or otherwise made available to the Department of Homeland Security by this Act may be used to prevent any of the following persons from entering, for the purpose of conducting oversight, any facility operated by or for the Department of Homeland Security used to detain or otherwise house aliens, or to make any temporary modification at any such facility that in any way alters what is observed by a visiting Member of Congress or such designated employee, compared to what would be observed in the absence of such modification:(1)A Member of Congress.(2)An employee of the United States House of Representatives or the United States Senate designated by such a Member for the purposes of this section.'''
+
+[[nodes]]
+jurisdiction = "milcon_va"
+bill = "118-s-4677"
+version = "1_reported-in-senate.xml"
+node_ordinal = 129
+element_id = "ida20009f021c3406e8e8e6d209caf14ed"
+path = "TITLE II > DEPARTMENT OF VETERANS AFFAIRS > Administrative provisions > Sec. 243 > (a)"
+text_sha256 = "423a4975f434e8e64b5769aac6464dd7d407623f2dba9b9659bcf54f871c9ba4"
+predicted = "restriction"
+label = ""
+note = ""
+text = '''
+(a)None of the funds appropriated or otherwise made available by this Act may be used to deny an Inspector General funded under this Act timely access to any records, documents, or other materials available to the department or agency over which that Inspector General has responsibilities under the Inspector General Act of 1978 (5 U.S.C. 401 et seq.), or to prevent or impede the access of the Inspector General to such records, documents, or other materials, under any provision of law, except a provision of law that expressly refers to such Inspector General and expressly limits the right of access.'''
+
+[[nodes]]
+jurisdiction = "defense"
+bill = "118-s-4921"
+version = "1_reported-in-senate.xml"
+node_ordinal = 258
+element_id = "id955ea9041b7646ce9be5f99238581827"
+path = "TITLE VIII > GENERAL PROVISIONS > Sec. 8117"
+text_sha256 = "824e662bdded0a94f2abdf35aff855f9e67f6db16b2c2d0197c1f043e390943a"
+predicted = "restriction"
+label = ""
+note = ""
+text = '''
+None of the funds appropriated or otherwise made available in this or any other Act may be used to transfer, release, or assist in the transfer or release to or within the United States, its territories, or possessions Khalid Sheikh Mohammed or any other detainee who—(1)is not a United States citizen or a member of the Armed Forces of the United States; and(2)is or was held on or after June 24, 2009, at United States Naval Station, Guantanamo Bay, Cuba, by the Department of Defense.'''
+
+[[nodes]]
+jurisdiction = "milcon_va"
+bill = "118-s-4677"
+version = "1_reported-in-senate.xml"
+node_ordinal = 96
+element_id = "idB1AC186E54BB4022B02AECCB249CD3DC"
+path = "TITLE II > DEPARTMENT OF VETERANS AFFAIRS > Administrative provisions > Sec. 220"
+text_sha256 = "5b23bbe2ede2e956650f5a783ee8f959e237a5587db9bc927705c2c50cecd405"
+predicted = "transfer"
+label = ""
+note = ""
+text = '''
+Of the amounts appropriated to the Department of Veterans Affairs which become available on October 1, 2025, for Medical Services, Medical Community Care, Medical Support and Compliance, and Medical Facilities, up to $644,025,000, plus reimbursements, may be transferred to the Joint Department of Defense—Department of Veterans Affairs Medical Facility Demonstration Fund, established by section 1704 of the National Defense Authorization Act for Fiscal Year 2010 (Public Law 111–84; 123 Stat. 2571) and may be used for operation of the facilities designated as combined Federal medical facilities as described by section 706 of the Duncan Hunter National Defense Authorization Act for Fiscal Year 2009 (Public Law 110–417; 122 Stat. 4500): Provided, That additional funds may be transferred from accounts designated in this section to the Joint Department of Defense—Department of Veterans Affairs Medical Facility Demonstration Fund upon written notification by the Secretary of Veterans Affairs to the Committees on Appropriations of both Houses of Congress.'''
+
+[[nodes]]
+jurisdiction = "milcon_va"
+bill = "118-s-4677"
+version = "1_reported-in-senate.xml"
+node_ordinal = 95
+element_id = "id5707F687187542E4A2FFB522CDDDB53D"
+path = "TITLE II > DEPARTMENT OF VETERANS AFFAIRS > Administrative provisions > Sec. 219"
+text_sha256 = "313de6e3a4c3d7e09499b29e34c5558690d1c8556ad611ffe19dbe882a705ca0"
+predicted = "transfer"
+label = ""
+note = ""
+text = '''
+Of the amounts appropriated to the Department of Veterans Affairs for fiscal year 2025 for Medical Services, Medical Community Care, Medical Support and Compliance, Medical Facilities, Construction, Minor Projects, and Information Technology Systems, up to $594,828,000, plus reimbursements, may be transferred to the Joint Department of Defense—Department of Veterans Affairs Medical Facility Demonstration Fund, established by section 1704 of the National Defense Authorization Act for Fiscal Year 2010 (Public Law 111–84; 123 Stat. 2571) and may be used for operation of the facilities designated as combined Federal medical facilities as described by section 706 of the Duncan Hunter National Defense Authorization Act for Fiscal Year 2009 (Public Law 110–417; 122 Stat. 4500): Provided, That additional funds may be transferred from accounts designated in this section to the Joint Department of Defense—Department of Veterans Affairs Medical Facility Demonstration Fund upon written notification by the Secretary of Veterans Affairs to the Committees on Appropriations of both Houses of Congress: Provided further, That section 220 of title II of division A of Public Law 118–42 is repealed.'''
+
+[[nodes]]
+jurisdiction = "milcon_va"
+bill = "118-s-4677"
+version = "1_reported-in-senate.xml"
+node_ordinal = 98
+element_id = "id3C1884B776994A3C94F0AE05E925E632"
+path = "TITLE II > DEPARTMENT OF VETERANS AFFAIRS > Administrative provisions > Sec. 222"
+text_sha256 = "37e0b873d598e5637ff694ffcb184c64b92e651ddaee5828b090f0cebd1ab234"
+predicted = "transfer"
+label = ""
+note = ""
+text = '''
+Of the amounts available in this title for Medical Services, Medical Community Care, Medical Support and Compliance, and Medical Facilities, a minimum of $15,000,000 shall be transferred to the DOD–VA Health Care Sharing Incentive Fund, as authorized by section 8111(d) of title 38, United States Code, to remain available until expended, for any purpose authorized by section 8111 of title 38, United States Code.'''
+
+[[nodes]]
+jurisdiction = "homeland_security"
+bill = "118-s-2625"
+version = "1_reported-in-senate.xml"
+node_ordinal = 83
+element_id = "id8E5170242648483CA5DBFFE4B5442772"
+path = "TITLE II > SECURITY, ENFORCEMENT, AND INVESTIGATIONS > Administrative provisions > Sec. 222"
+text_sha256 = "2c3cd8599d06ebc258b480e9b9955142ed543bbf172243ca0230fcd24ad86673"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+Without regard to the limitation as to time and condition of section 503(d) of this Act, after June 30, in accordance with the notification requirement described in subsection(b) of such section, up to the following amounts may be reprogrammed within Coast Guard—Operations and Support—(1)$10,000,000 to or from the Military Personnel funding category; and(2)$10,000,000 between the Field Operations funding subcategories.'''
+
+[[nodes]]
+jurisdiction = "defense"
+bill = "118-s-4921"
+version = "1_reported-in-senate.xml"
+node_ordinal = 95
+element_id = "idC46AEDD017F247799C8B1E7037DED316"
+path = "TITLE VIII > GENERAL PROVISIONS > Sec. 8019"
+text_sha256 = "41578c8c5569d2498023f1e38719898b0220f489c99103dc44b46c1822825e19"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+No more than $500,000 of the funds appropriated or made available in this Act shall be used during a single fiscal year for any single relocation of an organization, unit, activity or function of the Department of Defense into or within the National Capital Region: Provided, That the Secretary of Defense may waive this restriction on a case-by-case basis by certifying in writing to the congressional defense committees that such a relocation is required in the best interest of the Government.'''
+
+[[nodes]]
+jurisdiction = "financial_services"
+bill = "118-s-4928"
+version = "1_reported-in-senate.xml"
+node_ordinal = 237
+element_id = "id198972D53C1F4D99BD877AD75D43898A"
+path = "TITLE VII > GENERAL PROVISIONS\u2014GOVERNMENT-WIDE > Departments, agencies, and corporations > Sec. 710"
+text_sha256 = "5f732ef709671b787817116078da49b7236dd11de683051dea51440b4cb91ed1"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+During the period in which the head of any department or agency, or any other officer or civilian employee of the Federal Government appointed by the President of the United States, holds office, no funds may be obligated or expended in excess of $5,000 to furnish or redecorate the office of such department head, agency head, officer, or employee, or to purchase furniture or make improvements for any such office, unless advance notice of such furnishing or redecoration is transmitted to the Committees on Appropriations of the House of Representatives and the Senate. For the purposes of this section, the term office shall include the entire suite of offices assigned to the individual, as well as any other space used primarily by the individual or the use of which is directly controlled by the individual.'''
+
+[[nodes]]
+jurisdiction = "energy_water"
+bill = "118-s-4927"
+version = "1_reported-in-senate.xml"
+node_ordinal = 102
+element_id = "id7cc9b1a5efe143adbcc9e11c2928bbd2"
+path = "TITLE III\u2014DEPARTMENT OF ENERGY > GENERAL PROVISIONS\u2014DEPARTMENT OF ENERGY > Sec. 311"
+text_sha256 = "03697187a4b31ea491e0dd3aefc1c65b1f10c48f71abfb51a3fe8694705b2bd9"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+Of the amounts previously appropriated under the heading Department of Energy—Energy Programs—Electricity in division J of the Infrastructure Investment and Jobs Act (Public Law 117–58), up to $300,000,000 that are made available for fiscal year 2025 and up to $300,000,000 that are made available for fiscal year 2026, shall be available, in addition to amounts otherwise made available for such purposes, for financial assistance, procurement, technical assistance, and workforce support, to enhance the domestic supply chain for the manufacture of distribution and power transformers, components, and electric grid components: Provided, That such amounts may be used to supplement amounts previously appropriated under the heading Department of Energy—Energy Programs—Electricity in division J of the Infrastructure Investment and Jobs Act (Public Law 117–58) for electricity activities authorized in sections 40101, 40106(d)(3), 40107, and 40125(d) of such Act in an amount not to exceed 15 percent of the amount appropriated under such heading for each such purpose in such fiscal year and no additional funds may be used to deploy generation: Provided further, That any amount repurposed pursuant to this section shall retain its original period of availability: Provided further, That amounts repurposed pursuant to this section shall continue to be treated as amounts specified in section 103(b) of division A of Public Law 118–5.'''
+
+[[nodes]]
+jurisdiction = "state_foreign_ops"
+bill = "118-s-4797"
+version = "1_reported-in-senate.xml"
+node_ordinal = 360
+element_id = "idc7b30b89d86f40d28ea31ccc8ff7c34c"
+path = "TITLE VII\u2014GENERAL PROVISIONS > Sec. 7058 > (d) Global health workforce"
+text_sha256 = "f521933cb5e75868d06d5e9b203e64f022d95d90206fda2f6447d8c78ee50957"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+(d)Global health workforce Of the funds made available by this Act under the heading Global Health Programs, not less than $20,000,000 shall be made available to strengthen the global health workforce.'''
+
+[[nodes]]
+jurisdiction = "financial_services"
+bill = "118-s-4928"
+version = "1_reported-in-senate.xml"
+node_ordinal = 225
+element_id = "id06f8af00ec084237a1aac79631565ff3"
+path = "TITLE VI > GENERAL PROVISIONS\u2014THIS ACT > Sec. 635"
+text_sha256 = "fe2b51b9b80e9bb818cd48ac9b16f85dd2251a5d97761a709b2fc91ebc3e09fd"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+Of the unobligated balances made available for purposes of carrying out section 2105(a)(3) of the Social Security Act, $6,640,000,000 shall not be available for obligation in this fiscal year.'''
+
+[[nodes]]
+jurisdiction = "state_foreign_ops"
+bill = "118-s-4797"
+version = "1_reported-in-senate.xml"
+node_ordinal = 258
+element_id = "id3de9415e3aee49278dc80e85fb5c93d6"
+path = "TITLE VII\u2014GENERAL PROVISIONS > Sec. 7041 > (a) Egypt"
+text_sha256 = "ddfcea00eada6db688695788f2eb6471bcfe9aedf7e249a6fd286a0825d4ea66"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+(a)Egypt(1)Assistance Of the funds appropriated by this Act, not less than $1,425,000,000 should be made available for assistance for Egypt, of which—(A)not less than $125,000,000 shall be made available from funds under the heading Economic Support Fund, of which not less than $40,000,000 should be made available for higher education programs, including not less than $15,000,000 for scholarships for Egyptian students with high financial need to attend not-for-profit institutions of higher education in Egypt that are currently accredited by a regional accrediting agency recognized by the United States Department of Education, or meets standards equivalent to those required for United States institutional accreditation by a regional accrediting agency recognized by such Department: Provided, That such funds shall be made available for democracy programs, and for development programs in the Sinai; and(B)not less than $1,300,000,000 should be made available from funds under the heading Foreign Military Financing Program, to remain available until September 30, 2026: Provided, That except as provided for in the following proviso, such funds may be transferred to an interest bearing account in the Federal Reserve Bank of New York, following consultation with the Committees on Appropriations and the uses of any interest earned on such funds shall be subject to the regular notification procedures of the Committees on Appropriations: Provided further, That of the amounts made available in this subparagraph, an amount equal to interest earned on funds deposited in the Federal Reserve Bank of New York pursuant to the preceding proviso as of the date of enactment of this Act shall be transferred to, and merged with, funds appropriated by this Act under title III for assistance for democracy programs, economic growth, and humanitarian assistance, subject to prior consultation with, and the regular notification procedures of, the Committees on Appropriations: Provided further, That such transfer authority is in addition to any transfer authority otherwise available by this Act or any other Act.(2)Certification and report Funds appropriated by this Act that are available for assistance for Egypt may be made available notwithstanding any other provision of law restricting assistance for Egypt, except for this subsection and section 620M of the Foreign Assistance Act of 1961, and may only be made available for assistance for the Government of Egypt if the Secretary of State certifies and reports to the Committees on Appropriations that such government is—(A)sustaining the strategic relationship with the United States; and(B)meeting its obligations under the 1979 Egypt-Israel Peace Treaty.(3)Withholding Of the funds made available pursuant to paragraph(1)(B), $320,000,000 shall be withheld from obligation until the Secretary certifies and reports to the Committees on Appropriations that the Government of Egypt is meeting the requirements under this section in the report accompanying this Act: Provided, That the Secretary may waive such requirement if the Secretary determines and reports to the Committees on Appropriations that such funds are necessary for counterterrorism, border security, or nonproliferation programs or that it is otherwise important to the national security interest of the United States to do so, including a detailed justification for the use of such waiver and the reasons why any of the requirements cannot be met: Provided further, That the report required by the previous proviso shall be submitted in unclassified form but may be accompanied by a classified annex.'''
+
+[[nodes]]
+jurisdiction = "state_foreign_ops"
+bill = "118-s-4797"
+version = "1_reported-in-senate.xml"
+node_ordinal = 372
+element_id = "ida845ec0fb9c3456da0f4a92a91e50862"
+path = "TITLE VII\u2014GENERAL PROVISIONS > Sec. 7060 > (d) Food security and agricultural development"
+text_sha256 = "fea6d29242032b6957be7681284d47369d1d4cdc8187452c9ca1c22262ae6c61"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+(d)Food security and agricultural development(1)Use of funds Of the funds appropriated by title III of this Act, not less than $1,000,000,000 shall be made available for food security and agricultural development programs to carry out the purposes of the Global Food Security Act of 2016 (Public Law 114–195), including for the Feed the Future Innovation Labs: Provided, That funds may be made available for a contribution as authorized by section 3202 of the Food, Conservation, and Energy Act of 2008 (Public Law 110–246), as amended by section 3310 of the Agriculture Improvement Act of 2018 (Public Law 115–334).(2)Feed the future modernization Of the funds made available pursuant to this subsection—(A)not less than 50 percent should be made available for the Feed the Future target countries; and(B)not less than $25,000,000 shall be made available to support private sector investment in food security, including as catalytic capital.'''
+
+[[nodes]]
+jurisdiction = "state_foreign_ops"
+bill = "118-s-4797"
+version = "1_reported-in-senate.xml"
+node_ordinal = 403
+element_id = "id5e9ef1b251e244d49e235d8995f6ac2a"
+path = "TITLE VII\u2014GENERAL PROVISIONS > Sec. 7065 > (a) Authority"
+text_sha256 = "5e21868c57abfe35add1da6b57dca86389071b5020078eab025b6a350661c8c5"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+(a)Authority Up to $170,000,000 of the funds made available in title III of this Act pursuant to or to carry out the provisions of part I of the Foreign Assistance Act of 1961, including funds appropriated under the heading Assistance for Europe, Eurasia and Central Asia, may be used by the United States Agency for International Development to hire and employ individuals in the United States and overseas on a limited appointment basis pursuant to the authority of sections 308 and 309 of the Foreign Service Act of 1980 (22 U.S.C. 3948 and 3949).'''
+
+[[nodes]]
+jurisdiction = "labor_hhs"
+bill = "118-s-4942"
+version = "1_reported-in-senate.xml"
+node_ordinal = 309
+element_id = "id8151350A31D849DBA49F927FB491AA1B"
+path = "TITLE V\u2014GENERAL PROVISIONS > Sec. 529"
+text_sha256 = "7fbc54c3c30232fd6dc3d32aa3e924770c16473eb30f5cfbb30cd8787b0dcca0"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+Of amounts deposited in the Child Enrollment Contingency Fund under section 2104(n)(2) of the Social Security Act and the income derived from investment of those funds pursuant to section 2104(n)(2)(C) of that Act, $21,380,813,000 shall not be available for obligation in this fiscal year.'''
+
+[[nodes]]
+jurisdiction = "labor_hhs"
+bill = "118-s-4942"
+version = "1_reported-in-senate.xml"
+node_ordinal = 177
+element_id = "id88E7138C105846539E8ED13E39FEB76E"
+path = "TITLE II\u2014DEPARTMENT OF HEALTH AND HUMAN SERVICES > General provisions > Sec. 227"
+text_sha256 = "27115097bf38d25ce0f782936614e8b0bef731fa9f505dae6474b33d4203e6de"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+In addition to the amounts otherwise available for Centers for Medicare & Medicaid Services, Program Management, the Secretary of Health and Human Services may transfer up to $525,000,000 to such account from the Federal Hospital Insurance Trust Fund and the Federal Supplementary Medical Insurance Trust Fund to support program management activity related to the Medicare Program: Provided, That except for the foregoing purpose, such funds may not be used to support any provision of Public Law 111–148 or Public Law 111–152 (or any amendment made by either such Public Law) or to supplant any other amounts within such account.'''
+
+[[nodes]]
+jurisdiction = "defense"
+bill = "118-s-4921"
+version = "1_reported-in-senate.xml"
+node_ordinal = 151
+element_id = "id2C6334B3B9D647EEAEDD4C5D43D512B8"
+path = "TITLE VIII > GENERAL PROVISIONS > Sec. 8049"
+text_sha256 = "9446a9a57f5765e1a681b4bf42ae1d02c6068b0ee6094cf3e3a48a00c3764400"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+In addition to the amounts appropriated or otherwise made available elsewhere in this Act, $24,000,000 is hereby appropriated to the Department of Defense: Provided, That upon the determination of the Secretary of Defense that it shall serve the national interest, the Secretary shall make grants in the amounts specified as follows: $24,000,000 to the United Service Organizations.'''
+
+[[nodes]]
+jurisdiction = "homeland_security"
+bill = "118-s-2625"
+version = "1_reported-in-senate.xml"
+node_ordinal = 192
+element_id = "idCBCA850827F44D8DBC465FBBA04E4B9E"
+path = "TITLE V > GENERAL PROVISIONS > Sec. 521 > (c)"
+text_sha256 = "66ea95858ab941a5e7fcd786276ed285f7fca2781a62192b927a12f1b79826b8"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+(c)The total cost to the Department of Homeland Security of any such conference shall not exceed $500,000.'''
+
+[[nodes]]
+jurisdiction = "energy_water"
+bill = "118-s-4927"
+version = "1_reported-in-senate.xml"
+node_ordinal = 18
+element_id = "id5ead828ea52e4fa98cbb0b83b39556fa"
+path = "TITLE I\u2014CORPS OF ENGINEERS\u2014CIVIL > GENERAL PROVISIONS\u2014CORPS OF ENGINEERS\u2014CIVIL > Sec. 101 > (b) De minimus reprogrammings"
+text_sha256 = "45d973a579ce8326b1d82bbd1a8e87676b4a913d0c9ed65c568f7281357fc53d"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+(b)De minimus reprogrammings In no case should a reprogramming for less than $50,000 be submitted to the Committees on Appropriations of both Houses of Congress.'''
+
+[[nodes]]
+jurisdiction = "state_foreign_ops"
+bill = "118-s-4797"
+version = "1_reported-in-senate.xml"
+node_ordinal = 290
+element_id = "idC383A8413E3B4FB39EE7084A60FAED75"
+path = "TITLE VII\u2014GENERAL PROVISIONS > Sec. 7043 > (j) Tibet"
+text_sha256 = "24aeddae5ba11456e156265cab55ea12b628117b0b477de31d172f5ed5b2c858"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+(j)Tibet(1)Programs Of the funds appropriated by this Act under the heading Economic Support Fund, not less than $27,000,000 shall be made available, notwithstanding any other provision of law, for programs authorized by section 346(d),(e), and(f) of the Tibetan Policy and Support Act of 2020 (subtitle E of title III of division FF of Public Law 116–260) and the programs described under this section in the report accompanying this Act.(2)Sanctions Section 7031(c) of this Act shall be applied to officials of the Government of the People’s Republic of China and other governments in the South Asia region about whom the Secretary of State has credible information have been involved in a gross violation of human rights in the Tibet Autonomous Region or other Tibetan communities in the PRC and the region.'''
+
+[[nodes]]
+jurisdiction = "transportation_hud"
+bill = "118-s-4796"
+version = "1_reported-in-senate.xml"
+node_ordinal = 73
+element_id = "id86414d53f9d74b19a14045fc46ce7259"
+path = "TITLE I\u2014DEPARTMENT OF TRANSPORTATION > Federal Highway Administration > Sec. 125 > (a)"
+text_sha256 = "dbb46f49d279477401218c0b2d12e963a0b555cf28ace26087fae8edf90a15e1"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+(a)Notwithstanding any other provision of law, $63,000,000 from the funds described in subsection(c), in addition to amounts made available in paragraph(9) under the heading Highway Infrastructure Programs, shall be available for a competitive highway bridge program for States that—(1)have—(A)a population density of less than 115 individuals per square mile; or(B)a population of less than 1,100,000 individuals; and(2)have—(A)less than 26 percent of total bridges classified as in good condition; or(B)greater than or equal to 5.2 percent of total bridges classified as in poor condition: Provided, That any such State with more than 14 percent of total bridges classified as in poor condition shall receive not less than $32,500,000 of the funds made available under this subsection or in paragraph(9) under the heading Highway Infrastructure Programs for grant applications for projects eligible under this subsection: Provided further, That if the Secretary determines that eligible applications from any such State meeting the criteria under the preceding proviso are insufficient to make awards of at least $32,500,000, the Secretary shall use the unutilized amounts to provide other grants to States eligible under this subsection: Provided further, That no State shall be awarded more than $55,000,000 in awards from funds made available under this subsection or in paragraph(9) under the heading Highway Infrastructure Programs: Provided further, That the funds made available under this subsection shall be used for highway bridge replacement or rehabilitation projects on public roads that demonstrate cost savings by bundling multiple highway bridge projects and, except as otherwise provided in this section, shall be administered as if apportioned under chapter 1 of title 23, United States Code: Provided further, That the requirements of section 144(j)(5) of title 23, United States Code, shall not apply to funds made available under this subsection: Provided further, That for purposes of this subsection, the Secretary shall calculate population and population density figures based on the latest available data from the decennial census conducted under section 141(a) of title 13, United States Code: Provided further, That for purposes of this subsection, the Secretary shall calculate the percentages of bridge counts (including the percentages of bridge counts classified as in poor and good condition) based on the national bridge inventory as of June 2023: Provided further, That section 11101(e) of the Infrastructure Investment and Jobs Act (Public Law 117–58) shall apply to funds made available under this subsection.'''
+
+[[nodes]]
+jurisdiction = "state_foreign_ops"
+bill = "118-s-4797"
+version = "1_reported-in-senate.xml"
+node_ordinal = 281
+element_id = "id01371505b58a47eca494611d38559994"
+path = "TITLE VII\u2014GENERAL PROVISIONS > Sec. 7043 > (a) Association of southeast asian nations"
+text_sha256 = "6e020b95a7e917ef9a5478a6542dcc63de1e76e6cc2cc62db4f19f5f99359aff"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+(a)Association of southeast asian nations Of the funds appropriated by this Act under the headings Economic Support Fund and International Narcotics Control and Law Enforcement, not less than $45,000,000 shall be made available for programs for the Association of Southeast Asian Nations.'''
+
+[[nodes]]
+jurisdiction = "labor_hhs"
+bill = "118-s-4942"
+version = "1_reported-in-senate.xml"
+node_ordinal = 5
+element_id = "idF0565825D2844581A1CC6A5C6E0B088D"
+path = "TITLE I\u2014DEPARTMENT OF LABOR > Employment and training administration > JOB CORPS"
+text_sha256 = "a28861d2a53a27553927a2694cd338288a76bc9cfa3efa53a9cc57b37c581280"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+To carry out subtitle C of title I of the WIOA, including Federal administrative expenses, the purchase and hire of passenger motor vehicles, the construction, alteration, and repairs of buildings and other facilities, and the purchase of real property for training centers as authorized by the WIOA, $1,760,155,000, plus reimbursements, as follows: (1)$1,603,325,000 for Job Corps Operations, which shall be available for the period July 1, 2025 through June 30, 2026; (2)$123,000,000 for construction, rehabilitation and acquisition of Job Corps Centers, which shall be available for the period July 1, 2025 through June 30, 2028, and which may include the acquisition, maintenance, and repair of major items of equipment: Provided, That the Secretary may transfer up to 15 percent of such funds to meet the operational needs of such centers or to achieve administrative efficiencies: Provided further, That any funds transferred pursuant to the preceding proviso shall not be available for obligation after June 30, 2025: Provided further, That the Committees on Appropriations of the House of Representatives and the Senate are notified at least 15 days in advance of any transfer; and (3)$33,830,000 for necessary expenses of Job Corps, which shall be available for obligation for the period October 1, 2024 through September 30, 2025: Provided, That no funds from any other appropriation shall be used to provide meal services at or for Job Corps Centers.'''
+
+[[nodes]]
+jurisdiction = "transportation_hud"
+bill = "118-s-4796"
+version = "1_reported-in-senate.xml"
+node_ordinal = 113
+element_id = "iddb6bc4772fd84b5485a8afa293acdc0b"
+path = "TITLE I\u2014DEPARTMENT OF TRANSPORTATION > Federal transit administration > Sec. 166 > (d)"
+text_sha256 = "d90ea22ad374771719720adb2d928200a2294ee066546e7b8c8b0d719aa6ba9d"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+(d)Of the unobligated balances made available for Alternative Transportation in Parks and Public Lands under section 5320 of title 49, United States Code, $2,154,502 shall be transferred to and administered under section 5311 of title 49, United States Code.'''
+
+[[nodes]]
+jurisdiction = "state_foreign_ops"
+bill = "118-s-4797"
+version = "1_reported-in-senate.xml"
+node_ordinal = 386
+element_id = "id3cc7d04fab6b4f668a6b336c3d904ac8"
+path = "TITLE VII\u2014GENERAL PROVISIONS > Sec. 7061 > (h)"
+text_sha256 = "e87bd2f8686d1f5f9b26d89c4c2e54b3d5a7d292f27d0df6a36eb29fb006e361"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+(h)Of the funds appropriated under title III of this Act, not less than $50,000,000 shall be made available for programs to address plastic pollution, including ocean plastic pollution and other marine debris: Provided, That such funds may be made available for contributions to multilateral initiatives to address such pollution: Provided further, That such funds may only be made available following consultation with the Committees on Appropriations.'''
+
+[[nodes]]
+jurisdiction = "homeland_security"
+bill = "118-s-2625"
+version = "1_reported-in-senate.xml"
+node_ordinal = 225
+element_id = "idbf394ea1f47b40f290bd92b8c7a7042d"
+path = "TITLE V > GENERAL PROVISIONS > Sec. 532 > (c)"
+text_sha256 = "104ecd299756f85f8c730ede9c791c4d0c2b256e6752da0865c98c0e624689d2"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+(c)Not later than 15 days before extending, or 30 days before terminating, protection for a covered individual, the Secretary of Homeland Security shall submit a notification regarding the extension or termination and any change to the threat assessment to the congressional leadership and the appropriate congressional committees.'''
+
+[[nodes]]
+jurisdiction = "financial_services"
+bill = "118-s-4928"
+version = "1_reported-in-senate.xml"
+node_ordinal = 304
+element_id = "idc1559dc763bf482b9f70f58697f8f818"
+path = "TITLE VII > GENERAL PROVISIONS\u2014GOVERNMENT-WIDE > Departments, agencies, and corporations > Sec. 746 > (a)"
+text_sha256 = "9251903a9796a9d850976440c8d4a2646474b2098e695400da74d38cbd41462d"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+(a)During fiscal year 2025, on the date on which a request is made for a transfer of funds in accordance with section 1017 of Public Law 111–203, the Bureau of Consumer Financial Protection shall notify the Committees on Appropriations of the House of Representatives and the Senate, the Committee on Financial Services of the House of Representatives, and the Committee on Banking, Housing, and Urban Affairs of the Senate of such request.'''
+
+[[nodes]]
+jurisdiction = "state_foreign_ops"
+bill = "118-s-4797"
+version = "1_reported-in-senate.xml"
+node_ordinal = 324
+element_id = "id71d48871b5884772b967324f940d2582"
+path = "TITLE VII\u2014GENERAL PROVISIONS > Sec. 7048 > (g) Additional availability"
+text_sha256 = "855e76a70de601ae3ceb71a90ccd95563e2baa0a8cf852bb71b18b7999545832"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+(g)Additional availability Subject to the regular notification procedures of the Committees on Appropriations, funds appropriated by this Act which are returned or not made available due to the second proviso under the heading Contributions for International Peacekeeping Activities in title I of this Act or section 307(a) of the Foreign Assistance Act of 1961 (22 U.S.C. 2227(a)), shall remain available for obligation until September 30, 2026: Provided, That the requirement to withhold funds for programs in Burma under section 307(a) of the Foreign Assistance Act of 1961 shall not apply to funds appropriated by this Act.'''
+
+[[nodes]]
+jurisdiction = "interior_environment"
+bill = "118-s-4802"
+version = "1_reported-in-senate.xml"
+node_ordinal = 84
+element_id = "id412A65C770FC470F89C2CC0662F79F23"
+path = "TITLE I\u2014DEPARTMENT OF THE INTERIOR > Ellis, Governors, and Liberty Islands > Sec. 116 > (b) Terms and conditions"
+text_sha256 = "ee9a6ea6d34183389508e2be6307c92b1e442bbf745e9c15fe3d33ba3734e8bf"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+(b)Terms and conditions Such conveyance of the National Park Service land under subsection(a) shall be subject to any terms and conditions that the Secretary may require. If such conveyed land is no longer being used for the purposes specified in this section, the lands or interests therein shall revert to the National Park Service after they have been restored or remediated to the satisfaction of the Secretary.'''
+
+[[nodes]]
+jurisdiction = "cjs"
+bill = "118-s-4795"
+version = "1_reported-in-senate.xml"
+node_ordinal = 142
+element_id = "id76022981987e433195d5879abe20af23"
+path = "TITLE V > GENERAL PROVISIONS > Sec. 507 > (a)"
+text_sha256 = "56cde2ff0509e18723bbeb3665ba0fa4094aa816bd876c1d88fcf8d937ed7fc5"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+(a)The Departments of Commerce and Justice, the National Science Foundation, and the National Aeronautics and Space Administration shall provide to the Committees on Appropriations of the House of Representatives and the Senate a quarterly report on the status of balances of appropriations at the account level. For unobligated, uncommitted balances and unobligated, committed balances the quarterly reports shall separately identify the amounts attributable to each source year of appropriation from which the balances were derived. For balances that are obligated, but unexpended, the quarterly reports shall separately identify amounts by the year of obligation.'''
+
+[[nodes]]
+jurisdiction = "interior_environment"
+bill = "118-s-4802"
+version = "1_reported-in-senate.xml"
+node_ordinal = 213
+element_id = "id8A244862CFE44B06997B4CE1A2110D01"
+path = "TITLE IV\u2014GENERAL PROVISIONS > Sec. 428 > (b)"
+text_sha256 = "4a5b89d7157e2e2f246bfbb759f0beebff134455cac45366630c8272648acc7b"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+(b)The Secretaries of the Interior and Health and Human Services shall, jointly or separately, during fiscal year 2025 consult with tribes and tribal organizations through public solicitation and other means regarding the requirements for leases under section 105(l) of the Indian Self-Determination and Education Assistance Act (25 U.S.C. 5324(l)) on how to implement a consistent and transparent process for the payment of such leases.'''
+
+[[nodes]]
+jurisdiction = "transportation_hud"
+bill = "118-s-4796"
+version = "1_reported-in-senate.xml"
+node_ordinal = 301
+element_id = "id47234e35cf83424abf7482ecd0f30c2f"
+path = "TITLE IV\u2014GENERAL PROVISIONS\u2014THIS ACT > Sec. 420 > (a)"
+text_sha256 = "8ced025de34a7eff6b89c3b9a9aef2db472a96ba56bd5e7f4fc29fb79328d46c"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+(a)Amounts made available under the heading Department of Transportation–Consolidated Rail Infrastructure and Safety Improvements for the item relating to Midway Crossing in the table of projects entitled Community Project Funding/Congressionally Directed Spending in the explanatory statement for division L of the Consolidated Appropriations Act, 2023 (Public Law 117–328) described in section 4 in the matter preceding division A of such Act shall be transferred to Department of Transportation–Transit Infrastructure Grants and shall be available under the heading to which transferred for its original purpose.'''
+
+[[nodes]]
+jurisdiction = "state_foreign_ops"
+bill = "118-s-4797"
+version = "1_reported-in-senate.xml"
+node_ordinal = 437
+element_id = "idac419fc866f647e4bb67206b96100d82"
+path = "TITLE VII\u2014GENERAL PROVISIONS > Sec. 7071 > (e) Prohibition"
+text_sha256 = "005c4434b7c3957fa95980a759d49c4d36fd0589843bcf86f9b5d303bf29211e"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+(e)Prohibition Notwithstanding any other provision of this Act, funds appropriated or otherwise made available by this Act or other Acts making appropriations for the Department of State, foreign operations, and related programs, including provisions of Acts providing supplemental appropriations for the Department of State, foreign operations, and related programs, may not be used for a contribution, grant, or other payment to the United Nations Relief and Works Agency (UNRWA), notwithstanding any other provision of law, for any amounts provided in fiscal year 2024 or prior fiscal years, or for amounts provided in fiscal year 2025 until March 25, 2025: Provided, That funds for UNRWA may be made available following such date if the President certifies and reports to the appropriate congressional committees that UNRWA has—(1)received and is implementing the recommendations of, as appropriate, a review by an independent entity of UNRWA’s implementation of its policies and procedures pertaining to neutrality, ethics, and oversight of staff;(2)completed enhanced vetting of all active UNRWA personnel in Gaza, in consultation, as appropriate, with the United Nations and the Government of Israel;(3)acted promptly to investigate any derogatory information identified during such vetting and is taking action to remedy any violation of its policies; and(4)shared with its Advisory Commission initial results of steps taken to demonstrate UNRWA’s resolve to implement reforms: Provided further, That such conditions must be recertified by the President every 90 days until September 30, 2025: Provided further, That not later than 30 days after the date of enactment of this Act, and concurrent with each certification submitted pursuant to the previous proviso thereafter until September 30, 2025, the Secretary of State shall brief the appropriate congressional committees on the implementation of this section: Provided further, That funds made available by this Act shall be made available, as appropriate, to help build the capacity of other implementers of United States humanitarian assistance in Gaza.'''
+
+[[nodes]]
+jurisdiction = "labor_hhs"
+bill = "118-s-4942"
+version = "1_reported-in-senate.xml"
+node_ordinal = 60
+element_id = "id8fd58c20-efd1-4858-a8c5-f6533bbff188"
+path = "TITLE I\u2014DEPARTMENT OF LABOR > General provisions"
+text_sha256 = "88efbe3e449efa9e8ea0c980f94f31b02b970a74bdbc78d06d836a085d796894"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+This title may be cited as the Department of Labor Appropriations Act, 2025.'''
+
+[[nodes]]
+jurisdiction = "state_foreign_ops"
+bill = "118-s-4797"
+version = "1_reported-in-senate.xml"
+node_ordinal = 241
+element_id = "idd530a71f8dfb420d95255ba57b61569e"
+path = "TITLE VII\u2014GENERAL PROVISIONS > Sec. 7037 > (d) Exemption"
+text_sha256 = "e45d37fe8b72cd92cb330b669200b7a0da7eed27c053b7001a6f0438de7c94b7"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+(d)Exemption The restriction in subsection(a) shall not apply to assistance intended to help reform the Palestinian Authority and affiliated institutions, or the governing entity, in order to help meet the requirements of subsection(a), consistent with the provisions of section 7040 of this Act (Limitation on Assistance for the Palestinian Authority).'''
+
+[[nodes]]
+jurisdiction = "financial_services"
+bill = "118-s-4928"
+version = "1_reported-in-senate.xml"
+node_ordinal = 289
+element_id = "ide598b67498954cf7af9df925244f597b"
+path = "TITLE VII > GENERAL PROVISIONS\u2014GOVERNMENT-WIDE > Departments, agencies, and corporations > Sec. 738 > (d)"
+text_sha256 = "55b2479a2f8a067ecaa103497dd4a2f38fe7b57f9cb47da427c3fa5a448a3b72"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+(d)A grant or contract funded by amounts appropriated by this or any other appropriations Act may not be used for the purpose of defraying the costs of a conference described in subsection(c) that is not directly and programmatically related to the purpose for which the grant or contract was awarded, such as a conference held in connection with planning, training, assessment, review, or other routine purposes related to a project funded by the grant or contract.'''
+
+[[nodes]]
+jurisdiction = "milcon_va"
+bill = "118-s-4677"
+version = "1_reported-in-senate.xml"
+node_ordinal = 111
+element_id = "idd6be8b59f8954f60a729e183c496c88c"
+path = "TITLE II > DEPARTMENT OF VETERANS AFFAIRS > Administrative provisions > Sec. 232 > (c)"
+text_sha256 = "07a06e53729aae94bfd8479469260281c181567debe024df6213682887c5b426"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+(c)(1)The Secretary of Veterans Affairs shall conduct a study on the effectiveness of the hotline specified in subsection(a) during the 5-year period beginning on January 1, 2016, based on an analysis of national suicide data and data collected from such hotline.(2)At a minimum, the study required by paragraph(1) shall—(A)determine the number of veterans who contact the hotline specified in subsection(a) and who receive follow up services from the hotline or mental health services from the Department of Veterans Affairs thereafter;(B)determine the number of veterans who contact the hotline who are not referred to, or do not continue receiving, mental health care who commit suicide; and(C)determine the number of veterans described in subparagraph(A) who commit or attempt suicide.'''
+
+[[nodes]]
+jurisdiction = "transportation_hud"
+bill = "118-s-4796"
+version = "1_reported-in-senate.xml"
+node_ordinal = 0
+element_id = "front-matter-masthead"
+path = ""
+text_sha256 = "27393185485188b75d86be95ba23a9b622d070a9988cc5120b8d5411ec16ce3f"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+118th CONGRESS
+2d Session
+S. 4796
+A BILL'''
+
+[[nodes]]
+jurisdiction = "transportation_hud"
+bill = "118-s-4796"
+version = "1_reported-in-senate.xml"
+node_ordinal = 237
+element_id = "id6bbb3643747141288f9e5e93c1ad5938"
+path = "TITLE II\u2014DEPARTMENT OF HOUSING AND URBAN DEVELOPMENT > General provisions\u2014Department of housing and urban development > Sec. 235"
+text_sha256 = "427a98134a67e79adfe122870bb51521f10d48c99e5dc767c365b868172bfdc5"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+None of the amounts made available in this Act may be used to consider family self-sufficiency performance measures or performance scores in determining funding awards for programs receiving family self-sufficiency program coordinator funding provided in this Act.'''
+
+[[nodes]]
+jurisdiction = "state_foreign_ops"
+bill = "118-s-4797"
+version = "1_reported-in-senate.xml"
+node_ordinal = 158
+element_id = "id9d001fe0547a40d0aae4c66b759a7916"
+path = "TITLE VII\u2014GENERAL PROVISIONS > Sec. 7021 > (a) Lethal military equipment exports"
+text_sha256 = "f24b0efa502cc69adc0bcbc5ab3211580afd86672356ba2aafb07004f916e903"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+(a)Lethal military equipment exports(1)Prohibition None of the funds appropriated or otherwise made available under titles III through VI of this Act may be made available to any foreign government which provides lethal military equipment to a country the government of which the Secretary of State has determined supports international terrorism for purposes of section 1754(c) of the Export Reform Control Act of 2018 (50 U.S.C. 4813(c)): Provided, That the prohibition under this section with respect to a foreign government shall terminate 12 months after that government ceases to provide such military equipment: Provided further, That this section applies with respect to lethal military equipment provided under a contract entered into after October 1, 1997.(2)Determination Assistance restricted by paragraph(1) or any other similar provision of law, may be furnished if the President determines that to do so is important to the national interest of the United States.(3)Report Whenever the President makes a determination pursuant to paragraph(2), the President shall submit to the Committees on Appropriations a report with respect to the furnishing of such assistance, including a detailed explanation of the assistance to be provided, the estimated dollar amount of such assistance, and an explanation of how the assistance furthers the United States national interest.'''
+
+[[nodes]]
+jurisdiction = "state_foreign_ops"
+bill = "118-s-4797"
+version = "1_reported-in-senate.xml"
+node_ordinal = 434
+element_id = "id72459286133a4d4ead92a70adb2508d7"
+path = "TITLE VII\u2014GENERAL PROVISIONS > Sec. 7071 > (b) Flags"
+text_sha256 = "acd98a4d9eff130085488372466f7c19f7cb29f4f3d6c5f9e1311c724acb2e93"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+(b)Flags None of the funds appropriated or otherwise made available by this Act may be obligated or expended to fly or display a flag over a facility of the United States Department of State other than the—(1)United States flag;(2)Foreign Service flag pursuant to 2 FAM 154.2–1;(3)POW/MIA flag;(4)Hostage and Wrongful Detainee flag, pursuant to section 904 of title 36, United States Code;(5)flag of a State, insular area, or the District of Columbia at domestic locations;(6)flag of an Indian Tribal government;(7)official branded flag of a United States agency; or(8)sovereign flag of other countries.'''
+
+[[nodes]]
+jurisdiction = "agriculture"
+bill = "118-s-4690"
+version = "1_reported-in-senate.xml"
+node_ordinal = 124
+element_id = "idb4b159c3bc8248cd995f29624865b870"
+path = "TITLE VII\u2014GENERAL PROVISIONS > Sec. 729 > (b)"
+text_sha256 = "4c59e710a1a3685c13aa6e85f1d945bb6e008b092b2a9f65f305913671edc07e"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+(b)Section 409 of the Federal Food, Drug, and Cosmetic Act (21 U.S.C. 348) is amended—(1)in subsection(b)—(A)by redesignating paragraphs(3) through(5) as paragraphs(4) through(6), respectively; and(B)by inserting after paragraph(2) the following:(3)In the case of a zootechnical animal food substance, such petition shall, in addition to any explanatory or supporting data, contain—(A)all relevant data bearing on the effect the zootechnical animal food substance is intended to have and the quantity of such substance required to produce the intended effect; and(B)full reports of investigations made with respect to the intended use of such substance, including full information as to the methods and controls used in conducting such investigations.;(2)in subsection(c)—(A)by amending subparagraph(A) of paragraph(1) to read as follows:(A)(i)by order establish a regulation (whether or not in accord with that proposed by the petitioner) prescribing—(I)with respect to one or more proposed uses of the food additive involved, the conditions under which such additive may be safely used (including specifications as to the particular food or classes of food in or on which such additive may be used, the maximum quantity which may be used or permitted to remain in or on such food, the manner in which such additive may be added to or used in or on such food, and any directions or other labeling or packaging requirements for such additive as the Secretary determines necessary to assure the safety of such use); and(II)in the case of a zootechnical animal food substance, the conditions under which such substance may be used to achieve the intended effect; and(ii)notify the petitioner of such order and the reasons for such action; or; and(B)in paragraph(3)—(i)in subparagraph(A), by striking ; or and inserting a semicolon;(ii)in subparagraph(B), by striking the period and inserting ; or; and(iii)by adding at the end the following:(C)in the case of a zootechnical animal food substance, fails to establish that the proposed use of the substance, under the conditions of use to be specified in the regulation, will achieve the intended effect.; and(3)by adding at the end the following:(l)Zootechnical animal food substances The labeling of a zootechnical animal food substance—(1)shall include the statement: Not for use in the diagnosis, cure, mitigation, treatment, or prevention of disease in animals.; and(2)may include statements regarding the intended effect of the substance on the structure or function of the body of animals, as set forth in section 201(tt)(1)..'''
+
+[[nodes]]
+jurisdiction = "homeland_security"
+bill = "118-s-2625"
+version = "1_reported-in-senate.xml"
+node_ordinal = 166
+element_id = "idfacd93272ec649b7bf75a8d5ab5aecf4"
+path = "TITLE V > GENERAL PROVISIONS > Sec. 506 > (b)"
+text_sha256 = "3bdf774b79f4bfc4c8199f37c5f71d7ef84a89fb8b16d4fd1ca289b52586a3f2"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+(b)Amounts described in subsection(a) made available for Intelligence, Analysis, and Situational Awareness—Operations and Support that exceed the amounts in such authorization for such account shall be transferred to and merged with amounts made available under the heading Management Directorate—Operations and Support.'''
+
+[[nodes]]
+jurisdiction = "cjs_fy2024"
+bill = "118-s-2321"
+version = "1_reported-in-senate.xml"
+node_ordinal = 217
+element_id = "id4a9c435b64284ef286f4abafcebc035c"
+path = "TITLE V > GENERAL PROVISIONS > Sec. 543"
+text_sha256 = "46f81fd3a3e6961ded90402d3a2d2a285a108af6a040d0c40cba9ed49c241c3b"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+Each amount designated in this Act by the Congress as an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985 shall be available (or rescinded, if applicable) only if the President subsequently so designates all such amounts and transmits such designations to the Congress.'''
+
+[[nodes]]
+jurisdiction = "legislative_branch"
+bill = "118-s-4678"
+version = "1_reported-in-senate.xml"
+node_ordinal = 80
+element_id = "id1A540C14058C49589EB4B61EE6F4811C"
+path = "TITLE II\u2014GENERAL PROVISIONS"
+text_sha256 = "3cecf2b554c1c15666ab8bcfef647f6b1a7c334afee71fe63d9f8735dd45a34d"
+predicted = "unknown"
+label = ""
+note = ""
+text = '''
+This Act may be cited as the Legislative Branch Appropriations Act, 2025.'''
