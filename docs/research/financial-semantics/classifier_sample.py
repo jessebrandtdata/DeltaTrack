@@ -63,18 +63,26 @@ LABELS = (
     "sub_allocation",
     "unknown",
 )
+# The coarse label: the paragraph is not an appropriation, and which other class it is was not
+# decided. Scores in the appropriation-or-not pass only.
+NOT_APPROPRIATION = "not_appropriation"
+ALLOWED_LABELS = LABELS + (NOT_APPROPRIATION,)
 
 HEADER = """\
 # Paragraphs to label by hand, so classify_text (classify_bill.py) can be scored per class.
 # Written by classifier_sample.py; scored by classifier_agreement.py. Edit only `label` and
 # `note`; every other field identifies the paragraph (ADR 0019) and is checked at scoring.
+# Definitions and decision rules for every label: classifier_codebook.md, beside this file.
 #
-# label: the class the paragraph truly is, one of
-#   restriction transfer appropriation rescission directive cap authorization fee earmark
-#   availability sub_allocation unknown
-# "unknown" means none of the eleven fits. An empty label means not yet reviewed; the scorer
-# skips it. `predicted` is what the classifier said and is pre-filled for comparison only:
-# a row whose label equals its prediction still needs a person to have read it.
+# label: the class the paragraph truly is. Two passes are valid:
+#   appropriation-or-not   "appropriation", or "not_appropriation" when it is some other class
+#                          and you did not decide which. Every labelled row scores here.
+#   full                   one of restriction transfer appropriation rescission directive cap
+#                          authorization fee earmark availability sub_allocation unknown
+#                          ("unknown" = none of the eleven fits). Scores per class too.
+# An empty label means not yet reviewed; the scorer skips it. `predicted` is what the
+# classifier said and is pre-filled for comparison only: a row whose label equals its
+# prediction still needs a person to have read it.
 # note: anything the next reader needs (why the label, what made it hard). Free text.
 """
 
@@ -132,8 +140,19 @@ def stratum(row: Row) -> str:
     return row.predicted
 
 
-def sample(rows: list[Row], per_class: int, seed: int, exclude: set[tuple] = frozenset()) -> list[Row]:
-    """Up to `per_class` rows from each stratum, drawn with `seed`, skipping identities in `exclude`."""
+def sample(
+    rows: list[Row],
+    per_class: int,
+    seed: int,
+    exclude: set[tuple] = frozenset(),
+    have: dict[str, int] | None = None,
+) -> list[Row]:
+    """Rows that top each stratum up to `per_class`, drawn with `seed`.
+
+    `exclude` holds identities already in the file and `have` counts them per stratum, so a
+    rerun with the same `per_class` draws nothing and a larger one adds only the difference.
+    """
+    have = have or {}
     by_stratum: dict[str, list[Row]] = defaultdict(list)
     for r in rows:
         if r.identity not in exclude:
@@ -142,7 +161,8 @@ def sample(rows: list[Row], per_class: int, seed: int, exclude: set[tuple] = fro
     drawn = []
     for name in sorted(by_stratum):
         pool = by_stratum[name]
-        drawn.extend(rng.sample(pool, min(per_class, len(pool))))
+        want = max(0, per_class - have.get(name, 0))
+        drawn.extend(rng.sample(pool, min(want, len(pool))))
     return drawn
 
 
@@ -150,6 +170,17 @@ def existing_rows(path: Path) -> list[dict]:
     if not path.exists():
         return []
     return tomllib.loads(path.read_text()).get("nodes", [])
+
+
+def existing_strata(kept: list[dict]) -> dict[str, int]:
+    """How many rows the file already holds per stratum, from each row's prediction and text."""
+    counts: dict[str, int] = defaultdict(int)
+    for r in kept:
+        if r["predicted"] == "unknown":
+            counts["unknown/$" if cb.DOLLAR.search(r["text"]) else "unknown/no $"] += 1
+        else:
+            counts[r["predicted"]] += 1
+    return counts
 
 
 def _toml_string(value: str) -> str:
@@ -210,7 +241,7 @@ def main(argv: list[str] | None = None) -> int:
     kept = existing_rows(args.out)
     exclude = {(r["bill"], r["version"], r["node_ordinal"], r["text_sha256"]) for r in kept}
     rows = population()
-    drawn = sample(rows, args.per_class, args.seed, exclude)
+    drawn = sample(rows, args.per_class, args.seed, exclude, existing_strata(kept))
     strata: dict[str, int] = defaultdict(int)
     for r in drawn:
         strata[stratum(r)] += 1

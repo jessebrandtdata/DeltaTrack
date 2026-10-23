@@ -18,7 +18,8 @@ Financial classifier and analysis tools for DeltaTrack bill data.
 | `rollup_agreement.py` | Adds the typed figures up per agency and checks them against the committee report's "Total, <agency>" lines |
 | `classifier_sample.py` | Draws a stratified sample of bill paragraphs into `classifier_labels.toml` for a person to label by class |
 | `classifier_labels.toml` | The sampled paragraphs with the classifier's prediction and a hand-filled `label`; empty labels are unreviewed |
-| `classifier_agreement.py` | Precision and recall of `classify_text` per class, over the labelled rows |
+| `classifier_codebook.md` | What each of the twelve labels means, with GAO's definitions where one exists, decision rules for the overlaps, and examples from the sample |
+| `classifier_agreement.py` | Precision and recall of `classify_text`: appropriation-or-not over every labelled row, then per class |
 
 ## Is each paragraph the class the classifier says?
 
@@ -27,13 +28,16 @@ check only the dollar figure of one of them (appropriation). Nothing else in the
 paragraph's true class, so the classifier's precision and recall per class are measured against
 hand labels. `classifier_sample.py` draws up to 20 paragraphs per predicted label from the
 Senate-reported bills (the "unknown" label split by whether the paragraph has a dollar figure), 142
-rows from 3,003 paragraphs at seed 0, and writes them with `label = ""` for a person to fill.
-`classifier_agreement.py` re-reads each labelled paragraph from the bill XML, refuses to score one
-whose text no longer matches the hash recorded with its label, and prints per-class precision
-(of the paragraphs predicted as a class, how many are labelled it) and recall (of the paragraphs
-labelled a class, how many were predicted as it). Rows with an empty label are skipped and
-counted; the figures describe the labelled sample, which over-represents rare predictions by
-design.
+rows from 3,003 paragraphs at seed 0, and writes them with `label = ""` for a person to fill
+against `classifier_codebook.md`. Two labelling passes are valid. The coarse pass answers only
+whether the paragraph is an appropriation (`appropriation` or `not_appropriation`), the one
+distinction every downstream scorer rests on; the full pass names the class. `classifier_agreement.py`
+re-reads each labelled paragraph from the bill XML, refuses to score one whose text no longer
+matches the hash recorded with its label, and prints two tables: appropriation-or-not over every
+labelled row, then per-class precision (of the paragraphs predicted as a class, how many are
+labelled it) and recall (of the paragraphs labelled a class, how many were predicted as it) over
+the rows whose label names a class. Rows with an empty label are skipped and counted; the figures
+describe the labelled sample, which over-represents rare predictions by design.
 
 ```bash
 uv run python docs/research/financial-semantics/classifier_sample.py                 # add rows; keeps existing ones

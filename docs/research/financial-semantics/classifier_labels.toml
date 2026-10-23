@@ -1,20 +1,24 @@
 # Paragraphs to label by hand, so classify_text (classify_bill.py) can be scored per class.
 # Written by classifier_sample.py; scored by classifier_agreement.py. Edit only `label` and
 # `note`; every other field identifies the paragraph (ADR 0019) and is checked at scoring.
+# Definitions and decision rules for every label: classifier_codebook.md, beside this file.
 #
-# label: the class the paragraph truly is, one of
-#   restriction transfer appropriation rescission directive cap authorization fee earmark
-#   availability sub_allocation unknown
-# "unknown" means none of the eleven fits. An empty label means not yet reviewed; the scorer
-# skips it. `predicted` is what the classifier said and is pre-filled for comparison only:
-# a row whose label equals its prediction still needs a person to have read it.
+# label: the class the paragraph truly is. Two passes are valid:
+#   appropriation-or-not   "appropriation", or "not_appropriation" when it is some other class
+#                          and you did not decide which. Every labelled row scores here.
+#   full                   one of restriction transfer appropriation rescission directive cap
+#                          authorization fee earmark availability sub_allocation unknown
+#                          ("unknown" = none of the eleven fits). Scores per class too.
+# An empty label means not yet reviewed; the scorer skips it. `predicted` is what the
+# classifier said and is pre-filled for comparison only: a row whose label equals its
+# prediction still needs a person to have read it.
 # note: anything the next reader needs (why the label, what made it hard). Free text.
 
 [meta]
-generated = "2026-10-21"
+generated = "2026-10-23"
 per_class = 20
 seed = 0
-parser_revision = "6ce6f2c9359f2946557346c4c2c4e12615d2e88f"
+parser_revision = "af51d864204881412cbbab500820845c4799a54a"
 population = 3003
 bills = ["agriculture", "cjs", "cjs_fy2024", "defense", "energy_water", "financial_services", "homeland_security", "interior_environment", "labor_hhs", "legislative_branch", "milcon_va", "state_foreign_ops", "transportation_hud"]
 

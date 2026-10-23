@@ -40,6 +40,32 @@ def test_metrics_on_no_rows_is_empty():
     assert agree.metrics([]) == {}
 
 
+def test_binary_metrics_fold_every_other_label_into_not_appropriation():
+    pairs = [
+        ("appropriation", "appropriation"),
+        ("appropriation", "cap"),  # a missed appropriation
+        ("not_appropriation", "appropriation"),  # the coarse label, wrongly called an appropriation
+        ("restriction", "restriction"),  # a specific label counts as not_appropriation here
+        ("not_appropriation", "unknown"),
+    ]
+    m = agree.binary_metrics(pairs)
+    assert m["appropriation"] == {"support": 2, "predicted": 2, "tp": 1, "precision": 0.5, "recall": 0.5}
+    assert m["not_appropriation"] == {"support": 3, "predicted": 3, "tp": 2, "precision": 2 / 3, "recall": 2 / 3}
+
+
+def test_summary_scores_coarse_rows_in_the_binary_table_only():
+    scored = [
+        agree.Scored("j", "b", 1, "p", "appropriation", "appropriation", "t"),
+        agree.Scored("j", "b", 2, "p", "not_appropriation", "restriction", "t"),
+        agree.Scored("j", "b", 3, "p", "restriction", "restriction", "t"),
+    ]
+    text = agree.summary(scored, unlabelled=4)
+    assert "appropriation or not, 3 labelled rows" in text
+    assert "per class, 2 rows whose label names a class" in text
+    assert "agree 2 of 2" in text
+    assert "unlabelled rows skipped: 4" in text
+
+
 def _row(ordinal: int, predicted: str, has_dollar: bool = True) -> sampler.Row:
     return sampler.Row(
         jurisdiction="j",
@@ -78,6 +104,19 @@ def test_sample_is_deterministic_for_a_seed_and_skips_excluded_identities():
     assert first == sampler.sample(rows, per_class=4, seed=7)
     again = sampler.sample(rows, per_class=4, seed=7, exclude={r.identity for r in first})
     assert not {r.identity for r in again} & {r.identity for r in first}
+
+
+def test_rerun_tops_each_stratum_up_and_adds_nothing_at_the_same_size():
+    rows = [_row(i, "appropriation") for i in range(10)]
+    rows += [_row(10 + i, "unknown", has_dollar=False) for i in range(10)]
+    first = sampler.sample(rows, per_class=4, seed=1)
+    kept = [sampler._as_dict(r) for r in first]
+    have = sampler.existing_strata(kept)
+    assert have == {"appropriation": 4, "unknown/no $": 4}
+    exclude = {r.identity for r in first}
+    assert sampler.sample(rows, per_class=4, seed=1, exclude=exclude, have=have) == []
+    more = sampler.sample(rows, per_class=6, seed=1, exclude=exclude, have=have)
+    assert sorted(sampler.stratum(r) for r in more) == ["appropriation"] * 2 + ["unknown/no $"] * 2
 
 
 def test_render_round_trips_through_tomllib(tmp_path):

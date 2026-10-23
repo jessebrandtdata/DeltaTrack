@@ -5,10 +5,14 @@ and labelled. For each labelled row this re-reads the paragraph from the committ
 checks its text hash so a label never scores a paragraph that has since changed, runs
 `classify_text` on it, and counts the pair (label, predicted).
 
-Per class, precision is the share of paragraphs predicted as that class whose label is that
-class; recall is the share of paragraphs labelled that class the classifier predicted as it.
-Both are over the labelled rows only, so they describe the sample, not the bills: the sample
-is stratified by prediction (classifier_sample.py), which over-represents rare predictions.
+Two tables. The first is the appropriation-or-not question over every labelled row: a label
+of "appropriation" against any other label, including the coarse "not_appropriation". That is
+the distinction every downstream scorer rests on (committee_agreement.py and typed_precision.py
+read only paragraphs predicted "appropriation"). The second is per class over the rows whose
+label names a class. Per class, precision is the share of paragraphs predicted as that class
+whose label is that class; recall is the share of paragraphs labelled that class the
+classifier predicted as it. Both describe the labelled sample, not the bills: the sample is
+stratified by prediction (classifier_sample.py), which over-represents rare predictions.
 Rows with an empty label are skipped and counted.
 
     uv run python docs/research/financial-semantics/classifier_agreement.py
@@ -31,7 +35,7 @@ HERE = Path(__file__).resolve().parent
 sys.path[:0] = [str(HERE), str(HERE.parents[2])]
 
 import classify_bill as cb  # noqa: E402
-from classifier_sample import LABELS, LABELS_PATH, text_sha256  # noqa: E402
+from classifier_sample import ALLOWED_LABELS, LABELS, LABELS_PATH, NOT_APPROPRIATION, text_sha256  # noqa: E402
 
 from deltatrack.bill_tree import normalize_bill  # noqa: E402
 from tests.corpus_paths import fixture_path  # noqa: E402
@@ -65,7 +69,7 @@ def load(path: Path = LABELS_PATH) -> tuple[list[Scored], int]:
         if not r["label"]:
             unlabelled += 1
             continue
-        if r["label"] not in LABELS:
+        if r["label"] not in ALLOWED_LABELS:
             bad.append((r["bill"], r["node_ordinal"], r["label"]))
             continue
         text = _nodes(r["bill"], r["version"])[r["node_ordinal"]].body_text
@@ -115,22 +119,56 @@ def metrics(pairs: list[tuple[str, str]]) -> dict[str, dict[str, float | int | N
     return out
 
 
+def binary_metrics(pairs: list[tuple[str, str]]) -> dict[str, dict[str, float | int | None]]:
+    """The appropriation-or-not question: every label other than "appropriation" counts as not."""
+
+    def coarse(label: str) -> str:
+        return "appropriation" if label == "appropriation" else NOT_APPROPRIATION
+
+    support, predicted, tp = Counter(), Counter(), Counter()
+    for label, pred in pairs:
+        a, b = coarse(label), coarse(pred)
+        support[a] += 1
+        predicted[b] += 1
+        if a == b:
+            tp[a] += 1
+    return {
+        c: {
+            "support": support[c],
+            "predicted": predicted[c],
+            "tp": tp[c],
+            "precision": tp[c] / predicted[c] if predicted[c] else None,
+            "recall": tp[c] / support[c] if support[c] else None,
+        }
+        for c in ("appropriation", NOT_APPROPRIATION)
+    }
+
+
 def _pct(x: float | None) -> str:
     return "     —" if x is None else f"{100 * x:5.1f}%"
 
 
-def summary(scored: list[Scored], unlabelled: int) -> str:
-    pairs = [(s.label, s.predicted) for s in scored]
-    m = metrics(pairs)
-    lines = [f"{'class':16}{'labelled':>9}{'predicted':>10}{'correct':>8}{'precision':>11}{'recall':>8}"]
-    lines.append("-" * 62)
+def _table(m: dict[str, dict[str, float | int | None]]) -> list[str]:
+    lines = [f"{'class':18}{'labelled':>9}{'predicted':>10}{'correct':>8}{'precision':>11}{'recall':>8}"]
+    lines.append("-" * 64)
     for c, v in m.items():
         lines.append(
-            f"{c:16}{v['support']:>9}{v['predicted']:>10}{v['tp']:>8}{_pct(v['precision']):>11}{_pct(v['recall']):>8}"
+            f"{c:18}{v['support']:>9}{v['predicted']:>10}{v['tp']:>8}{_pct(v['precision']):>11}{_pct(v['recall']):>8}"
         )
-    agree = sum(1 for label, pred in pairs if label == pred)
-    lines.append("-" * 62)
-    lines.append(f"labelled rows {len(pairs)}, agree {agree} ({_pct(agree / len(pairs) if pairs else None).strip()})")
+    return lines
+
+
+def summary(scored: list[Scored], unlabelled: int) -> str:
+    pairs = [(s.label, s.predicted) for s in scored]
+    lines = [f"appropriation or not, {len(pairs)} labelled rows:"]
+    lines += _table(binary_metrics(pairs))
+    full = [(label, pred) for label, pred in pairs if label != NOT_APPROPRIATION]
+    lines.append("")
+    lines.append(f"per class, {len(full)} rows whose label names a class:")
+    lines += _table(metrics(full))
+    agree = sum(1 for label, pred in full if label == pred)
+    lines.append("-" * 64)
+    lines.append(f"agree {agree} of {len(full)} ({_pct(agree / len(full) if full else None).strip()})")
     lines.append(f"unlabelled rows skipped: {unlabelled}")
     confusions = Counter((s.label, s.predicted) for s in scored if s.label != s.predicted)
     if confusions:
